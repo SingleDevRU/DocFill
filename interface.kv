@@ -1,0 +1,849 @@
+<DocFill>
+    MDTabs:
+        id: tabs
+        Primary:
+            text: "Основные сведения"
+
+            MDTextField:
+                id: Date
+                hint_text: "Дата документа"
+                multiline: False
+                size_hint_y: None
+                height: 25
+                size_hint_x: None
+                width: 150
+                pos_hint: {"center_x": .9, "center_y": .94}
+                on_focus: root.show_date_picker()
+
+            MDTextField:
+                id: curkkt
+                hint_text: "Текущая ККТ"
+                readonly: True
+                multiline: False
+                size_hint_y: None
+                height: 25
+                size_hint_x: None
+                width: 200
+                pos_hint: {"center_x": .6, "center_y": .94}
+
+
+            MDTextField:
+                id: DockType
+                hint_text: "Вид документа"
+                multiline: False
+                size_hint_y: None
+                height: 25
+                size_hint_x: None
+                width: 150
+                pos_hint: {"center_x": .3, "center_y": .94}
+                on_focus: root.MenuDock()
+
+            MDLabel:
+                text: "Изменение адреса/места установки"
+                pos_hint: {"center_x": .77, "center_y": .88}
+                font_size: 12
+
+            MDCheckbox:
+                id: r1
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .25, "center_y": .88}
+
+            MDLabel:
+                text: "Смена ОФД"
+                pos_hint: {"center_x": .77, "center_y": .83}
+                font_size: 12
+
+            MDCheckbox:
+                id: r2
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .25, "center_y": .83}
+
+            MDLabel:
+                text: "Изменение сведений об авт.устр-ве"
+                pos_hint: {"center_x": .77, "center_y": .78}
+                font_size: 12
+
+            MDCheckbox:
+                id: r3
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .25, "center_y": .78}
+
+            MDLabel:
+                text: "Замена ФН"
+                pos_hint: {"center_x": .77, "center_y": .73}
+                font_size: 12
+
+            MDCheckbox:
+                id: r4
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .25, "center_y": .73}
+
+            MDLabel:
+                text: "Переход из автономного режима в обычный"
+                pos_hint: {"center_x": 1.1, "center_y": .88}
+                font_size: 12
+
+            MDCheckbox:
+                id: r5
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .58, "center_y": .88}
+
+            MDLabel:
+                text: "Переход из обычного режима в автономный"
+                pos_hint: {"center_x": 1.1, "center_y": .83}
+                font_size: 12
+
+            MDCheckbox:
+                id: r6
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .58, "center_y": .83}
+
+            MDLabel:
+                text: "Изменение наименования пользователя ККТ"
+                pos_hint: {"center_x": 1.1, "center_y": .78}
+                font_size: 12
+
+            MDCheckbox:
+                id: r7
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .58, "center_y": .78}
+
+            MDLabel:
+                text: "По иным причинам"
+                pos_hint: {"center_x": 1.1, "center_y": .73}
+                font_size: 12
+
+            MDCheckbox:
+                id: r8
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .58, "center_y": .73}
+
+            MDLabel:
+                text: "Выберите Тип"
+                pos_hint: {"center_x": .50, "center_y": .97}
+                font_size:15
+
+            MDLabel:
+                text: "ИП"
+                pos_hint: {"center_x": .53, "center_y": .92}
+                font_size: 15
+
+            MDCheckbox:
+                id: TG1
+                active: True
+                group: "group"
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .1, "center_y": .92}
+
+            MDLabel:
+                text: "ЮрЛицо"
+                pos_hint: {"center_x": .53, "center_y": .86}
+                font_size: 15
+
+            MDCheckbox:
+                id: TG2
+                group: "group"
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .14, "center_y": .86}
+
+            MDLabel:
+                text:"ИНН"
+                pos_hint: {"center_x": .50, "center_y": .80}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: inn
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 100
+                pos_hint: {"center_x": .09, "center_y": .74}
+
+            MDFillRoundFlatButton:
+                text: "Запрос"
+                pos_hint: {"center_x": .09, "center_y": .10}
+                on_press: root.request(inn.text)
+
+            MDLabel:
+                text:"ОГРН/ОГРНИП"
+                pos_hint: {"center_x": .50, "center_y": .69}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: ogrn
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 120
+                pos_hint: {"center_x": .09, "center_y": .64}
+
+            MDLabel:
+                text:"КПП"
+                pos_hint: {"center_x": .50, "center_y": .59}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: kpp
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 120
+                pos_hint: {"center_x": .09, "center_y": .54}
+
+            MDLabel:
+                text:"Полное наименование/ФИО"
+                pos_hint: {"center_x": .87, "center_y": .69}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: name1
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 400
+                pos_hint: {"center_x": .5, "center_y": .64}
+
+            MDTextFieldRect:
+                id: name2
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 400
+                pos_hint: {"center_x": .5, "center_y": .59}
+
+            MDTextFieldRect:
+                id: name3
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 400
+                pos_hint: {"center_x": .5, "center_y": .54}
+
+            MDTextFieldRect:
+                id: name4
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 400
+                pos_hint: {"center_x": .5, "center_y": .49}
+
+            MDTextField:
+                id: User
+                hint_text: "Лицо, подающее заявление"
+                readonly: True
+                multiline: False
+                size_hint_y: None
+                height: 25
+                size_hint_x: None
+                width: 150
+                pos_hint: {"center_x": .1, "center_y": .45}
+                on_focus: root.UserMenu()
+
+            MDLabel:
+                text: "ФИО пользователя/представителя"
+                pos_hint: {"center_x": .60, "center_y": .40}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: f
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .26, "center_y": .35}
+
+            MDTextFieldRect:
+                id: i
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .26, "center_y": .29}
+
+            MDTextFieldRect:
+                id: o
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .26, "center_y": .23}
+
+            MDLabel:
+                text: "Документ, подтверждающий полномочия"
+                pos_hint: {"center_x": 1, "center_y": .40}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: d1
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .7, "center_y": .35}
+
+            MDTextFieldRect:
+                id: d2
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .7, "center_y": .29}
+
+            MDTextFieldRect:
+                id: d3
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .7, "center_y": .23}
+
+        KKT_and_FN:
+            text: "Данные ККТ и ФН"
+
+            MDTextField:
+                id: KKT
+                hint_text: "Модель ККТ"
+                readonly: False
+                multiline: False
+                size_hint_y: None
+                height: 25
+                size_hint_x: None
+                width: 200
+                pos_hint: {"center_x": .15, "center_y": 0.95}
+                on_focus: root.KKTMenu()
+
+            MDLabel:
+                text: "Серийный номер ККТ"
+                pos_hint: {"center_x": 1, "center_y": .98}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: seriesKKT
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .6, "center_y": .93}
+
+            MDTextField:
+                id: FN
+                hint_text: "Модель ФН"
+                readonly: False
+                multiline: False
+                size_hint_y: None
+                height: 25
+                size_hint_x: None
+                width: 700
+                pos_hint: {"center_x": .5, "center_y": 0.85}
+                on_focus: root.FNMenu()
+
+            MDTextFieldRect:
+                id: fn1
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .25, "center_y": .75}
+
+            MDTextFieldRect:
+                id: fn2
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .25, "center_y": .70}
+
+            MDTextFieldRect:
+                id: fn3
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .25, "center_y": .65}
+
+            MDTextFieldRect:
+                id: fn4
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .65, "center_y": .75}
+
+            MDTextFieldRect:
+                id: fn5
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .65, "center_y": .70}
+
+            MDTextFieldRect:
+                id: fn6
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .65, "center_y": .65}
+
+            MDLabel:
+                text: "Серийный номер ФН"
+                pos_hint: {"center_x": 0.85, "center_y": .55}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: serialFN
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .45, "center_y": .5}
+
+        Address:
+            text: "Адрес установки"
+
+            MDLabel:
+                text: "Индекс"
+                pos_hint: {"center_x": 0.57, "center_y": .95}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: ZipCode
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 150
+                pos_hint: {"center_x": .1, "center_y": .9}
+
+            MDFillRoundFlatButton:
+                text: "Получить индекс"
+                pos_hint: {"center_x": .3, "center_y": .9}
+                on_press: root.GetPostIndex()
+
+            MDTextField:
+                id: region
+                text: "66 СВЕРДЛОВСКАЯ ОБЛАСТЬ"
+                hint_text: "Регион"
+                readonly: False
+                multiline: False
+                size_hint_y: None
+                height: 50
+                size_hint_x: None
+                width: 450
+                pos_hint: {"center_x": .7, "center_y": 0.9}
+                on_focus: root.RegionMenu()
+
+            MDLabel:
+                text: "Район"
+                pos_hint: {"center_x": 0.57, "center_y": .82}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: district
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .35, "center_y": .82}
+
+            MDLabel:
+                text: "Город"
+                pos_hint: {"center_x": 0.57, "center_y": .75}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: city
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .35, "center_y": .75}
+
+            MDLabel:
+                text: "Населенный пункт\n(село,поселок и т.д.)"
+                pos_hint: {"center_x": 0.5, "center_y": .68}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: village
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .38, "center_y": .68}
+
+            MDLabel:
+                text: "Улица (проспект,\nпереулок и т.д.)"
+                pos_hint: {"center_x": 0.5, "center_y": .61}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: street
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 300
+                pos_hint: {"center_x": .38, "center_y": .61}
+
+            MDLabel:
+                text: "Номер дома"
+                pos_hint: {"center_x": 0.63, "center_y": .54}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: house
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 150
+                pos_hint: {"center_x": .18, "center_y": .49}
+
+            MDLabel:
+                text: "Номер корпуса"
+                pos_hint: {"center_x": .93, "center_y": .54}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: campus
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 150
+                pos_hint: {"center_x": .5, "center_y": .49}
+
+            MDLabel:
+                text: "Номер помещения"
+                pos_hint: {"center_x": 1.23, "center_y": .54}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: room
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 150
+                pos_hint: {"center_x": .82, "center_y": .49}
+
+            MDLabel:
+                text: "Место установки (применения) контрольно-кассовой техники"
+                pos_hint: {"center_x": .7, "center_y": .40}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: exp1
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 400
+                pos_hint: {"center_x": .45, "center_y": .33}
+
+            MDTextFieldRect:
+                id: exp2
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 400
+                pos_hint: {"center_x": .45, "center_y": .25}
+
+            MDTextFieldRect:
+                id: exp3
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 400
+                pos_hint: {"center_x": .45, "center_y": .18}
+
+        OFD_and_DATA:
+            text: "Настройки ОФД \n и передачи данных"
+
+            MDLabel:
+                text: "ККТ предназначена для работы исключительно\nв автономном режиме "
+                pos_hint: {"center_x": .55, "center_y": .95}
+                font_size: 12
+
+            MDCheckbox:
+                id: ofd1
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .03, "center_y": .95}
+
+            MDLabel:
+                text: "ККТ используется для реализации лотерейных билетов"
+                pos_hint: {"center_x": .55, "center_y": .89}
+                font_size: 12
+
+            MDCheckbox:
+                id: ofd2
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .03, "center_y": .89}
+
+            MDLabel:
+                text: "ККТ используется при осуществлении азартных игр"
+                pos_hint: {"center_x": .55, "center_y": .83}
+                font_size: 12
+
+            MDCheckbox:
+                id: ofd3
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .03, "center_y": .83}
+
+            MDLabel:
+                text: "ККТ используется в игорном заведении при выдаче\nили получении обменных знаков"
+                pos_hint: {"center_x": .55, "center_y": .77}
+                font_size: 12
+
+            MDCheckbox:
+                id: ofd4
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .03, "center_y": .77}
+
+            MDLabel:
+                text: "ККТ используется при осуществлении деятельности \nбанковского платежного агента/субагента"
+                pos_hint: {"center_x": .55, "center_y": .71}
+                font_size: 12
+
+            MDCheckbox:
+                id: ofd5
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .03, "center_y": .71}
+
+            MDLabel:
+                text: "ККТ входит в состав автоматического устройства для расчетов"
+                pos_hint: {"center_x": .55, "center_y": .65}
+                font_size: 12
+
+            MDCheckbox:
+                id: ofd6
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .03, "center_y": .65}
+
+            MDLabel:
+                text: "ККТ используется при осуществлении деятельности \n платежного агента/субагента"
+                pos_hint: {"center_x": 1.12, "center_y": .95}
+                font_size: 12
+
+            MDCheckbox:
+                id: ofd7
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .6, "center_y": .95}
+
+            MDLabel:
+                text: "ККТ используется для расчетов \nв сети интернет"
+                pos_hint: {"center_x": 1.12, "center_y": .89}
+                font_size: 12
+
+            MDCheckbox:
+                id: ofd8
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .6, "center_y": .89}
+
+            MDLabel:
+                text: "ККТ используется для развозной и/или\nразносной торговли/услуг"
+                pos_hint: {"center_x": 1.12, "center_y": .83}
+                font_size: 12
+
+            MDCheckbox:
+                id: ofd9
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .6, "center_y": .83}
+
+            MDLabel:
+                text: "ККТ применяется только при оказании услуг"
+                pos_hint: {"center_x": 1.12, "center_y": .77}
+                font_size: 12
+
+            MDCheckbox:
+                id: ofd10
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .6, "center_y": .77}
+
+            MDLabel:
+                text: "ККТ используется при продаже подакцизных\nтоваров"
+                pos_hint: {"center_x": 1.12, "center_y": .71}
+                font_size: 12
+
+            MDCheckbox:
+                id: ofd11
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .6, "center_y": .71}
+
+            MDLabel:
+                text: "ККТ используется при расчетах за товары,\nмаркированные средствами идентификации"
+                pos_hint: {"center_x": 1.12, "center_y": .65}
+                font_size: 12
+
+            MDCheckbox:
+                id: ofd12
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .6, "center_y": .65}
+
+            MDTextField:
+                id: OFD
+                hint_text: "ОФД"
+                readonly: False
+                multiline: False
+                size_hint_y: None
+                height: 50
+                size_hint_x: None
+                width: 450
+                pos_hint: {"center_x": .5, "center_y": 0.58}
+                on_focus: root.OFDMenu()
+
+            MDLabel:
+                text: "Наименование ОФД"
+                pos_hint: {"center_x": .53, "center_y": .50}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: ofdn1
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 400
+                pos_hint: {"center_x": .5, "center_y": .50}
+
+            MDTextFieldRect:
+                id: ofdn2
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 400
+                pos_hint: {"center_x": .5, "center_y": .44}
+
+            MDTextFieldRect:
+                id: ofdn3
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 400
+                pos_hint: {"center_x": .5, "center_y": .38}
+
+            MDTextFieldRect:
+                id: ofdn4
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 400
+                pos_hint: {"center_x": .5, "center_y": .32}
+
+            MDLabel:
+                text: "ИНН ОФД"
+                pos_hint: {"center_x": .53, "center_y": .26}
+                font_size: 15
+
+            MDTextFieldRect:
+                id: ofdinn
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 400
+                pos_hint: {"center_x": .4, "center_y": .26}
+
+            MDFillRoundFlatButton:
+                text: "Генерация"
+                pos_hint: {"center_x": .09, "center_y": .10}
+                on_press: root.GenerateXLSX()
+<CurrentKKT>
+    title: "Текущий ККТ"
+    title_color: 0, 0, 0
+    size_hint: None, None
+    size: 525, 200
+    background_color: 255, 255, 255
+
+    MDFloatLayout:
+        MDLabel:
+            text: "Рег. номер"
+            pos_hint: {"center_x": 4, "center_y": 4.9}
+
+        MDTextField:
+            id: Date
+            hint_text: "Дата"
+            multiline: False
+            size_hint_y: None
+            height: 30
+            size_hint_x: None
+            width: 150
+            pos_hint: {"center_x": 4, "center_y": 4}
+            on_focus: root.show_date_picker()
+
+        MDTextFieldRect:
+            id: reg
+            input_filter: "int"
+            multiline: False
+            size_hint_y: None
+            height: 30
+            size_hint_x: None
+            width: 150
+            pos_hint: {"center_x": 4, "center_y": 4.5}
+
+
+
+        MDFillRoundFlatButton:
+            text: "ОТМЕНА"
+            pos_hint: {"center_x": 5, "center_y": 3}
+            on_press: root.manager.current = "Doc"
+
+        MDFillRoundFlatButton:
+            id: bt
+            text: "ОК"
+            pos_hint: {"center_x": 3.2, "center_y": 3}
+            on_press: root.RegN()
+
+

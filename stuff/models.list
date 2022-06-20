@@ -1,0 +1,1083 @@
+﻿<?xml version="1.0"?>
+<ArrayOfModels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Models>
+    <Code>0001</Code>
+    <Model>ШТРИХ-ON-LINE</Model>
+    <Sn>xxxxxx0004xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0002</Code>
+    <Model>АТОЛ FPrint-22ПТК</Model>
+    <Sn>001063xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0004</Code>
+    <Model>ВИКИ МИНИ Ф</Model>
+    <Sn>0491xxxxxx</Sn>
+    <Manufacturer>OOO "Дримкас"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0005</Code>
+    <Model>ПИРИТ 2Ф</Model>
+    <Sn>0128xxxxxx</Sn>
+    <Manufacturer>OOO "Кристалл Сервис Интеграция"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0006</Code>
+    <Model>АТОЛ 77Ф</Model>
+    <Sn>001069xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0007</Code>
+    <Model>АТОЛ 30Ф</Model>
+    <Sn>001061xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0008</Code>
+    <Model>АТОЛ 11Ф</Model>
+    <Sn>001067xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0009</Code>
+    <Model>ЭВОТОР СТ2Ф</Model>
+    <Sn>003074xxxxxxxx</Sn>
+    <Manufacturer>OOO "ЭВОТОР"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0010</Code>
+    <Model>ШТРИХ-ФР-01Ф</Model>
+    <Sn>xxxxxx0002xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0011</Code>
+    <Model>ШТРИХ-МИНИ-01Ф</Model>
+    <Sn>xxxxxx0001xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0012</Code>
+    <Model>ШТРИХ-ЛАЙТ-01Ф</Model>
+    <Sn>xxxxxx0007xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0013</Code>
+    <Model>РР-01Ф</Model>
+    <Sn>xxxxxx0003xxxxxx</Sn>
+    <Manufacturer>OOO "РР-Электро"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0014</Code>
+    <Model>РИТЕЙЛ-01Ф</Model>
+    <Sn>xxxxxx0012xxxxxx</Sn>
+    <Manufacturer>OOO "Тринити"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0015</Code>
+    <Model>ЭЛВЕС-МФ</Model>
+    <Sn>xxxxxx0030xxxxxx</Sn>
+    <Manufacturer>OOO "НТЦ "Измеритель"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0016</Code>
+    <Model>ШТРИХ-М-02Ф</Model>
+    <Sn>xxxxxx0008xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0017</Code>
+    <Model>ШТРИХ-М-01Ф</Model>
+    <Sn>xxxxxx0006xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0018</Code>
+    <Model>АТОЛ 90Ф</Model>
+    <Sn>001072xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0019</Code>
+    <Model>АТОЛ 55Ф</Model>
+    <Sn>001062xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0020</Code>
+    <Model>АТОЛ 52Ф</Model>
+    <Sn>001064xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0021</Code>
+    <Model>АТОЛ 25Ф</Model>
+    <Sn>001057xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0022</Code>
+    <Model>ВИКИ ПРИНТ 57 Ф</Model>
+    <Sn>0493xxxxxx</Sn>
+    <Manufacturer>OOO "Дримкас"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0023</Code>
+    <Model>ВИКИ ПРИНТ 57 ПЛЮС Ф</Model>
+    <Sn>0494xxxxxx</Sn>
+    <Manufacturer>OOO "Дримкас"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0024</Code>
+    <Model>ПИРИТ 1Ф</Model>
+    <Sn>0126xxxxxx</Sn>
+    <Manufacturer>OOO "Кристалл Сервис Интеграция"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0025</Code>
+    <Model>РР-02Ф</Model>
+    <Sn>xxxxxx0013xxxxxx</Sn>
+    <Manufacturer>OOO "РР-Электро"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0026</Code>
+    <Model>ШТРИХ-ЛАЙТ-02Ф</Model>
+    <Sn>xxxxxx0009xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0027</Code>
+    <Model>ПТК"MSTAR-TK"</Model>
+    <Sn>199031xxxxxx</Sn>
+    <Manufacturer>OOO "НТЦ Альфа-Проект"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0028</Code>
+    <Model>ПТК"MSPOS-K"</Model>
+    <Sn>199036xxxxxx</Sn>
+    <Manufacturer>OOO "НТЦ Альфа-Проект"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0029</Code>
+    <Model>ПТК"АЛЬФА-ТК"</Model>
+    <Sn>199041xxxxxx</Sn>
+    <Manufacturer>OOO "НТЦ Альфа-Проект"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0030</Code>
+    <Model>ПТК"IRAS 900 K"</Model>
+    <Sn>19994xxxxx</Sn>
+    <Manufacturer>OOO "НТЦ Альфа-Проект"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0031</Code>
+    <Model>ЯРУС М2100Ф</Model>
+    <Sn>xxxxxx0018xxxxxx</Sn>
+    <Manufacturer>OOO "Ярус Лтд"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0032</Code>
+    <Model>PAYONLINE-01-ФА</Model>
+    <Sn>xxxxxx0005xxxxxx</Sn>
+    <Manufacturer>OOO "Пэй Киоск"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0033</Code>
+    <Model>ЭКР 2102К-Ф</Model>
+    <Sn>xxxxxxx</Sn>
+    <Manufacturer>ЗАО "СЧЕТМАШ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0034</Code>
+    <Model>ВИКИ ПРИНТ 80 ПЛЮС Ф</Model>
+    <Sn>0495xxxxxx</Sn>
+    <Manufacturer>OOO "Дримкас"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0035</Code>
+    <Model>ПИРИТ 2СФ</Model>
+    <Sn>0129xxxxxx</Sn>
+    <Manufacturer>OOO "Кристалл Сервис Интеграция"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0036</Code>
+    <Model>РР-03Ф</Model>
+    <Sn>xxxxxx0014xxxxxx</Sn>
+    <Manufacturer>OOO "РР-Электро"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0037</Code>
+    <Model>РР-04Ф</Model>
+    <Sn>xxxxxx0015xxxxxx</Sn>
+    <Manufacturer>OOO "РР-Электро"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0038</Code>
+    <Model>ПРИМ 07-Ф</Model>
+    <Sn>17xxxxx</Sn>
+    <Manufacturer>ОАО "СКБ  вычислительной техники "ИСКРА""</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0039</Code>
+    <Model>ПРИМ 21-ФА</Model>
+    <Sn>17xxxxx</Sn>
+    <Manufacturer>ОАО "СКБ  вычислительной техники "ИСКРА""</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0040</Code>
+    <Model>ПРИМ 08-Ф</Model>
+    <Sn>17xxxxx</Sn>
+    <Manufacturer>ОАО "СКБ  вычислительной техники "ИСКРА""</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0041</Code>
+    <Model>ПРИМ 88-Ф</Model>
+    <Sn>17xxxxx</Sn>
+    <Manufacturer>ОАО "СКБ  вычислительной техники "ИСКРА""</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0042</Code>
+    <Model>Пионер-114Ф</Model>
+    <Sn>50yyxxxxxx</Sn>
+    <Manufacturer>OOO "Пионер инжиниринг"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0043</Code>
+    <Model>ЯРУС ТФ</Model>
+    <Sn>xxxxxx0017xxxxxx</Sn>
+    <Manufacturer>OOO "Ярус Лтд"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0044</Code>
+    <Model>Viki Tower F</Model>
+    <Sn>0492xxxxxx</Sn>
+    <Manufacturer>OOO "Дримкас"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0045</Code>
+    <Model>ШТРИХ-МИНИ-02Ф</Model>
+    <Sn>xxxxxx0024xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0046</Code>
+    <Model>МИНИКА 1102МК-Ф</Model>
+    <Sn>xxxxxxx</Sn>
+    <Manufacturer>ЗАО "СЧЕТМАШ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0047</Code>
+    <Model>АМС-100Ф</Model>
+    <Sn>002100xxxxxx</Sn>
+    <Manufacturer>OOO "АРКУС-СТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0048</Code>
+    <Model>ШТРИХ-МПЕЙ-Ф</Model>
+    <Sn>xxxxxx0020xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0049</Code>
+    <Model>МК 35-Ф</Model>
+    <Manufacturer>ОАО "СКБ  вычислительной техники "ИСКРА""</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0050</Code>
+    <Model>Меркурий-115Ф</Model>
+    <Sn>00xxxxxx</Sn>
+    <Manufacturer>OOO "АСТОР ТРЕЙД"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0051</Code>
+    <Model>Меркурий-185Ф</Model>
+    <Sn>04xxxxxx</Sn>
+    <Manufacturer>OOO "АСТОР ТРЕЙД"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0052</Code>
+    <Model>СПАРК-115-Ф</Model>
+    <Sn>009xxxxxx</Sn>
+    <Manufacturer>ЗАО "Компьютерно-кассовые системы"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0053</Code>
+    <Model>POSprint FP510-Ф</Model>
+    <Sn>02551001xxxxx</Sn>
+    <Manufacturer>OOO "Фирма ПИЛОТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0054</Code>
+    <Model>POSprint FP410-Ф</Model>
+    <Sn>02541001xxxxx</Sn>
+    <Manufacturer>OOO "Фирма ПИЛОТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0055</Code>
+    <Model>ОРИОН-100Ф</Model>
+    <Sn>mmyyxxxxxxxx</Sn>
+    <Manufacturer>OOO "ОРИОН ЮТА ТРЕЙД"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0056</Code>
+    <Model>Меркурий-119Ф</Model>
+    <Sn>02xxxxxx</Sn>
+    <Manufacturer>OOO "АСТОР ТРЕЙД"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0057</Code>
+    <Model>КАЗНАЧЕЙ ФА</Model>
+    <Sn>001076xxxxxxxx</Sn>
+    <Manufacturer>OOO "КАЗНАЧЕЙ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0058</Code>
+    <Model>СП402-Ф</Model>
+    <Sn>02003xxxxxx</Sn>
+    <Manufacturer>OOO "Сервис Плюс"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0059</Code>
+    <Model>СП101-Ф</Model>
+    <Sn>02002xxxxxx</Sn>
+    <Manufacturer>OOO "Сервис Плюс"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0060</Code>
+    <Model>СП802-Ф</Model>
+    <Sn>02005xxxxxx</Sn>
+    <Manufacturer>OOO "Сервис Плюс"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0061</Code>
+    <Model>ЧекВей77-Ф</Model>
+    <Sn>02001xxxxxx</Sn>
+    <Manufacturer>OOO "Сервис Плюс"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0062</Code>
+    <Model>АТОЛ 42ФС</Model>
+    <Sn>001077xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0063</Code>
+    <Model>PAY VKP-80K-ФА</Model>
+    <Sn>xxxxxx0027xxxxxx</Sn>
+    <Manufacturer>OOO "Пэй Киоск"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0064</Code>
+    <Model>РП Система 1ФА</Model>
+    <Sn>00000000381xxxxxxxxx</Sn>
+    <Manufacturer>OOO "РП Система"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0065</Code>
+    <Model>ЭЛВЕС-ФР-Ф</Model>
+    <Sn>xxxxxx0022xxxxxx</Sn>
+    <Manufacturer>OOO "НТЦ "Измеритель"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0066</Code>
+    <Model>ШТРИХ-МОБАЙЛ-Ф</Model>
+    <Sn>xxxxxx0016xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0067</Code>
+    <Model>ШТРИХ-ФР-02Ф</Model>
+    <Sn>xxxxxx0019xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0068</Code>
+    <Model>WNJI-003Ф</Model>
+    <Sn>46xxxxxx</Sn>
+    <Manufacturer>OOO "Винкор Никсдорф"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0069</Code>
+    <Model>МИКРО 35G-Ф</Model>
+    <Sn>006xxxxxxx</Sn>
+    <Manufacturer>OOO "ИСКРАСервис"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0070</Code>
+    <Model>ПКТФ</Model>
+    <Sn>018016xxxxxxxx</Sn>
+    <Manufacturer>OOO "ПРЕДПРИЯТИЕ "МИКРОТЕХ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0071</Code>
+    <Model>NCR-001Ф</Model>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0072</Code>
+    <Model>ЭЛВЕС-МИКРО-Ф</Model>
+    <Manufacturer>OOO "НТЦ "Измеритель"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0073</Code>
+    <Model>АТОЛ 60Ф</Model>
+    <Sn>001075xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0074</Code>
+    <Model>АТОЛ 15Ф</Model>
+    <Sn>001078xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0075</Code>
+    <Model>Дримкас-Ф</Model>
+    <Sn>0496xxxxxx</Sn>
+    <Manufacturer>OOO "Дримкас"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0076</Code>
+    <Model>Меркурий-130Ф</Model>
+    <Sn>06xxxxxx</Sn>
+    <Manufacturer>OOO "АСТОР ТРЕЙД"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0077</Code>
+    <Model>Меркурий-180Ф</Model>
+    <Sn>08xxxxxx</Sn>
+    <Manufacturer>OOO "АСТОР ТРЕЙД"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0078</Code>
+    <Model>Терминал-ФА</Model>
+    <Sn>550101xxxxxx</Sn>
+    <Manufacturer>OOO "КИТ ИНВЕСТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0079</Code>
+    <Model>Касби-02Ф</Model>
+    <Sn>008001xxxxxxx</Sn>
+    <Manufacturer>АО "Калужский завод телеграфной аппаратуры"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0080</Code>
+    <Model>ЭВОТОР СТ3Ф</Model>
+    <Sn>003079xxxxxxxx</Sn>
+    <Manufacturer>OOO "ЭВОТОР"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0081</Code>
+    <Model>CUSTOM Q3X-Ф</Model>
+    <Sn>0000080719xxxx</Sn>
+    <Manufacturer>OOO "КАСТОМ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0081</Code>
+    <Model>CUSTOM Q3X-Ф</Model>
+    <Sn>00000000000000xxxxxx</Sn>
+    <Manufacturer>OOO "КАСТОМ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0082</Code>
+    <Model>РП Система 1ФС</Model>
+    <Sn>0000000382xxxxxxxxxx</Sn>
+    <Manufacturer>OOO "РП Система"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0083</Code>
+    <Model>АМС-300Ф</Model>
+    <Sn>002300xxxxxx</Sn>
+    <Manufacturer>OOO "АРКУС-СТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0084</Code>
+    <Model>УМКА-01-ФА</Model>
+    <Sn>17xxxxxx</Sn>
+    <Manufacturer>OOO "ОПЛАТ-СЕРВИС"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0085</Code>
+    <Model>МЕЩЕРА-01-Ф</Model>
+    <Sn>183xxxxx</Sn>
+    <Manufacturer>OOO "Ремонт и обслуживание контрольно-кассовой техники"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0086</Code>
+    <Model>ПРИМ 06-Ф</Model>
+    <Sn>17xxxxx</Sn>
+    <Manufacturer>ОАО "СКБ  вычислительной техники "ИСКРА""</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0087</Code>
+    <Model>ОКА-102Ф</Model>
+    <Sn>47xxxx</Sn>
+    <Manufacturer>OOO "СЧЕТНО АНАЛИТИЧЕСКИЕ МАШИНЫ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0088</Code>
+    <Model>ars.mobile Ф</Model>
+    <Sn>0545xxxxxx</Sn>
+    <Manufacturer>OOO "Передовые торговые решения"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0089</Code>
+    <Model>К1-Ф</Model>
+    <Sn>001010xxxxxx</Sn>
+    <Manufacturer>OOO "ЛАБОРАТОРИЯ ЗАЩИТЫ ИНФОРМАЦИИ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0090</Code>
+    <Model>МЁБИУС.NET.H21-Ф</Model>
+    <Manufacturer>OOO "ТЕРЛИС"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0091</Code>
+    <Model>СП801-Ф</Model>
+    <Manufacturer>OOO "Сервис Плюс"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0092</Code>
+    <Model>NETPAY-ФС</Model>
+    <Sn>xxxxxx0038xxxxxx</Sn>
+    <Manufacturer>OOO "Пэй Киоск"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0093</Code>
+    <Model>FIT-ONLINE-Ф</Model>
+    <Manufacturer>OOO "Франс Информатик энд Текнолоджи"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0094</Code>
+    <Model>ZEBRA-EZ320-Ф</Model>
+    <Manufacturer>OOO "ТЕРЛИС"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0095</Code>
+    <Model>МЁБИУС.NET.T18-Ф</Model>
+    <Manufacturer>OOO "ТЕРЛИС"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0096</Code>
+    <Model>АГАТ 1Ф</Model>
+    <Sn>17xxxxxx</Sn>
+    <Manufacturer>OOO "УЭБ Технолоджи"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0097</Code>
+    <Model>ars.vera 01Ф</Model>
+    <Sn>0541xxxxxx</Sn>
+    <Manufacturer>OOO "Передовые торговые решения"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0098</Code>
+    <Model>ars.evo 01Ф</Model>
+    <Sn>0544xxxxxx</Sn>
+    <Manufacturer>OOO "Передовые торговые решения"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0099</Code>
+    <Model>Меркурий-МФ</Model>
+    <Sn>14xxxxxx</Sn>
+    <Manufacturer>OOO "АСТОР ТРЕЙД"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0100</Code>
+    <Model>ФЕЛИКС-РМФ</Model>
+    <Sn>xxxxxxx</Sn>
+    <Manufacturer>ЗАО "СЧЕТМАШ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0101</Code>
+    <Model>FIT-NEWLINE-F</Model>
+    <Manufacturer>OOO "Франс Информатик энд Текнолоджи"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0102</Code>
+    <Model>АМС-300.1Ф</Model>
+    <Sn>002301xxxxxx</Sn>
+    <Manufacturer>OOO "АРКУС-СТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0103</Code>
+    <Model>АТОЛ 20Ф</Model>
+    <Sn>001081xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0104</Code>
+    <Model>АТОЛ 50Ф</Model>
+    <Sn>001080xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0105</Code>
+    <Model>SKY-PRINT 54-F</Model>
+    <Sn>02561002xxxxx</Sn>
+    <Manufacturer>OOO "Фирма ПИЛОТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0106</Code>
+    <Model>КИТ Онлайн-Ф</Model>
+    <Sn>550301xxxxxx</Sn>
+    <Manufacturer>OOO "КИТ ИНВЕСТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0107</Code>
+    <Model>FN-1.online/ФАС</Model>
+    <Manufacturer>OOO "ИнфоОборона"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0108</Code>
+    <Model>Ока МФ</Model>
+    <Sn>yyxxx</Sn>
+    <Manufacturer>OOO "СЧЕТНО АНАЛИТИЧЕСКИЕ МАШИНЫ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0109</Code>
+    <Model>Кассир 57Ф</Model>
+    <Sn>0000000383xxxxxxxxxx</Sn>
+    <Manufacturer>OOO "РП Система"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0110</Code>
+    <Model>АТОЛ 91Ф</Model>
+    <Sn>001082xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0111</Code>
+    <Model>ПОРТ-100Ф</Model>
+    <Sn>55xxxxxxxx</Sn>
+    <Manufacturer>OOO НПО "ГК ПОРТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0112</Code>
+    <Model>ПОРТ-1000Ф</Model>
+    <Sn>88xxxxxxxx</Sn>
+    <Manufacturer>OOO НПО "ГК ПОРТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0113</Code>
+    <Model>МТ01-Солитон mPOS-Ф</Model>
+    <Manufacturer>АО "Научно-исследовательсткий институт "Солитон"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0114</Code>
+    <Model>ЭЛВЕС-МИНИ-Ф</Model>
+    <Manufacturer>OOO "НТЦ "Измеритель"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0115</Code>
+    <Model>ПТК"АЛЬФА-ТК-Ф"</Model>
+    <Manufacturer>OOO "НТЦ Альфа-Проект"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0116</Code>
+    <Model>Эвотор СТ5Ф</Model>
+    <Sn>003083xxxxxxxx</Sn>
+    <Manufacturer>OOO "ЭВОТОР"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0117</Code>
+    <Model>НЕВА-01-Ф</Model>
+    <Sn>182xxxxx</Sn>
+    <Manufacturer>OOO "ККМ ОНЛАЙН"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0118</Code>
+    <Model>АЗУР-01Ф</Model>
+    <Sn>0001201804xxxxxx</Sn>
+    <Manufacturer>OOO "АЗУР ПОС"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0119</Code>
+    <Model>МИКРО 106-Ф</Model>
+    <Sn>006106xxxxxxx</Sn>
+    <Manufacturer>OOO "ИСКРАСервис"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0120</Code>
+    <Model>Кассатка-1Ф</Model>
+    <Sn>0000000385xxxxxxxxxx</Sn>
+    <Manufacturer>OOO "РП Система"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0121</Code>
+    <Model>АТОЛ 92Ф</Model>
+    <Sn>001084xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0122</Code>
+    <Model>АТОЛ 150Ф</Model>
+    <Sn>001086xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0123</Code>
+    <Model>КИТ ШОП-Ф</Model>
+    <Manufacturer>OOO "КИТ ИНВЕСТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0124</Code>
+    <Model>MicroPay-ФАС</Model>
+    <Sn>018018xxxxxxxx</Sn>
+    <Manufacturer>OOO "ПРЕДПРИЯТИЕ "МИКРОТЕХ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0125</Code>
+    <Model>Касса Ф</Model>
+    <Sn>0497xxxxxx</Sn>
+    <Manufacturer>OOO "Дримкас"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0126</Code>
+    <Model>КАССИР 80Ф</Model>
+    <Sn>0000000384xxxxxxxxxx</Sn>
+    <Manufacturer>OOO "РП Система"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0127</Code>
+    <Model>AQSI5-Ф</Model>
+    <Sn>100xxxxxxxxxxxxx</Sn>
+    <Manufacturer>OOO "Пэй Киоск"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0128</Code>
+    <Model>ШТРИХ-НАНО-Ф</Model>
+    <Sn>xxxxxx0041xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0129</Code>
+    <Model>ШТРИХ-СМАРТПОС-Ф</Model>
+    <Sn>xxxxxx0033xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0130</Code>
+    <Model>АМС-700Ф</Model>
+    <Sn>002700xxxxxx</Sn>
+    <Manufacturer>OOO "АРКУС-СТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0131</Code>
+    <Model>СПЕКТР-ПС-Ф</Model>
+    <Manufacturer>АО Научно-производственный центр "Спектр"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0132</Code>
+    <Model>TZ Pro-F</Model>
+    <Manufacturer>OOO "ЛАНТЕР"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0133</Code>
+    <Model>САЛЮТ-08Ф</Model>
+    <Sn>0800xxxxxx</Sn>
+    <Manufacturer>OOO "Инженерный Стапель"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0134</Code>
+    <Model>САЛЮТ-10Ф</Model>
+    <Manufacturer>OOO "Инженерный Стапель"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0135</Code>
+    <Model>POSCENTER-A7L-Ф</Model>
+    <Sn>11801777xxxxxxxx</Sn>
+    <Manufacturer>OOO "ПОСЦЕНТР"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0136</Code>
+    <Model>Уникум-ФА</Model>
+    <Sn>0001xxxxxxxxxxxxxxxx</Sn>
+    <Manufacturer>OOO "КРАФТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0137</Code>
+    <Model>МИНИКА 1105К-Ф</Model>
+    <Sn>xxxxxxx</Sn>
+    <Manufacturer>ЗАО "СЧЕТМАШ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0138</Code>
+    <Model>НКР-01-Ф</Model>
+    <Sn>18210101xxxxxx</Sn>
+    <Manufacturer>OOO "Новые кассовые решения"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0139</Code>
+    <Model>РИТЕЙЛ-КОМБО-01Ф</Model>
+    <Sn>xxxxxx0042xxxxxx</Sn>
+    <Manufacturer>OOO "ПОСЦЕНТР"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0140</Code>
+    <Model>Пульс ФА</Model>
+    <Sn>0498xxxxxx</Sn>
+    <Manufacturer>OOO "Дримкас"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0141</Code>
+    <Model>IRAS-EM Ф</Model>
+    <Manufacturer>OOO "Мультисофт Системз"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0142</Code>
+    <Model>IRAS-E Ф</Model>
+    <Manufacturer>OOO "Мультисофт Системз"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0143</Code>
+    <Model>MSPOS-T-Ф</Model>
+    <Sn>177043xxxxxx</Sn>
+    <Manufacturer>OOO "Мультисофт Системз"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0144</Code>
+    <Model>СТАРТ-ТК-Ф</Model>
+    <Manufacturer>OOO "НТЦ Альфа-Проект"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0145</Code>
+    <Model>СТАРТ 21 ФА</Model>
+    <Sn>19995xxxxx</Sn>
+    <Manufacturer>OOO "НТЦ Альфа-Проект"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0146</Code>
+    <Model>MB Solution-F</Model>
+    <Manufacturer>OOO "ПРОФИНДУСТРИЯ-ЦЕНТР"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0148</Code>
+    <Model>MicroPay-ФС</Model>
+    <Manufacturer>OOO "ПРЕДПРИЯТИЕ "МИКРОТЕХ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0149</Code>
+    <Model>Кассатка-Мини-Ф</Model>
+    <Sn>0000000386xxxxxxxxxx</Sn>
+    <Manufacturer>OOO "РП Система"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0150</Code>
+    <Model>Облако-1Ф</Model>
+    <Sn>002887xxxxxx</Sn>
+    <Manufacturer>OOO "КАССОВЫЕ РЕШЕНИЯ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0151</Code>
+    <Model>МКАССА RS9000-Ф</Model>
+    <Manufacturer>OOO "РайтСкан"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0152</Code>
+    <Model>SKY-PRINT Mini-F</Model>
+    <Manufacturer>OOO "Фирма ПИЛОТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0153</Code>
+    <Model>WAB57-FRФ</Model>
+    <Manufacturer>OOO "УЭБ Технолоджи"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0154</Code>
+    <Model>ПОРТ-600Ф</Model>
+    <Sn>77xxxxxxxx</Sn>
+    <Manufacturer>OOO НПО "ГК ПОРТ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0155</Code>
+    <Model>Электроника 30Ф</Model>
+    <Manufacturer>OOO "ИЗОТ-Электроникс"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0156</Code>
+    <Model>MSPOS-E-Ф</Model>
+    <Sn>177044xxxxxx</Sn>
+    <Manufacturer>OOO "Мультисофт Системз"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0157</Code>
+    <Model>РР-Микро-Ф</Model>
+    <Manufacturer>OOO "РР-Электро"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0158</Code>
+    <Model>POSCENTER-02Ф</Model>
+    <Sn>xxxxxx0052xxxxxx</Sn>
+    <Manufacturer>OOO "ПОСЦЕНТР"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0159</Code>
+    <Model>АК СМАРТ-01-Ф</Model>
+    <Sn>00xxxxxx</Sn>
+    <Manufacturer>OOO "Телемаркет"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0160</Code>
+    <Model>Лимон МОБАЙЛ-Ф</Model>
+    <Manufacturer>OOO "Ойстерс"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0161</Code>
+    <Model>АТОЛ Sigma 7Ф</Model>
+    <Sn>001090xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0162</Code>
+    <Model>АТОЛ Sigma 8Ф</Model>
+    <Sn>001091xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0163</Code>
+    <Model>ПэйМоб-Ф</Model>
+    <Sn>18xxxxxx</Sn>
+    <Manufacturer>OOO "Мобильные платежные системы"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0164</Code>
+    <Model>Лимон СМАРТ-Ф</Model>
+    <Manufacturer>OOO "Ойстерс"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0165</Code>
+    <Model>Лимон БАНК-Ф</Model>
+    <Sn>19xxxxxx</Sn>
+    <Manufacturer>OOO "Ойстерс"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0166</Code>
+    <Model>СПЕКТР-Ф</Model>
+    <Manufacturer>АО Научно-производственный центр "Спектр"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0167</Code>
+    <Model>САЛЮТ-12Ф</Model>
+    <Sn>1201xxxxxx</Sn>
+    <Manufacturer>OOO "Инженерный Стапель"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0168</Code>
+    <Model>АТОЛ 1Ф</Model>
+    <Sn>001093xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0169</Code>
+    <Model>АТОЛ 27Ф</Model>
+    <Sn>001087xxxxxxxx</Sn>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0170</Code>
+    <Model>ШТРИХ-КАРТ-Ф</Model>
+    <Sn>xxxxxx0044xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0171</Code>
+    <Model>ПИКАССА-Ф</Model>
+    <Sn>xxxxxx</Sn>
+    <Manufacturer>ЗАО "СЧЕТМАШ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0172</Code>
+    <Model>POSCENTER BANK-Ф</Model>
+    <Sn>31901930xxxxxxxx</Sn>
+    <Manufacturer>OOO "Технотор"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0173</Code>
+    <Model>NEW8210-Ф</Model>
+    <Manufacturer>OOO "Контакт Дизайн"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0174</Code>
+    <Model>Тактилион-А Ф</Model>
+    <Manufacturer>OOO "НТЦ Альфа-Проект"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0175</Code>
+    <Model>ШТРИХ-СИТИ-Ф</Model>
+    <Sn>xxxxxx0051xxxxxx</Sn>
+    <Manufacturer>АО "ШТРИХ-М"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0176</Code>
+    <Model>MSPOS-D-Ф</Model>
+    <Manufacturer>OOO "НТЦ Альфа-Проект"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0177</Code>
+    <Model>CUSTOM TK302-ФБ</Model>
+    <Manufacturer>OOO "КАСТОМ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0178</Code>
+    <Model>Спутник Ф</Model>
+    <Sn>0499xxxxxx</Sn>
+    <Manufacturer>OOO "Дримкас"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0179</Code>
+    <Model>Эвотор СТ51Ф</Model>
+    <Sn>003096xxxxxxxx</Sn>
+    <Manufacturer>OOO "ЭВОТОР"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0180</Code>
+    <Model>СПАРК-130-Ф</Model>
+    <Manufacturer>ЗАО "Компьютерно-кассовые системы"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0181</Code>
+    <Model>Меркурий-105Ф</Model>
+    <Sn>23xxxxxx</Sn>
+    <Manufacturer>OOO "Инкотекс-Т"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0182</Code>
+    <Model>Эфир Pro ФС</Model>
+    <Manufacturer>OOO "Стамина"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0183</Code>
+    <Model>АТОЛ 22 v2 Ф</Model>
+    <Manufacturer>OOO "АТОЛ"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0184</Code>
+    <Model>POSCENTER BANK-01Ф</Model>
+    <Manufacturer>OOO "Технотор"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0185</Code>
+    <Model>ПРИМ 05-Ф</Model>
+    <Manufacturer>ОАО "СКБ  вычислительной техники "ИСКРА""</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0186</Code>
+    <Model>Эфир Pro ФА</Model>
+    <Manufacturer>OOO "Стамина"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0187</Code>
+    <Model>MSPOS-kiosk-Ф</Model>
+    <Manufacturer>OOO "НТЦ Альфа-Проект"</Manufacturer>
+  </Models>
+  <Models>
+    <Code>0188</Code>
+    <Model>iCASH-1F</Model>
+    <Manufacturer>OOO "АЙКЭШ"</Manufacturer>
+  </Models>
+</ArrayOfModels>

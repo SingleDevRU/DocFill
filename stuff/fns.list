@@ -1,0 +1,231 @@
+﻿<?xml version="1.0"?>
+<ArrayOfFN xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FN>
+    <Code>0001</Code>
+    <Model>РИК Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель ФН-1</Model>
+    <Manufacturer>OOO "РИК"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ ФН-1</String5>
+    <String6></String6>
+    <Prefix>87100001</Prefix>
+  </FN>
+  <FN>
+    <Code>0002</Code>
+    <Model>ИЗМЕРИТЕЛЬ Исп.3 Вер.1 Средство криптографической защиты фискальных данных "ФН-1" исполнение 3 версия 1</Model>
+    <Manufacturer>OOO "НТЦ "ИЗМЕРИТЕЛЬ"</Manufacturer>
+    <String1>СРЕДСТВО КРИПТОГРАФИ</String1>
+    <String2>ЧЕСКОЙ ЗАЩИТЫ ФИСКАЛ</String2>
+    <String3>ЬНЫХ ДАННЫХ "ФН-1" И</String3>
+    <String4>СПОЛНЕНИЕ 3 ВЕРСИЯ 1</String4>
+    <String5></String5>
+    <String6></String6>
+    <Prefix>8712000101</Prefix>
+  </FN>
+  <FN>
+    <Code>0003</Code>
+    <Model>ПРАГМАТИК Исп.3 Вер.2 Средство криптографической защиты фискальных данных "ФН-1" исполнение 3 версия 2</Model>
+    <Manufacturer>OOO "ПРАГМАТИК"</Manufacturer>
+    <String1>СРЕДСТВО КРИПТОГРАФИ</String1>
+    <String2>ЧЕСКОЙ ЗАЩИТЫ ФИСКАЛ</String2>
+    <String3>ЬНЫХ ДАННЫХ "ФН-1" И</String3>
+    <String4>СПОЛНЕНИЕ 3 ВЕРСИЯ 2</String4>
+    <String5></String5>
+    <String6></String6>
+    <Prefix>8712000100</Prefix>
+  </FN>
+  <FN>
+    <Code>0004</Code>
+    <Model>РИК Исп.2 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель "ФН-1" исполнение 2</Model>
+    <Manufacturer>OOO "РИК"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1" ИСПО</String5>
+    <String6>ЛНЕНИЕ 2</String6>
+    <Prefix>87110001</Prefix>
+  </FN>
+  <FN>
+    <Code>0005</Code>
+    <Model>АВТОМАТИКА Исп.3 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель "ФН-1.1" исполнение 3</Model>
+    <Manufacturer>АО "КОНЦЕРН "АВТОМАТИКА"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1.1" ИС</String5>
+    <String6>ПОЛНЕНИЕ 3</String6>
+    <Prefix>92860001</Prefix>
+  </FN>
+  <FN>
+    <Code>0006</Code>
+    <Model>ПРАГМАТИК Пр13-2 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель "ФН-1" исполнение Пр13-2</Model>
+    <Manufacturer>OOO "ПРАГМАТИК"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1" ИСПО</String5>
+    <String6>ЛНЕНИЕ ПР13-2</String6>
+    <Prefix>87150001</Prefix>
+  </FN>
+  <FN>
+    <Code>0007</Code>
+    <Model>ИЗМЕРИТЕЛЬ Из13-2 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель "ФН-1" исполнение Из13-2</Model>
+    <Manufacturer>OOO "НТЦ "ИЗМЕРИТЕЛЬ"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1" ИСПО</String5>
+    <String6>ЛНЕНИЕ ИЗ13-2</String6>
+    <Prefix>87160001</Prefix>
+  </FN>
+  <FN>
+    <Code>0008</Code>
+    <Model>ИНВЕНТА 5-15-2 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель "ФН-1.1" исполнение 5-15-2</Model>
+    <Manufacturer>OOO "ИНВЕНТА"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1.1" ИС</String5>
+    <String6>ПОЛНЕНИЕ 5-15-2</String6>
+    <Prefix>92820001, 92824403</Prefix>
+  </FN>
+  <FN>
+    <Code>0009</Code>
+    <Model>ЭВОТОР Эв15-2 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель «ФН-1.1» исполнение Эв15-2</Model>
+    <Manufacturer>OOO "ЭВОТОР"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1.1" ИС</String5>
+    <String6>ПОЛНЕНИЕ ЭВ15-2</String6>
+    <Prefix>92840001, 92844403</Prefix>
+  </FN>
+  <FN>
+    <Code>0010</Code>
+    <Model>ИНВЕНТА Исп.4 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель «ФН-1.1» исполнение 4</Model>
+    <Manufacturer>OOO "ИНВЕНТА"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1.1" ИС</String5>
+    <String6>ПОЛНЕНИЕ 4</String6>
+    <Prefix>92810001</Prefix>
+  </FN>
+  <FN>
+    <Code>0011</Code>
+    <Model>АВТОМАТИКА Ав15-2 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель «ФН-1.1» исполнение Ав15-2</Model>
+    <Manufacturer>АО "КОНЦЕРН «АВТОМАТИКА"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1.1" ИС</String5>
+    <String6>ПОЛНЕНИЕ АВ15-2</String6>
+    <Prefix>92804403</Prefix>
+  </FN>
+  <FN>
+    <Code>0012</Code>
+    <Model>ДРИМКАС 6-15-2 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель «ФН-1.1» исполнение 6-15-2</Model>
+    <Manufacturer>OOO "ДРИМКАС"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1.1" ИС</String5>
+    <String6>ПОЛНЕНИЕ 6-15-2</String6>
+    <Prefix>92514403</Prefix>
+  </FN>
+  <FN>
+    <Code>0013</Code>
+    <Model>ПРАГМАТИК Пр15-2 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель «ФН-1.1» исполнение Пр15-2</Model>
+    <Manufacturer>OOO "ПРАГМАТИК"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1.1" ИС</String5>
+    <String6>ПОЛНЕНИЕ ПР15-2</String6>
+    <Prefix>92890001, 92894403</Prefix>
+  </FN>
+  <FN>
+    <Code>0014</Code>
+    <Model>ИЗМЕРИТЕЛЬ Из15-2 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель «ФН-1.1» исполнение Из15-2</Model>
+    <Manufacturer>OOO "НТЦ "ИЗМЕРИТЕЛЬ"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1.1" ИС</String5>
+    <String6>ПОЛНЕНИЕ ИЗ15-2</String6>
+    <Prefix>92850001, 92854403</Prefix>
+  </FN>
+  <FN>
+    <Code>0016</Code>
+    <Model>ИНВЕНТА 5-15-1 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель «ФН-1.1» исполнение 5-15-1</Model>
+    <Manufacturer>OOO "ИНВЕНТА"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1.1" ИС</String5>
+    <String6>ПОЛНЕНИЕ 5-15-1</String6>
+    <Prefix>92880001</Prefix>
+  </FN>
+  <FN>
+    <Code>0017</Code>
+    <Model>ИНВЕНТА Исп.2 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель «ФН-1.1» исполнение 2</Model>
+    <Manufacturer>OOO "ИНВЕНТА"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1.1" ИС</String5>
+    <String6>ПОЛНЕНИЕ 2</String6>
+    <Prefix>92874403</Prefix>
+  </FN>
+  <FN>
+    <Code>0018</Code>
+    <Model>ЭВОТОР Эв36-2 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель «ФН-1.1» исполнение Эв36-2</Model>
+    <Manufacturer>OOO "ЭВОТОР"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1.1" ИС</String5>
+    <String6>ПОЛНЕНИЕ ЭВ36-2</String6>
+    <Prefix>92834403</Prefix>
+  </FN>
+  <FN>
+    <Code>0019</Code>
+    <Model>АВТОМАТИКА Ав36-2 Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель «ФН-1.1» исполнение Ав36-2</Model>
+    <Manufacturer>АО "КОНЦЕРН «АВТОМАТИКА"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1.1" ИС</String5>
+    <String6>ПОЛНЕНИЕ АВ36-2</String6>
+    <Prefix>92524403</Prefix>
+  </FN>
+  <FN>
+    <Code>0021</Code>
+    <Model>ИНВЕНТА Ин15-1М Шифровальное (криптографическое) средство защиты фискальных данных фискальный накопитель «ФН-1.1М» исполнение Ин15-1М</Model>
+    <Manufacturer>OOO "ИНВЕНТА"</Manufacturer>
+    <String1>ШИФРОВАЛЬНОЕ (КРИПТО</String1>
+    <String2>ГРАФИЧЕСКОЕ) СРЕДСТВ</String2>
+    <String3>О ЗАЩИТЫ ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ ФИСКАЛЬНЫЙ НА</String4>
+    <String5>КОПИТЕЛЬ "ФН-1.1М ИС</String5>
+    <String6>ПОЛНЕНИЕ ИН15-1М"</String6>
+    <Prefix>99604403</Prefix>
+  </FN>
+</ArrayOfFN>

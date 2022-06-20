@@ -1,0 +1,343 @@
+﻿<?xml version="1.0"?>
+<ArrayOfRegions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Regions>
+    <Code>01</Code>
+    <Name>РЕСПУБЛИКА АДЫГЕЯ</Name>
+  </Regions>
+  <Regions>
+    <Code>02</Code>
+    <Name>РЕСПУБЛИКА БАШКОРТОСТАН</Name>
+  </Regions>
+  <Regions>
+    <Code>03</Code>
+    <Name>РЕСПУБЛИКА БУРЯТИЯ</Name>
+  </Regions>
+  <Regions>
+    <Code>04</Code>
+    <Name>РЕСПУБЛИКА АЛТАЙ</Name>
+  </Regions>
+  <Regions>
+    <Code>05</Code>
+    <Name>РЕСПУБЛИКА ДАГЕСТАН</Name>
+  </Regions>
+  <Regions>
+    <Code>06</Code>
+    <Name>РЕСПУБЛИКА ИНГУШЕТИЯ</Name>
+  </Regions>
+  <Regions>
+    <Code>07</Code>
+    <Name>КАБАРДИНО-БАЛКАРСКАЯ РЕСПУБЛИКА</Name>
+  </Regions>
+  <Regions>
+    <Code>08</Code>
+    <Name>РЕСПУБЛИКА КАЛМЫКИЯ</Name>
+  </Regions>
+  <Regions>
+    <Code>09</Code>
+    <Name>КАРАЧАЕВО-ЧЕРКЕССКАЯ РЕСПУБЛИКА</Name>
+  </Regions>
+  <Regions>
+    <Code>10</Code>
+    <Name>РЕСПУБЛИКА КАРЕЛИЯ</Name>
+  </Regions>
+  <Regions>
+    <Code>11</Code>
+    <Name>РЕСПУБЛИКА КОМИ</Name>
+  </Regions>
+  <Regions>
+    <Code>12</Code>
+    <Name>РЕСПУБЛИКА МАРИЙ ЭЛ</Name>
+  </Regions>
+  <Regions>
+    <Code>13</Code>
+    <Name>РЕСПУБЛИКА МОРДОВИЯ</Name>
+  </Regions>
+  <Regions>
+    <Code>14</Code>
+    <Name>РЕСПУБЛИКА САХА (ЯКУТИЯ)</Name>
+  </Regions>
+  <Regions>
+    <Code>15</Code>
+    <Name>РЕСПУБЛИКА СЕВЕРНАЯ ОСЕТИЯ — АЛАНИЯ</Name>
+  </Regions>
+  <Regions>
+    <Code>16</Code>
+    <Name>РЕСПУБЛИКА ТАТАРСТАН</Name>
+  </Regions>
+  <Regions>
+    <Code>17</Code>
+    <Name>РЕСПУБЛИКА ТЫВА</Name>
+  </Regions>
+  <Regions>
+    <Code>18</Code>
+    <Name>УДМУРТСКАЯ РЕСПУБЛИКА</Name>
+  </Regions>
+  <Regions>
+    <Code>19</Code>
+    <Name>РЕСПУБЛИКА ХАКАСИЯ</Name>
+  </Regions>
+  <Regions>
+    <Code>20</Code>
+    <Name>ЧЕЧЕНСКАЯ РЕСПУБЛИКА</Name>
+  </Regions>
+  <Regions>
+    <Code>21</Code>
+    <Name>ЧУВАШСКАЯ РЕСПУБЛИКА</Name>
+  </Regions>
+  <Regions>
+    <Code>22</Code>
+    <Name>АЛТАЙСКИЙ КРАЙ</Name>
+  </Regions>
+  <Regions>
+    <Code>23</Code>
+    <Name>КРАСНОДАРСКИЙ КРАЙ</Name>
+  </Regions>
+  <Regions>
+    <Code>24</Code>
+    <Name>КРАСНОЯРСКИЙ КРАЙ</Name>
+  </Regions>
+  <Regions>
+    <Code>25</Code>
+    <Name>ПРИМОРСКИЙ КРАЙ</Name>
+  </Regions>
+  <Regions>
+    <Code>26</Code>
+    <Name>СТАВРОПОЛЬСКИЙ КРАЙ</Name>
+  </Regions>
+  <Regions>
+    <Code>27</Code>
+    <Name>ХАБАРОВСКИЙ КРАЙ</Name>
+  </Regions>
+  <Regions>
+    <Code>28</Code>
+    <Name>АМУРСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>29</Code>
+    <Name>АРХАНГЕЛЬСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>30</Code>
+    <Name>АСТРАХАНСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>31</Code>
+    <Name>БЕЛГОРОДСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>32</Code>
+    <Name>БРЯНСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>33</Code>
+    <Name>ВЛАДИМИРСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>34</Code>
+    <Name>ВОЛГОГРАДСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>35</Code>
+    <Name>ВОЛОГОДСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>36</Code>
+    <Name>ВОРОНЕЖСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>37</Code>
+    <Name>ИВАНОВСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>38</Code>
+    <Name>ИРКУТСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>39</Code>
+    <Name>КАЛИНИНГРАДСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>40</Code>
+    <Name>КАЛУЖСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>41</Code>
+    <Name>КАМЧАТСКИЙ КРАЙ</Name>
+  </Regions>
+  <Regions>
+    <Code>42</Code>
+    <Name>КЕМЕРОВСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>43</Code>
+    <Name>КИРОВСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>44</Code>
+    <Name>КОСТРОМСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>45</Code>
+    <Name>КУРГАНСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>46</Code>
+    <Name>КУРСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>47</Code>
+    <Name>ЛЕНИНГРАДСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>48</Code>
+    <Name>ЛИПЕЦКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>49</Code>
+    <Name>МАГАДАНСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>50</Code>
+    <Name>МОСКОВСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>51</Code>
+    <Name>МУРМАНСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>52</Code>
+    <Name>НИЖЕГОРОДСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>53</Code>
+    <Name>НОВГОРОДСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>54</Code>
+    <Name>НОВОСИБИРСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>55</Code>
+    <Name>ОМСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>56</Code>
+    <Name>ОРЕНБУРГСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>57</Code>
+    <Name>ОРЛОВСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>58</Code>
+    <Name>ПЕНЗЕНСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>59</Code>
+    <Name>ПЕРМСКИЙ КРАЙ</Name>
+  </Regions>
+  <Regions>
+    <Code>60</Code>
+    <Name>ПСКОВСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>61</Code>
+    <Name>РОСТОВСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>62</Code>
+    <Name>РЯЗАНСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>63</Code>
+    <Name>САМАРСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>64</Code>
+    <Name>САРАТОВСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>65</Code>
+    <Name>САХАЛИНСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>66</Code>
+    <Name>СВЕРДЛОВСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>67</Code>
+    <Name>СМОЛЕНСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>68</Code>
+    <Name>ТАМБОВСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>69</Code>
+    <Name>ТВЕРСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>70</Code>
+    <Name>ТОМСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>71</Code>
+    <Name>ТУЛЬСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>72</Code>
+    <Name>ТЮМЕНСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>73</Code>
+    <Name>УЛЬЯНОВСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>74</Code>
+    <Name>ЧЕЛЯБИНСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>75</Code>
+    <Name>ЗАБАЙКАЛЬСКИЙ КРАЙ</Name>
+  </Regions>
+  <Regions>
+    <Code>76</Code>
+    <Name>ЯРОСЛАВСКАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>77</Code>
+    <Name>МОСКВА</Name>
+  </Regions>
+  <Regions>
+    <Code>78</Code>
+    <Name>САНКТ-ПЕТЕРБУРГ</Name>
+  </Regions>
+  <Regions>
+    <Code>79</Code>
+    <Name>ЕВРЕЙСКАЯ АВТОНОМНАЯ ОБЛАСТЬ</Name>
+  </Regions>
+  <Regions>
+    <Code>83</Code>
+    <Name>НЕНЕЦКИЙ АВТОНОМНЫЙ ОКРУГ</Name>
+  </Regions>
+  <Regions>
+    <Code>86</Code>
+    <Name>ХАНТЫ-МАНСИЙСКИЙ АВТОНОМНЫЙ ОКРУГ - ЮГРА</Name>
+  </Regions>
+  <Regions>
+    <Code>87</Code>
+    <Name>ЧУКОТСКИЙ АВТОНОМНЫЙ ОКРУГ</Name>
+  </Regions>
+  <Regions>
+    <Code>89</Code>
+    <Name>ЯМАЛО-НЕНЕЦКИЙ АВТОНОМНЫЙ ОКРУГ</Name>
+  </Regions>
+  <Regions>
+    <Code>91</Code>
+    <Name>РЕСПУБЛИКА КРЫМ</Name>
+  </Regions>
+  <Regions>
+    <Code>92</Code>
+    <Name>СЕВАСТОПОЛЬ</Name>
+  </Regions>
+</ArrayOfRegions>
