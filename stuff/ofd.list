@@ -1,0 +1,509 @@
+﻿<?xml version="1.0"?>
+<ArrayOfOFD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <OFD>
+    <Number>1</Number>
+    <Reason>Приказ ФНС России от 31.08.2016 № ЕД-7-20/468@</Reason>
+    <Site>www.1-ofd.ru</Site>
+    <Name>1-ОФД</Name>
+    <FullName>АКЦИОНЕРНОЕ ОБЩЕСТВО "ЭНЕРГЕТИЧЕСКИЕ СИСТЕМЫ И КОММУНИКАЦИИ"</FullName>
+    <INN>7709364346</INN>
+    <String1>АКЦИОНЕРНОЕ ОБЩЕСТВО</String1>
+    <String2>"ЭНЕРГЕТИЧЕСКИЕ СИСТ</String2>
+    <String3>ЕМЫ И КОММУНИКАЦИИ"</String3>
+    <String4></String4>
+    <Config>    АО "Энергетические системы и коммуникации"
+    IP: 91.107.114.10
+    Хост: k-server.1-ofd.ru
+    Порт: 7777
+    ИНН: 7709364346
+    Проверка чеков: https://consumer.1-ofd.ru/#/landing</Config>
+    <Info>    Тестовый хост: kkm-server-test.1-ofd.ru
+    Тестовый IP: 92.53.73.60
+    Тестовый порт: 7777
+    Админка: www.1-ofd.ru
+    Техподдержка телефон: 8-800-755-0-755
+    Техподдержка e-mail: info@1-ofd.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>2</Number>
+    <Reason>Приказ ФНС России от 31.08.2016 № ЕД-7-20/468@</Reason>
+    <Site>taxcom.ru/ofd/</Site>
+    <Name>ТАКСКОМ</Name>
+    <FullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ТАКСКОМ"</FullName>
+    <INN>7704211201</INN>
+    <String1>ОБЩЕСТВО С ОГРАНИЧЕН</String1>
+    <String2>НОЙ ОТВЕТСТВЕННОСТЬЮ</String2>
+    <String3>"ТАКСКОМ"</String3>
+    <String4></String4>
+    <Config>    ООО "Такском"
+    IP: 193.0.214.11
+    Хост: f1.taxcom.ru
+    Порт: 7777
+    ИНН: 7704211201
+    Проверка чеков: https://receipt.taxcom.ru</Config>
+    <Info>    Тестовый хост: f1test.taxcom.ru
+    Тестовый IP: 193.0.214.11
+    Тестовый порт: 7778
+    Админка: lk.taxcom.ru
+    Техподдержка телефон: 8-495-730-16-19
+    Техподдержка e-mail: kassa_support@taxcom.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>3</Number>
+    <Reason>Приказ ФНС России от 31.08.2016 № ЕД-7-20/468@</Reason>
+    <Site>www.platformaofd.ru</Site>
+    <Name>ЭВОТОР ОФД</Name>
+    <FullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЭВОТОР ОФД"</FullName>
+    <INN>9715260691</INN>
+    <String1>ОБЩЕСТВО С ОГРАНИЧЕН</String1>
+    <String2>НОЙ ОТВЕТСТВЕННОСТЬЮ</String2>
+    <String3>"ЭВОТОР ОФД"</String3>
+    <String4></String4>
+    <Config>    ООО "Эвотор ОФД"
+    IP: 185.170.204.91
+    Хост: ofdp.platformaofd.ru
+    Порт: 21101
+    ИНН: 9715260691
+    Проверка чеков: https://lk.platformaofd.ru/web/noauth/cheque/search</Config>
+    <Info>    Тестовый хост: ofdt.platformaofd.ru
+    Тестовый IP: 185.170.204.85
+    Тестовый порт: 19081
+    Админка: lk.platformaofd.ru
+    Техподдержка телефон: 8-800-100-54-00
+    Техподдержка e-mail: info@platformaofd.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>4</Number>
+    <Reason>Приказ ФНС России от 31.08.2016 № ЕД-7-20/468@</Reason>
+    <Site>www.ofd-ya.ru</Site>
+    <Name>ЯРУС</Name>
+    <FullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЯРУС"</FullName>
+    <INN>7728699517</INN>
+    <String1>ОБЩЕСТВО С ОГРАНИЧЕН</String1>
+    <String2>НОЙ ОТВЕТСТВЕННОСТЬЮ</String2>
+    <String3>"ЯРУС"</String3>
+    <String4></String4>
+    <Config>    ООО "Ярус"
+    IP: 91.107.67.212
+    Хост: connect.ofd-ya.ru
+    Порт: 7779
+    ИНН: 7728699517
+    Проверка чеков: https://ofd-ya.ru/check</Config>
+    <Info>    Тестовый хост: test.ofd-ya.ru
+    Тестовый IP: 91.107.67.212
+    Тестовый порт: 7790
+    Админка: lk.ofd-ya.ru
+    Техподдержка телефон: 8-800-350-39-69
+    Техподдержка e-mail: help@ofd-ya.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>5</Number>
+    <Reason>Приказ ФНС России от 18.10.2016 № ЕД-7-20/565@</Reason>
+    <Site>www.peterofd.ru</Site>
+    <Name>ПЕТЕР-СЕРВИС</Name>
+    <FullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ПЕТЕР-СЕРВИС СПЕЦТЕХНОЛОГИИ"</FullName>
+    <INN>7841465198</INN>
+    <String1>ОБЩЕСТВО С ОГРАНИЧЕН</String1>
+    <String2>НОЙ ОТВЕТСТВЕННОСТЬЮ</String2>
+    <String3>"ПЕТЕР-СЕРВИС СПЕЦТЕ</String3>
+    <String4>ХНОЛОГИИ"</String4>
+    <Config>    ООО "ПЕТЕР-СЕРВИС"
+    IP: 185.15.172.18
+    Хост: gate.ofd.ru
+    Порт: 4000
+    ИНН: 7841465198
+    Проверка чеков: https://check.ofd.ru</Config>
+    <Info>    Тестовый хост: testgate.ofd.ru
+    Тестовый IP: 46.148.200.215
+    Тестовый порт: 4001
+    Админка: https://lk.ofd.ru
+    Техподдержка телефон: 8-800-550-99-11
+    Техподдержка e-mail: ofd@ofd.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>6</Number>
+    <Reason>Приказ ФНС России от 10.04.2017 № ЕД-6-20/20@</Reason>
+    <Site>ofd.yandex.ru</Site>
+    <Name>ЯНДЕКС.ОФД</Name>
+    <FullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЯНДЕКС.ОФД"</FullName>
+    <INN>7704358518</INN>
+    <String1>ОБЩЕСТВО С ОГРАНИЧЕН</String1>
+    <String2>НОЙ ОТВЕТСТВЕННОСТЬЮ</String2>
+    <String3>"ЯНДЕКС.ОФД"</String3>
+    <String4></String4>
+    <Config>    ООО "Яндекс.ОФД"
+    IP: 185.32.186.252
+    Хост: kkt.ofd.yandex.net
+    Порт: 12345
+    ИНН: 7704358518
+    Проверка чеков: https://ofd.yandex.ru/check</Config>
+    <Info>    Тестовый хост: test.kkt.ofd.yandex.net
+    Тестовый IP: 213.180.204.116
+    Тестовый порт: 12345
+    Админка: https://ofd.yandex.ru/lk
+    Техподдержка телефон: 8-495-230-05-41
+    Техподдержка e-mail: https://yandex.ru/support/ofd-client/troubleshooting/joining.html</Info>
+  </OFD>
+  <OFD>
+    <Number>7</Number>
+    <Reason>Приказ ФНС России от 14.04.2017 № ЕД-7-20/312@</Reason>
+    <Site>garantexpress.ru</Site>
+    <Name>ЭЛЕКТРОННЫЙ ЭКСПРЕСС</Name>
+    <FullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЭЛЕКТРОННЫЙ ЭКСПРЕСС"</FullName>
+    <INN>7729633131</INN>
+    <String1>ОБЩЕСТВО С ОГРАНИЧЕН</String1>
+    <String2>НОЙ ОТВЕТСТВЕННОСТЬЮ</String2>
+    <String3>"ЭЛЕКТРОННЫЙ ЭКСПРЕС</String3>
+    <String4>С"</String4>
+    <Config>    ООО "Электронный экспресс"
+    IP: 141.101.203.186
+    Хост: ofd.garantexpress.ru
+    Порт: 30801
+    ИНН: 7729633131
+    Проверка чеков: https://ofd.garantexpress.ru/eKKT/Check</Config>
+    <Info>    Тестовый хост: н/д
+    Тестовый IP: н/д
+    Тестовый порт: н/д
+    Админка: https://ofd.garantexpress.ru/eKKT
+    Техподдержка телефон: 8-800-333-88-88
+    Техподдержка e-mail: ee@garant.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>8</Number>
+    <Reason>Приказ ФНС России от 14.04.2017 № ЕД-7-20/313@</Reason>
+    <Site>ofd.astralnalog.ru</Site>
+    <Name>КАЛУГА АСТРАЛ</Name>
+    <FullName>ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "КАЛУГА АСТРАЛ"</FullName>
+    <INN>4029017981</INN>
+    <String1>ЗАКРЫТОЕ АКЦИОНЕРНОЕ</String1>
+    <String2>ОБЩЕСТВО "КАЛУГА АСТ</String2>
+    <String3>РАЛ"</String3>
+    <String4></String4>
+    <Config>    ЗАО "Калуга Астрал"
+    IP: 91.239.5.68
+    Хост: ofd.astralnalog.ru
+    Порт: 7777
+    ИНН: 4029017981
+    Проверка чеков: https://ofd.astralnalog.ru/#section-check</Config>
+    <Info>    Тестовый хост: demo.ofd.astralnalog.ru
+    Тестовый IP: 91.239.5.75
+    Тестовый порт: 7777
+    Админка: https://ofd.astralnalog.ru/lk
+    Техподдержка телефон: 8-800-700-80-86
+    Техподдержка e-mail: OFD@astralnalog.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>9</Number>
+    <Reason>Приказ ФНС России от 14.04.2017 № ЕД-7-20/314@</Reason>
+    <Site>sbis.ru</Site>
+    <Name>ТЕНЗОР (СБИС)</Name>
+    <FullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "КОМПАНИЯ "ТЕНЗОР"</FullName>
+    <INN>7605016030</INN>
+    <String1>ОБЩЕСТВО С ОГРАНИЧЕН</String1>
+    <String2>НОЙ ОТВЕТСТВЕННОСТЬЮ</String2>
+    <String3>"КОМПАНИЯ "ТЕНЗОР"</String3>
+    <String4></String4>
+    <Config>    ООО "Компания "Тензор"
+    IP: 91.213.144.29
+    Хост: kkt.sbis.ru
+    Порт: 7777
+    ИНН: 7605016030
+    Проверка чеков: https://sbis.ru/ofd/check</Config>
+    <Info>    Тестовый хост: н/д
+    Тестовый IP: н/д
+    Тестовый порт: н/д
+    Админка: н/д
+    Техподдержка телефон: https://sbis.ru/support
+    Техподдержка e-mail: н/д</Info>
+  </OFD>
+  <OFD>
+    <Number>10</Number>
+    <Reason>Приказ ФНС России от 12.05.2017 № АС-7-20/441@</Reason>
+    <Cancellation>Приказ от 23.09.2020 № АБ-7-20/688@</Cancellation>
+    <Site>esphere.ru</Site>
+    <Name>КОРУС КОНСАЛТИНГ</Name>
+    <FullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "КОРУС КОНСАЛТИНГ СНГ"</FullName>
+    <INN>7801392271</INN>
+    <String1>ОБЩЕСТВО С ОГРАНИЧЕН</String1>
+    <String2>НОЙ ОТВЕТСТВЕННОСТЬЮ</String2>
+    <String3>"КОРУС КОНСАЛТИНГ СН</String3>
+    <String4>Г"</String4>
+    <Config>    ООО "КОРУС Консалтинг СНГ"
+    IP: 92.38.2.202
+    Хост: н/д
+    Порт: 7001
+    ИНН: 7801392271
+    Проверка чеков: https://ofd.esphere.ru/CheckWebApp/fiscaldocsearch.zul</Config>
+    <Info>    Тестовый хост: н/д
+    Тестовый IP: н/д
+    Тестовый порт: н/д
+    Админка: https://ofd.esphere.ru/CheckWebApp/login.zul
+    Техподдержка телефон: 8-800-100-88-12
+    Техподдержка e-mail: help@esphere.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>11</Number>
+    <Reason>Приказ ФНС России от 29.06.2017 № ЕД-7-20/525@</Reason>
+    <Site>kontur.ru</Site>
+    <Name>КОНТУР</Name>
+    <FullName>АКЦИОНЕРНОЕ ОБЩЕСТВО "ПРОИЗВОДСТВЕННАЯ ФИРМА "СКБ КОНТУР"</FullName>
+    <INN>6663003127</INN>
+    <String1>АКЦИОНЕРНОЕ ОБЩЕСТВО</String1>
+    <String2>"ПРОИЗВОДСТВЕННАЯ ФИ</String2>
+    <String3>РМА "СКБ КОНТУР"</String3>
+    <String4></String4>
+    <Config>    АО "ПФ "СКБ Контур"
+    IP: 46.17.204.250
+    Хост: ofd.kontur.ru
+    Порт: 7777
+    ИНН: 6663003127
+    Проверка чеков: https://cash.kontur.ru/CashReceipt/Search</Config>
+    <Info>    Тестовый хост: н/д
+    Тестовый IP: н/д
+    Тестовый порт: н/д
+    Админка: https://auth.kontur.ru/login?customize=ofd
+    Техподдержка телефон: 8-800-500-50-80
+    Техподдержка e-mail: https://kontur.ru/feedback</Info>
+  </OFD>
+  <OFD>
+    <Number>12</Number>
+    <Reason>Приказ ФНС России от 11.07.2017 № ЕД-7-20/543@</Reason>
+    <Site>ofd-magnit.ru</Site>
+    <Name>ТАНДЕР</Name>
+    <FullName>АКЦИОНЕРНОЕ ОБЩЕСТВО "ТАНДЕР"</FullName>
+    <INN>2310031475</INN>
+    <String1>АКЦИОНЕРНОЕ ОБЩЕСТВО</String1>
+    <String2>"ТАНДЕР"</String2>
+    <String3></String3>
+    <String4></String4>
+    <Config>    АО "Тандер"
+    IP: 193.19.169.36
+    Хост: kkt.ofd-magnit.ru
+    Порт: 7001
+    ИНН: 2310031475
+    Проверка чеков: https://check.ofd-magnit.ru/CheckWebApp/fiscaldocsearch.zul</Config>
+    <Info>    Тестовый хост: kkttst.ofd-magnit.ru
+    Тестовый IP: 193.19.171.209
+    Тестовый порт: 7002
+    Админка: https://lk.ofd-magnit.ru/CheckWebApp/login.zul
+    Техподдержка телефон: 8-861-210-48-70
+    Техподдержка e-mail: ofd@magnit.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>13</Number>
+    <Reason>Приказ ФНС России от 12.09.2017 № ЕД-7-20/720@</Reason>
+    <Site>ofd-initpro.ru</Site>
+    <Name>ИНИТПРО</Name>
+    <FullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ УДОСТОВЕРЯЮЩИЙ ЦЕНТР "ИНИТПРО"</FullName>
+    <INN>5902034504</INN>
+    <String1>ОБЩЕСТВО С ОГРАНИЧЕН</String1>
+    <String2>НОЙ ОТВЕТСТВЕННОСТЬЮ</String2>
+    <String3>УДОСТОВЕРЯЮЩИЙ ЦЕНТР</String3>
+    <String4>"ИНИТПРО"</String4>
+    <Config>    ООО УЦ "ИнитПро"
+    IP: 84.201.162.163
+    Хост: kkt.ofd-initpro.ru
+    Порт: 9999
+    ИНН: 5902034504
+    Проверка чеков: https://ofd-initpro.ru/check-bill</Config>
+    <Info>    Тестовый хост: test.ofd-initpro.ru
+    Тестовый IP: н/д
+    Тестовый порт: 5555
+    Админка: https://ofd-initpro.ru/lk
+    Техподдержка телефон: 8-800-511-73-30
+    Техподдержка e-mail: info@ofd-initpro.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>14</Number>
+    <Reason>Приказ ФНС России от 12.09.2017 № ЕД-7-20/721@</Reason>
+    <Site>e-ofd.ru</Site>
+    <Name>ГРУППА ЭЛЕМЕНТ</Name>
+    <FullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ГРУППА ЭЛЕМЕНТ"</FullName>
+    <INN>7729642175</INN>
+    <String1>ОБЩЕСТВО С ОГРАНИЧЕН</String1>
+    <String2>НОЙ ОТВЕТСТВЕННОСТЬЮ</String2>
+    <String3>"ГРУППА ЭЛЕМЕНТ"</String3>
+    <String4></String4>
+    <Config>    ООО "Группа Элемент"
+    IP: 176.122.30.30
+    Хост: kkt.e-ofd.ru
+    Порт: 7777
+    ИНН: 7729642175
+    Проверка чеков: http://e-ofd.ru/check</Config>
+    <Info>    Тестовый хост: н/д
+    Тестовый IP: н/д
+    Тестовый порт: н/д
+    Админка: https://e-ofd.ru/lk/login
+    Техподдержка телефон: 8-495-215-58-97
+    Техподдержка e-mail: support@e-ofd.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>15</Number>
+    <Reason>Приказ ФНС России от 06.12.2017 № ЕД-7-20/1023@</Reason>
+    <Site>ofd.nvg.ru</Site>
+    <Name>ЭНВИЖН ГРУП</Name>
+    <FullName>АКЦИОНЕРНОЕ ОБЩЕСТВО "ЭНВИЖН ГРУП"</FullName>
+    <INN>7703282175</INN>
+    <String1>АКЦИОНЕРНОЕ ОБЩЕСТВО</String1>
+    <String2>"ЭНВИЖН ГРУП"</String2>
+    <String3></String3>
+    <String4></String4>
+    <Config>    АО "Энвижн Груп"
+    IP: 213.87.202.41
+    Хост: ofd.nvg.ru
+    Порт: 21101
+    ИНН: 7703282175
+    Проверка чеков: http://ofd.nvg.ru/receipt</Config>
+    <Info>    Тестовый хост: н/д
+    Тестовый IP: н/д
+    Тестовый порт: н/д
+    Админка: https://b2b.mts.ru/login
+    Техподдержка телефон: 8-800-250-93-82
+    Техподдержка e-mail: ofdsupport@nvg.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>16</Number>
+    <Reason>Приказ ФНС России от 26.12.2017 № ЕД-7-20/1091@</Reason>
+    <Site>ofd.beeline.ru</Site>
+    <Name>БИЛАЙН</Name>
+    <FullName>ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ВЫМПЕЛ-КОММУНИКАЦИИ"</FullName>
+    <INN>7713076301</INN>
+    <String1>ПУБЛИЧНОЕ АКЦИОНЕРНО</String1>
+    <String2>Е ОБЩЕСТВО "ВЫМПЕЛ-К</String2>
+    <String3>ОММУНИКАЦИИ"</String3>
+    <String4></String4>
+    <Config>    ПАО "Вымпел-Коммуникации"
+    IP: 217.118.87.210
+    Хост: ofd.beeline.ru
+    Порт: 7765
+    ИНН: 7713076301
+    Проверка чеков: http://ofd.beeline.ru:81/check-order</Config>
+    <Info>    Тестовый хост: н/д
+    Тестовый IP: н/д
+    Тестовый порт: н/д
+    Админка: https://ofd.beeline.ru/login
+    Техподдержка телефон: 8-800-700-88-00
+    Техподдержка e-mail: services@beeline.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>17</Number>
+    <Reason>Приказ ФНС России от 12.02.2018 № ЕД-7-20/86@</Reason>
+    <Cancellation>Приказ от 17.03.2021 № АБ-7-20/194@</Cancellation>
+    <Site>multicarta.ru</Site>
+    <Name>МУЛЬТИКАРТА</Name>
+    <FullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "МУЛЬТИКАРТА"</FullName>
+    <INN>7710007966</INN>
+    <String1>ОБЩЕСТВО С ОГРАНИЧЕН</String1>
+    <String2>НОЙ ОТВЕТСТВЕННОСТЬЮ</String2>
+    <String3>"МУЛЬТИКАРТА"</String3>
+    <String4></String4>
+    <Config>    ООО "МультиКарта"
+    IP: 91.198.98.97
+    Хост: ofd.multicarta.ru
+    Порт: 21101
+    ИНН: 7710007966
+    Проверка чеков: https://ofdcheck.multicarta.ru</Config>
+    <Info>    Тестовый хост: н/д
+    Тестовый IP: н/д
+    Тестовый порт: н/д
+    Админка: https://ofdlk.multicarta.ru
+    Техподдержка телефон: 8-495-784-60-55
+    Техподдержка e-mail: ofd@multicarta.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>18</Number>
+    <Reason>Приказ ФНС России от 05.04.2018 № АС-7-20/193@</Reason>
+    <Site>ofd.dreamkas.ru</Site>
+    <Name>ДРИМКАС</Name>
+    <FullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ДРИМКАС"</FullName>
+    <INN>7802870820</INN>
+    <String1>ОБЩЕСТВО С ОГРАНИЧЕН</String1>
+    <String2>НОЙ ОТВЕТСТВЕННОСТЬЮ</String2>
+    <String3>"ДРИМКАС"</String3>
+    <String4></String4>
+    <Config>    ООО "Дримкас"
+    IP: 185.241.176.4
+    Хост: ofd.dreamkas.ru
+    Порт: 21101
+    ИНН: 7802870820
+    Проверка чеков: https://ofd.dreamkas.ru/check</Config>
+    <Info>    Тестовый хост: н/д
+    Тестовый IP: 95.213.181.203
+    Тестовый порт: 21101
+    Админка: https://kabinet.dreamkas.ru/app/#!/login
+    Техподдержка телефон: 8-800-500-61-24
+    Техподдержка e-mail: https://help.dreamkas.ru/hc/ru/requests/new</Info>
+  </OFD>
+  <OFD>
+    <Number>19</Number>
+    <Reason>Приказ ФНС России от 11.07.2018 № ЕД-7-20/443@</Reason>
+    <Site>konturntt.ru</Site>
+    <Name>КОНТУР НТТ</Name>
+    <FullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "КОНТУР НТТ"</FullName>
+    <INN>6658497833</INN>
+    <String1>ОБЩЕСТВО С ОГРАНИЧЕН</String1>
+    <String2>НОЙ ОТВЕТСТВЕННОСТЬЮ</String2>
+    <String3>"КОНТУР НТТ"</String3>
+    <String4></String4>
+    <Config>    ООО "Контур НТТ"
+    IP: 46.17.204.250
+    Хост: ofd.kontur.ru
+    Порт: 7777
+    ИНН: 6658497833
+    Проверка чеков: https://cash-ntt.kontur.ru/CashReceipt/Search</Config>
+    <Info>    Тестовый хост: н/д
+    Тестовый IP: н/д
+    Тестовый порт: н/д
+    Админка: https://auth.kontur.ru/login?customize=ofd
+    Техподдержка телефон: 8-800-500-67-30
+    Техподдержка e-mail: ofd@kontur.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>20</Number>
+    <Reason>Приказ ФНС России от 26.12.2018 № ЕД-7-20/843@</Reason>
+    <Site>ofd-online.ru</Site>
+    <Name>ОФД ОНЛАЙН</Name>
+    <FullName>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ОПЕРАТОР ФИСКАЛЬНЫХ ДАННЫХ "ОНЛАЙН"</FullName>
+    <INN>6686089392</INN>
+    <String1>ОБЩЕСТВО С ОГРАНИЧЕН</String1>
+    <String2>НОЙ ОТВЕТСТВЕННОСТЬЮ</String2>
+    <String3>"ОПЕРАТОР ФИСКАЛЬНЫХ</String3>
+    <String4>ДАННЫХ "ОНЛАЙН"</String4>
+    <Config>    ООО "ОФД "Онлайн"
+    IP: 217.199.242.194
+    Хост: api.ofd-online.ru
+    Порт: 3105
+    ИНН: 6686089392
+    Проверка чеков: https://api.ofd-online.ru/docview/</Config>
+    <Info>    Тестовый хост: н/д
+    Тестовый IP: н/д
+    Тестовый порт: н/д
+    Админка: https://api.ofd-online.ru/backoffice/login.xhtml
+    Техподдержка телефон: 8-800-700-72-36
+    Техподдержка e-mail: info@ofd-online.ru</Info>
+  </OFD>
+  <OFD>
+    <Number>21</Number>
+    <Reason>Приказ ФНС России от 22.03.2019 № ЕД-7-20/150@</Reason>
+    <Site>ofd.informcenter.ru</Site>
+    <Name>ИНФОРМАЦИОННЫЙ ЦЕНТР</Name>
+    <FullName>АКЦИОНЕРНОЕ ОБЩЕСТВО "ИНФОРМАЦИОННЫЙ ЦЕНТР"</FullName>
+    <INN>7701553038</INN>
+    <String1>АКЦИОНЕРНОЕ ОБЩЕСТВО</String1>
+    <String2>"ИНФОРМАЦИОННЫЙ</String2>
+    <String3>ЦЕНТР"</String3>
+    <String4></String4>
+    <Config>    АО "Информационный центр"
+    IP: н/д
+    Хост: kkt.infc.ru
+    Порт: 21101
+    ИНН: 7701553038
+    Проверка чеков: https://infc.ru/check_search/</Config>
+    <Info>    Тестовый хост: н/д
+    Тестовый IP: н/д
+    Тестовый порт: н/д
+    Админка: https://lk.infc.ru/login
+    Техподдержка телефон: 8-800-302-97-20
+    Техподдержка e-mail: support@infc.ru</Info>
+  </OFD>
+</ArrayOfOFD>
