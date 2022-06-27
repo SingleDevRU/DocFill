@@ -2,8 +2,9 @@ from kivymd.uix.floatlayout import MDFloatLayout
 from kivymd.app import MDApp
 from kivymd.uix.tab import MDTabsBase
 from kivy.uix.screenmanager import Screen, ScreenManager
-from kivymd.uix.menu import MDDropdownMenu
 from kivymd.uix.picker import MDDatePicker
+from kivymd.uix.textfield import MDTextFieldRect
+from kivymd.uix.menu import MDDropdownMenu
 
 import rq
 import dw
@@ -14,6 +15,10 @@ def AddSymbol(string, value):
         string += " "
 
     return string
+
+
+class MenuDock(MDDropdownMenu):
+    pass
 
 
 class OFD_and_DATA(MDFloatLayout, MDTabsBase):
@@ -32,18 +37,32 @@ class Primary(MDFloatLayout, MDTabsBase):
     pass
 
 
+class MyInput(MDTextFieldRect):
+    max_len = 0
+
+    def insert_text(self, substring, from_undo=False):
+        if len(self.text) == self.max_len > 0:
+            substring = ""
+        MDTextFieldRect.insert_text(self, substring, from_undo)
+
+
 class CurrentKKT(Screen):
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.date = MDDatePicker()
+
     def on_save(self, instance, value, date_range):
         date = str(value).split("-")
         monthlist = ("января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября",
                      "октября", "ноября", "декабря")
         self.ids.Date.text = date[2] + " " + monthlist[int(date[1]) - 1] + " " + date[0]
 
+        self.date.dismiss()
+
     def show_date_picker(self):
-        date = MDDatePicker()
-        date.elem = self.ids.Date.text
-        date.bind(on_save=self.on_save)
-        date.open()
+        self.date.elem = self.ids.Date.text
+        self.date.bind(on_save=self.on_save)
+        self.date.open()
 
     def RegN(self):
         self.manager.get_screen("Doc").ids.curkkt.text = self.ids.reg.text + "/" + self.ids.Date.text
@@ -51,6 +70,29 @@ class CurrentKKT(Screen):
 
 
 class DocFill(Screen):
+
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.DockMenu = MDDropdownMenu()
+        self.UsersMenu = MDDropdownMenu()
+        self.MenuKKT = MDDropdownMenu()
+        self.MenuFN = MDDropdownMenu()
+        self.MenuOFD = MDDropdownMenu()
+        self.MenuRegion = MDDropdownMenu()
+        self.date = MDDatePicker()
+
+    def ULActive(self):
+        self.ids.inn.max_len = 10
+        self.ids.ogrn.max_len = 13
+        self.ids.kpp.readonly = False
+        self.ids.kpp.background_color = MDTextFieldRect().background_color
+
+    def FLActive(self):
+        self.ids.inn.max_len = 12
+        self.ids.ogrn.max_len = 15
+        self.ids.kpp.readonly = True
+        self.ids.kpp.background_color = 0, 0, 0, .4
+
     def request(self, inn):
         info = rq.EgrulRq(inn)
         if info:
@@ -76,17 +118,16 @@ class DocFill(Screen):
             {
                 "text": f'{i}',
                 "viewclass": "OneLineListItem",
-                "on_press": lambda x=f'{i}': self.MenuDock_callback(x)
+                "on_release": lambda x=f'{i}': self.MenuDock_callback(x)
             } for i in items
         ]
-        menu = MDDropdownMenu(
-            caller=self.ids.DockType,
-            items=menu_items,
-            width_mult=2.69,
-            max_height=150
 
-        )
-        menu.open()
+        self.DockMenu.caller = self.ids.DockType
+        self.DockMenu.items = menu_items
+        self.DockMenu.width_mult = 2.69
+        self.DockMenu.max_height = 150
+
+        self.DockMenu.open()
 
     def UserMenu(self):
         items = ["Пользователь", "Представитель"]
@@ -94,17 +135,15 @@ class DocFill(Screen):
             {
                 "text": f'{i}',
                 "viewclass": "OneLineListItem",
-                "on_press": lambda x=f'{i}': self.MenuUser_callback(x)
+                "on_release": lambda x=f'{i}': self.MenuUser_callback(x)
             } for i in items
         ]
-        menu = MDDropdownMenu(
-            caller=self.ids.User,
-            items=menu_items,
-            width_mult=2.5,
-            max_height=100,
+        self.UsersMenu.caller = self.ids.User
+        self.UsersMenu.items = menu_items
+        self.UsersMenu.width_mult = 2.5
+        self.UsersMenu.max_height = 100
 
-        )
-        menu.open()
+        self.UsersMenu.open()
 
     def KKTMenu(self):
         items = dw.GetKKT()
@@ -112,19 +151,17 @@ class DocFill(Screen):
             {
                 "text": f'{i}',
                 "viewclass": "OneLineListItem",
-                "on_press": lambda x=f'{i}': self.KKTMenu_callback(x)
+                "on_release": lambda x=f'{i}': self.KKTMenu_callback(x)
             } for i in items if self.ids.KKT.text.lower() in i.lower()
         ]
-        menu = MDDropdownMenu(
-            caller=self.ids.KKT,
-            items=menu_items,
-            width_mult=4,
-            max_height=300,
-            position="bottom",
-            ver_growth="down"
+        self.MenuKKT.caller = self.ids.KKT
+        self.MenuKKT.items = menu_items
+        self.MenuKKT.width_mult = 4
+        self.MenuKKT.max_height = 300
+        self.MenuKKT.position = "bottom"
+        self.MenuKKT.ver_growth = "down"
 
-        )
-        menu.open()
+        self.MenuKKT.open()
 
     def FNMenu(self):
         items = dw.GetFN()
@@ -135,16 +172,14 @@ class DocFill(Screen):
                 "on_press": lambda x=f'{i}': self.FNMenu_callback(x)
             } for i in items.keys() if self.ids.FN.text.lower() in str(i).lower()
         ]
-        menu = MDDropdownMenu(
-            caller=self.ids.FN,
-            items=menu_items,
-            width_mult=100,
-            max_height=300,
-            position="bottom",
-            ver_growth="down"
+        self.MenuFN.caller = self.ids.FN
+        self.MenuFN.items = menu_items
+        self.MenuFN.width_mult = 100
+        self.MenuFN.max_height = 300
+        self.MenuFN.position = "bottom"
+        self.MenuFN.ver_growth = "down"
 
-        )
-        menu.open()
+        self.MenuFN.open()
 
     def OFDMenu(self):
         items = dw.GetOFD()
@@ -155,16 +190,14 @@ class DocFill(Screen):
                 "on_press": lambda x=f'{i}': self.OFDMenu_callback(x)
             } for i in items.keys() if self.ids.OFD.text.lower() in str(i).lower()
         ]
-        menu = MDDropdownMenu(
-            caller=self.ids.OFD,
-            items=menu_items,
-            width_mult=100,
-            max_height=300,
-            position="bottom",
-            ver_growth="down"
+        self.MenuOFD.caller = self.ids.OFD
+        self.MenuOFD.items = menu_items
+        self.MenuOFD.width_mult = 100
+        self.MenuOFD.max_height = 300
+        self.MenuOFD.position = "bottom"
+        self.MenuOFD.ver_growth = "down"
 
-        )
-        menu.open()
+        self.MenuOFD.open()
 
     def RegionMenu(self):
         items = dw.GetRegions()
@@ -175,16 +208,14 @@ class DocFill(Screen):
                 "on_press": lambda x=f'{i}': self.RegionMenu_callback(x)
             } for i in items if self.ids.region.text.lower() in str(i).lower()
         ]
-        menu = MDDropdownMenu(
-            caller=self.ids.region,
-            items=menu_items,
-            width_mult=100,
-            max_height=300,
-            position="bottom",
-            ver_growth="down"
+        self.MenuRegion.caller = self.ids.region
+        self.MenuRegion.items = menu_items
+        self.MenuRegion.width_mult = 100
+        self.MenuRegion.max_height = 300
+        self.MenuRegion.position = "bottom"
+        self.MenuRegion.ver_growth = "down"
 
-        )
-        menu.open()
+        self.MenuRegion.open()
 
     def OFDMenu_callback(self, text):
         items = dw.GetOFD()
@@ -195,8 +226,12 @@ class DocFill(Screen):
         self.ids.ofdn4.text = items[text][0][3] if items[text][0][3] is not None else ""
         self.ids.ofdinn.text = items[text][1] if items[text][1] is not None else ""
 
+        self.MenuOFD.dismiss()
+
     def RegionMenu_callback(self, text):
         self.ids.region.text = text
+
+        self.MenuRegion.dismiss()
 
     def FNMenu_callback(self, text):
         items = dw.GetFN()
@@ -208,28 +243,34 @@ class DocFill(Screen):
         self.ids.fn5.text = items[text][4] if items[text][4] is not None else ""
         self.ids.fn6.text = items[text][5] if items[text][5] is not None else ""
 
+        self.MenuFN.dismiss()
+
     def KKTMenu_callback(self, text):
         self.ids.KKT.text = text
 
+        self.MenuKKT.dismiss()
+
     def MenuUser_callback(self, text):
         self.ids.User.text = text
+        self.UsersMenu.dismiss()
 
     def MenuDock_callback(self, text):
         self.ids.DockType.text = text
         if text == "Перерегистрация":
             self.manager.current = "KKT"
+        self.DockMenu.dismiss()
 
     def on_save(self, instance, value, date_range):
         date = str(value).split("-")
         monthlist = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября",
                      "октября", "ноября", "декабря"]
         self.ids.Date.text = date[2] + " " + monthlist[int(date[1]) - 1] + " " + date[0]
+        self.date.dismiss()
 
     def show_date_picker(self):
-        date = MDDatePicker()
-        date.elem = self.ids.Date.text
-        date.bind(on_save=self.on_save)
-        date.open()
+        self.date.elem = self.ids.Date.text
+        self.date.bind(on_save=self.on_save)
+        self.date.open()
 
     def GetPostIndex(self):
         if self.ids.district.text == "":

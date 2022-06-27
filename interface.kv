@@ -36,7 +36,7 @@
                 size_hint_x: None
                 width: 150
                 pos_hint: {"center_x": .3, "center_y": .94}
-                on_focus: root.MenuDock()
+                on_focus: if self.focus: root.MenuDock()
 
             MDLabel:
                 text: "Изменение адреса/места установки"
@@ -138,6 +138,7 @@
 
             MDCheckbox:
                 id: TG1
+                on_active: root.FLActive()
                 active: True
                 group: "group"
                 size: dp(30), dp(30)
@@ -151,6 +152,7 @@
 
             MDCheckbox:
                 id: TG2
+                on_active: root.ULActive()
                 group: "group"
                 size: dp(30), dp(30)
                 size_hint: None, None
@@ -161,7 +163,9 @@
                 pos_hint: {"center_x": .50, "center_y": .80}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
+                max_len: 12
+                input_filter: "int"
                 id: inn
                 multiline: False
                 size_hint_y: None
@@ -180,7 +184,9 @@
                 pos_hint: {"center_x": .50, "center_y": .69}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
+                max_len: 15
+                input_filter: "int"
                 id: ogrn
                 multiline: False
                 size_hint_y: None
@@ -194,8 +200,12 @@
                 pos_hint: {"center_x": .50, "center_y": .59}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: kpp
+                input_filter: "int"
+                max_len: 9
+                readonly: True
+                background_color: 0, 0, 0, .4
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -208,8 +218,9 @@
                 pos_hint: {"center_x": .87, "center_y": .69}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: name1
+                max_len: 40
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -217,8 +228,9 @@
                 width: 400
                 pos_hint: {"center_x": .5, "center_y": .64}
 
-            MDTextFieldRect:
+            MyInput:
                 id: name2
+                max_len: 40
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -226,8 +238,9 @@
                 width: 400
                 pos_hint: {"center_x": .5, "center_y": .59}
 
-            MDTextFieldRect:
+            MyInput:
                 id: name3
+                max_len: 40
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -235,8 +248,9 @@
                 width: 400
                 pos_hint: {"center_x": .5, "center_y": .54}
 
-            MDTextFieldRect:
+            MyInput:
                 id: name4
+                max_len: 40
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -254,15 +268,16 @@
                 size_hint_x: None
                 width: 150
                 pos_hint: {"center_x": .1, "center_y": .45}
-                on_focus: root.UserMenu()
+                on_focus: if self.focus: root.UserMenu()
 
             MDLabel:
                 text: "ФИО пользователя/представителя"
                 pos_hint: {"center_x": .60, "center_y": .40}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: f
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -270,8 +285,9 @@
                 width: 300
                 pos_hint: {"center_x": .26, "center_y": .35}
 
-            MDTextFieldRect:
+            MyInput:
                 id: i
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -279,8 +295,9 @@
                 width: 300
                 pos_hint: {"center_x": .26, "center_y": .29}
 
-            MDTextFieldRect:
+            MyInput:
                 id: o
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -293,8 +310,9 @@
                 pos_hint: {"center_x": 1, "center_y": .40}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: d1
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -302,8 +320,9 @@
                 width: 300
                 pos_hint: {"center_x": .7, "center_y": .35}
 
-            MDTextFieldRect:
+            MyInput:
                 id: d2
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -311,8 +330,9 @@
                 width: 300
                 pos_hint: {"center_x": .7, "center_y": .29}
 
-            MDTextFieldRect:
+            MyInput:
                 id: d3
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -333,15 +353,17 @@
                 size_hint_x: None
                 width: 200
                 pos_hint: {"center_x": .15, "center_y": 0.95}
-                on_focus: root.KKTMenu()
+                on_focus: if self.focus: root.KKTMenu()
 
             MDLabel:
                 text: "Серийный номер ККТ"
                 pos_hint: {"center_x": 1, "center_y": .98}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: seriesKKT
+                max_len: 20
+                input_filter: "int"
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -359,10 +381,11 @@
                 size_hint_x: None
                 width: 700
                 pos_hint: {"center_x": .5, "center_y": 0.85}
-                on_focus: root.FNMenu()
+                on_focus: if self.focus: root.FNMenu()
 
-            MDTextFieldRect:
+            MyInput:
                 id: fn1
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -370,8 +393,9 @@
                 width: 300
                 pos_hint: {"center_x": .25, "center_y": .75}
 
-            MDTextFieldRect:
+            MyInput:
                 id: fn2
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -379,8 +403,9 @@
                 width: 300
                 pos_hint: {"center_x": .25, "center_y": .70}
 
-            MDTextFieldRect:
+            MyInput:
                 id: fn3
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -388,8 +413,9 @@
                 width: 300
                 pos_hint: {"center_x": .25, "center_y": .65}
 
-            MDTextFieldRect:
+            MyInput:
                 id: fn4
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -397,8 +423,9 @@
                 width: 300
                 pos_hint: {"center_x": .65, "center_y": .75}
 
-            MDTextFieldRect:
+            MyInput:
                 id: fn5
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -406,8 +433,9 @@
                 width: 300
                 pos_hint: {"center_x": .65, "center_y": .70}
 
-            MDTextFieldRect:
+            MyInput:
                 id: fn6
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -420,8 +448,10 @@
                 pos_hint: {"center_x": 0.85, "center_y": .55}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: serialFN
+                max_len: 20
+                input_filter: "int"
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -462,15 +492,16 @@
                 size_hint_x: None
                 width: 450
                 pos_hint: {"center_x": .7, "center_y": 0.9}
-                on_focus: root.RegionMenu()
+                on_focus: if self.focus: root.RegionMenu()
 
             MDLabel:
                 text: "Район"
                 pos_hint: {"center_x": 0.57, "center_y": .82}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: district
+                max_len: 30
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -483,8 +514,9 @@
                 pos_hint: {"center_x": 0.57, "center_y": .75}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: city
+                max_len: 30
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -497,8 +529,9 @@
                 pos_hint: {"center_x": 0.5, "center_y": .68}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: village
+                max_len: 30
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -511,8 +544,9 @@
                 pos_hint: {"center_x": 0.5, "center_y": .61}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: street
+                max_len: 30
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -525,8 +559,9 @@
                 pos_hint: {"center_x": 0.63, "center_y": .54}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: house
+                max_len: 8
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -539,8 +574,9 @@
                 pos_hint: {"center_x": .93, "center_y": .54}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: campus
+                max_len: 8
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -553,8 +589,9 @@
                 pos_hint: {"center_x": 1.23, "center_y": .54}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: room
+                max_len: 8
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -567,8 +604,9 @@
                 pos_hint: {"center_x": .7, "center_y": .40}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: exp1
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -576,8 +614,9 @@
                 width: 400
                 pos_hint: {"center_x": .45, "center_y": .33}
 
-            MDTextFieldRect:
+            MyInput:
                 id: exp2
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -585,8 +624,9 @@
                 width: 400
                 pos_hint: {"center_x": .45, "center_y": .25}
 
-            MDTextFieldRect:
+            MyInput:
                 id: exp3
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -739,15 +779,16 @@
                 size_hint_x: None
                 width: 450
                 pos_hint: {"center_x": .5, "center_y": 0.58}
-                on_focus: root.OFDMenu()
+                on_focus: if self.focus: root.OFDMenu()
 
             MDLabel:
                 text: "Наименование ОФД"
                 pos_hint: {"center_x": .53, "center_y": .50}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: ofdn1
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -755,8 +796,9 @@
                 width: 400
                 pos_hint: {"center_x": .5, "center_y": .50}
 
-            MDTextFieldRect:
+            MyInput:
                 id: ofdn2
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -764,8 +806,9 @@
                 width: 400
                 pos_hint: {"center_x": .5, "center_y": .44}
 
-            MDTextFieldRect:
+            MyInput:
                 id: ofdn3
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -773,8 +816,9 @@
                 width: 400
                 pos_hint: {"center_x": .5, "center_y": .38}
 
-            MDTextFieldRect:
+            MyInput:
                 id: ofdn4
+                max_len: 20
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -787,8 +831,10 @@
                 pos_hint: {"center_x": .53, "center_y": .26}
                 font_size: 15
 
-            MDTextFieldRect:
+            MyInput:
                 id: ofdinn
+                max_len: 10
+                input_filter: "int"
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -800,6 +846,8 @@
                 text: "Генерация"
                 pos_hint: {"center_x": .09, "center_y": .10}
                 on_press: root.GenerateXLSX()
+
+
 <CurrentKKT>
     title: "Текущий ККТ"
     title_color: 0, 0, 0
