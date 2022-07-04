@@ -1,10 +1,10 @@
 <DocFill>
     MDTabs:
         id: tabs
-        Primary:
+        MyTab:
             text: "Основные сведения"
 
-            MDTextField:
+            Date:
                 id: Date
                 hint_text: "Дата документа"
                 multiline: False
@@ -13,7 +13,6 @@
                 size_hint_x: None
                 width: 150
                 pos_hint: {"center_x": .9, "center_y": .94}
-                on_focus: root.show_date_picker()
 
             MDTextField:
                 id: curkkt
@@ -29,10 +28,11 @@
 
             MDTextField:
                 id: DockType
+                text: "Регистрация"
                 hint_text: "Вид документа"
                 multiline: False
                 size_hint_y: None
-                height: 25
+                height: 50
                 size_hint_x: None
                 width: 150
                 pos_hint: {"center_x": .3, "center_y": .94}
@@ -45,6 +45,7 @@
 
             MDCheckbox:
                 id: r1
+                disabled: True
                 size: dp(30), dp(30)
                 size_hint: None, None
                 pos_hint: {"center_x": .25, "center_y": .88}
@@ -56,6 +57,7 @@
 
             MDCheckbox:
                 id: r2
+                disabled: True
                 size: dp(30), dp(30)
                 size_hint: None, None
                 pos_hint: {"center_x": .25, "center_y": .83}
@@ -67,6 +69,7 @@
 
             MDCheckbox:
                 id: r3
+                disabled: True
                 size: dp(30), dp(30)
                 size_hint: None, None
                 pos_hint: {"center_x": .25, "center_y": .78}
@@ -78,6 +81,7 @@
 
             MDCheckbox:
                 id: r4
+                disabled: True
                 size: dp(30), dp(30)
                 size_hint: None, None
                 pos_hint: {"center_x": .25, "center_y": .73}
@@ -89,6 +93,7 @@
 
             MDCheckbox:
                 id: r5
+                disabled: True
                 size: dp(30), dp(30)
                 size_hint: None, None
                 pos_hint: {"center_x": .58, "center_y": .88}
@@ -100,6 +105,7 @@
 
             MDCheckbox:
                 id: r6
+                disabled: True
                 size: dp(30), dp(30)
                 size_hint: None, None
                 pos_hint: {"center_x": .58, "center_y": .83}
@@ -111,6 +117,7 @@
 
             MDCheckbox:
                 id: r7
+                disabled: True
                 size: dp(30), dp(30)
                 size_hint: None, None
                 pos_hint: {"center_x": .58, "center_y": .78}
@@ -122,6 +129,7 @@
 
             MDCheckbox:
                 id: r8
+                disabled: True
                 size: dp(30), dp(30)
                 size_hint: None, None
                 pos_hint: {"center_x": .58, "center_y": .73}
@@ -261,10 +269,11 @@
             MDTextField:
                 id: User
                 hint_text: "Лицо, подающее заявление"
+                text: "Пользователь"
                 readonly: True
                 multiline: False
                 size_hint_y: None
-                height: 25
+                height: 50
                 size_hint_x: None
                 width: 150
                 pos_hint: {"center_x": .1, "center_y": .45}
@@ -313,6 +322,8 @@
             MyInput:
                 id: d1
                 max_len: 20
+                readonly: True
+                background_color: 0, 0, 0, .4
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -323,6 +334,8 @@
             MyInput:
                 id: d2
                 max_len: 20
+                readonly: True
+                background_color: 0, 0, 0, .4
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -333,6 +346,8 @@
             MyInput:
                 id: d3
                 max_len: 20
+                readonly: True
+                background_color: 0, 0, 0, .4
                 multiline: False
                 size_hint_y: None
                 height: 30
@@ -340,10 +355,10 @@
                 width: 300
                 pos_hint: {"center_x": .7, "center_y": .23}
 
-        KKT_and_FN:
+        MyTab:
             text: "Данные ККТ и ФН"
 
-            MDTextField:
+            MenuKKT:
                 id: KKT
                 hint_text: "Модель ККТ"
                 readonly: False
@@ -353,7 +368,6 @@
                 size_hint_x: None
                 width: 200
                 pos_hint: {"center_x": .15, "center_y": 0.95}
-                on_focus: if self.focus: root.KKTMenu()
 
             MDLabel:
                 text: "Серийный номер ККТ"
@@ -371,8 +385,9 @@
                 width: 300
                 pos_hint: {"center_x": .6, "center_y": .93}
 
-            MDTextField:
+            MenuFN:
                 id: FN
+                parrent: root
                 hint_text: "Модель ФН"
                 readonly: False
                 multiline: False
@@ -381,7 +396,6 @@
                 size_hint_x: None
                 width: 700
                 pos_hint: {"center_x": .5, "center_y": 0.85}
-                on_focus: if self.focus: root.FNMenu()
 
             MyInput:
                 id: fn1
@@ -459,7 +473,7 @@
                 width: 300
                 pos_hint: {"center_x": .45, "center_y": .5}
 
-        Address:
+        MyTab:
             text: "Адрес установки"
 
             MDLabel:
@@ -481,7 +495,7 @@
                 pos_hint: {"center_x": .3, "center_y": .9}
                 on_press: root.GetPostIndex()
 
-            MDTextField:
+            RegionMenu:
                 id: region
                 text: "66 СВЕРДЛОВСКАЯ ОБЛАСТЬ"
                 hint_text: "Регион"
@@ -492,7 +506,6 @@
                 size_hint_x: None
                 width: 450
                 pos_hint: {"center_x": .7, "center_y": 0.9}
-                on_focus: if self.focus: root.RegionMenu()
 
             MDLabel:
                 text: "Район"
@@ -634,7 +647,7 @@
                 width: 400
                 pos_hint: {"center_x": .45, "center_y": .18}
 
-        OFD_and_DATA:
+        MyTab:
             text: "Настройки ОФД \n и передачи данных"
 
             MDLabel:
@@ -769,8 +782,9 @@
                 size_hint: None, None
                 pos_hint: {"center_x": .6, "center_y": .65}
 
-            MDTextField:
+            OFDMenu:
                 id: OFD
+                parrent: root
                 hint_text: "ОФД"
                 readonly: False
                 multiline: False
@@ -779,7 +793,6 @@
                 size_hint_x: None
                 width: 450
                 pos_hint: {"center_x": .5, "center_y": 0.58}
-                on_focus: if self.focus: root.OFDMenu()
 
             MDLabel:
                 text: "Наименование ОФД"
@@ -847,6 +860,135 @@
                 pos_hint: {"center_x": .09, "center_y": .10}
                 on_press: root.GenerateXLSX()
 
+        MyTab:
+            text: "Сведения об отчетах"
+
+            MDLabel:
+                text: "ФН заменен в связи с поломкой"
+                pos_hint: {"center_x": .9, "center_y": .95}
+                font_size: 15
+
+            MDCheckbox:
+                id: FNBroken
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .38, "center_y": .95}
+
+            MDLabel:
+                text: "Сведения из отчета о регистрации или об изменении параметров регистрации"
+                pos_hint: {"center_x": .6, "center_y": .85}
+                font_size: 18
+
+            MDLabel:
+                text: "Не выводить отчет о рег./перерег."
+                pos_hint: {"center_x": .9, "center_y": .80}
+                font_size: 15
+
+            MDCheckbox:
+                id: RegRep
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .38, "center_y": .80}
+
+            MyInput:
+                id: Nregrep
+                max_len: 8
+                hint_text: "Номер отчета"
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 110
+                pos_hint: {"center_x": .38, "center_y": .70}
+
+            MyInput:
+                id: FPDockreg
+                max_len: 10
+                hint_text: "ФП документа"
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 115
+                pos_hint: {"center_x": .58, "center_y": .70}
+
+            Date:
+                id: DateReg
+                hint_text: "Дата отчета"
+                multiline: False
+                size_hint_y: None
+                height: 25
+                size_hint_x: None
+                width: 150
+                pos_hint: {"center_x": .4, "center_y": .60}
+
+            Time:
+                id: TimeReg
+                hint_text: "Время отчета"
+                multiline: False
+                size_hint_y: None
+                height: 25
+                size_hint_x: None
+                width: 150
+                pos_hint: {"center_x": .6, "center_y": .60}
+
+            MDLabel:
+                text: "Сведения из отчета о закрытии фискального накопителя"
+                pos_hint: {"center_x": .6, "center_y": .50}
+                font_size: 18
+
+            MDCheckbox:
+                id: RegClose
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .38, "center_y": .45}
+
+            MDLabel:
+                text: "Не выводить отчет о закрытии"
+                pos_hint: {"center_x": .9, "center_y": .45}
+                font_size: 15
+
+            MyInput:
+                id: Nregclos
+                max_len: 8
+                hint_text: "Номер отчета"
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 110
+                pos_hint: {"center_x": .38, "center_y": .35}
+
+            MyInput:
+                id: FPDockclos
+                max_len: 10
+                hint_text: "ФП документа"
+                multiline: False
+                size_hint_y: None
+                height: 30
+                size_hint_x: None
+                width: 115
+                pos_hint: {"center_x": .58, "center_y": .35}
+
+            Date:
+                id: Dateclos
+                hint_text: "Дата отчета"
+                multiline: False
+                size_hint_y: None
+                height: 25
+                size_hint_x: None
+                width: 150
+                pos_hint: {"center_x": .4, "center_y": .25}
+
+            Time:
+                id: Timeclos
+                hint_text: "Время отчета"
+                multiline: False
+                size_hint_y: None
+                height: 25
+                size_hint_x: None
+                width: 150
+                pos_hint: {"center_x": .6, "center_y": .25}
 
 <CurrentKKT>
     title: "Текущий ККТ"
@@ -860,7 +1002,7 @@
             text: "Рег. номер"
             pos_hint: {"center_x": 4, "center_y": 4.9}
 
-        MDTextField:
+        Date:
             id: Date
             hint_text: "Дата"
             multiline: False
@@ -869,11 +1011,11 @@
             size_hint_x: None
             width: 150
             pos_hint: {"center_x": 4, "center_y": 4}
-            on_focus: root.show_date_picker()
 
-        MDTextFieldRect:
+        MyInput:
             id: reg
             input_filter: "int"
+            max_len: 16
             multiline: False
             size_hint_y: None
             height: 30

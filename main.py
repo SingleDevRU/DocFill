@@ -2,9 +2,11 @@ from kivymd.uix.floatlayout import MDFloatLayout
 from kivymd.app import MDApp
 from kivymd.uix.tab import MDTabsBase
 from kivy.uix.screenmanager import Screen, ScreenManager
-from kivymd.uix.picker import MDDatePicker
+from kivymd.uix.picker import MDDatePicker, MDTimePicker
 from kivymd.uix.textfield import MDTextFieldRect
+from kivymd.uix.textfield import MDTextField
 from kivymd.uix.menu import MDDropdownMenu
+from kivy.properties import ObjectProperty
 
 import rq
 import dw
@@ -17,24 +19,184 @@ def AddSymbol(string, value):
     return string
 
 
-class MenuDock(MDDropdownMenu):
+class MyTab(MDFloatLayout, MDTabsBase):
     pass
 
 
-class OFD_and_DATA(MDFloatLayout, MDTabsBase):
-    pass
+class Time(MDTextField):
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.time = MDTimePicker()
+        self.time.ids.input_clock_switch.disabled = True
+
+    def on_focus(self, *args):
+        self.time.bind(on_save=self.GetTime)
+        if self.focus:
+            self.time.open()
+        MDTextField.on_focus(self, *args)
+
+    def GetTime(self, instance, time):
+        StTime = str(time).split(":")
+        self.text = StTime[0] + ":" + StTime[1]
+        self.time.dismiss()
 
 
-class Address(MDFloatLayout, MDTabsBase):
-    pass
+class Date(MDTextField):
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.date = MDDatePicker()
+
+    def on_focus(self, *args):
+        self.date.elem = self
+        self.date.bind(on_save=self.on_save)
+        if self.focus:
+            self.date.open()
+        MDTextField.on_focus(self, *args)
+
+    def on_save(self, instance, value, date_range):
+        date = str(value).split("-")
+        monthlist = ("января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября",
+                     "октября", "ноября", "декабря")
+        self.text = date[2] + " " + monthlist[int(date[1]) - 1] + " " + date[0]
+
+        self.date.dismiss()
 
 
-class KKT_and_FN(MDFloatLayout, MDTabsBase):
-    pass
+class OFDMenu(MDTextField):
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.parrent = ObjectProperty()
+        self.menu = MDDropdownMenu()
+        self.menu.caller = self
+        self.menu.width_mult = 100
+        self.menu.max_height = 300
+        self.menu.position = "bottom"
+        self.menu.ver_growth = "down"
+
+    def on_focus(self, *args):
+        self.menu.items = [
+            {
+                "text": f'{i}',
+                "viewclass": "OneLineListItem",
+                "on_release": lambda x=f'{i}': self.Menu_callback(x)
+            } for i in dw.GetOFD() if self.text.lower() in str(i).lower()
+        ]
+
+        if self.focus:
+            self.menu.dismiss()
+            self.menu.open()
+
+        MDTextField.on_focus(self, *args)
+
+    def Menu_callback(self, text):
+        items = dw.GetOFD()
+        self.parrent.ids.OFD.text = text
+        self.parrent.ids.ofdn1.text = items[text][0][0] if items[text][0][0] is not None else ""
+        self.parrent.ids.ofdn2.text = items[text][0][1] if items[text][0][1] is not None else ""
+        self.parrent.ids.ofdn3.text = items[text][0][2] if items[text][0][2] is not None else ""
+        self.parrent.ids.ofdn4.text = items[text][0][3] if items[text][0][3] is not None else ""
+        self.parrent.ids.ofdinn.text = items[text][1] if items[text][1] is not None else ""
+
+        self.menu.dismiss()
 
 
-class Primary(MDFloatLayout, MDTabsBase):
-    pass
+class RegionMenu(MDTextField):
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.menu = MDDropdownMenu()
+        self.menu.caller = self
+        self.menu.width_mult = 100
+        self.menu.max_height = 300
+        self.menu.position = "bottom"
+        self.menu.ver_growth = "down"
+
+    def on_focus(self, *args):
+        self.menu.items = [
+            {
+                "text": f'{i}',
+                "viewclass": "OneLineListItem",
+                "on_release": lambda x=f'{i}': self.Menu_callback(x)
+            } for i in dw.GetRegions() if self.text.lower() in str(i).lower()
+        ]
+
+        if self.focus:
+            self.menu.dismiss()
+            self.menu.open()
+
+        MDTextField.on_focus(self, *args)
+
+    def Menu_callback(self, text):
+        self.text = text
+        self.menu.dismiss()
+
+
+class MenuFN(MDTextField):
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.parrent = ObjectProperty()
+        self.menu = MDDropdownMenu()
+        self.menu.caller = self
+        self.menu.width_mult = 100
+        self.menu.max_height = 300
+        self.menu.position = "bottom"
+        self.menu.ver_growth = "down"
+
+    def on_focus(self, *args):
+        self.menu.items = [
+            {
+                "text": f'{i}',
+                "viewclass": "OneLineListItem",
+                "on_release": lambda x=f'{i}': self.Menu_callback(x)
+            } for i in dw.GetFN() if self.text.lower() in i.lower()
+        ]
+
+        if self.focus:
+            self.menu.dismiss()
+            self.menu.open()
+
+        MDTextField.on_focus(self, *args)
+
+    def Menu_callback(self, text):
+        items = dw.GetFN()
+        self.text = text
+        self.parrent.ids.fn1.text = items[text][0] if items[text][0] is not None else ""
+        self.parrent.ids.fn2.text = items[text][1] if items[text][1] is not None else ""
+        self.parrent.ids.fn3.text = items[text][2] if items[text][2] is not None else ""
+        self.parrent.ids.fn4.text = items[text][3] if items[text][3] is not None else ""
+        self.parrent.ids.fn5.text = items[text][4] if items[text][4] is not None else ""
+        self.parrent.ids.fn6.text = items[text][5] if items[text][5] is not None else ""
+
+        self.menu.dismiss()
+
+
+class MenuKKT(MDTextField):
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.menu = MDDropdownMenu()
+        self.menu.caller = self
+        self.menu.width_mult = 4
+        self.menu.max_height = 300
+        self.menu.position = "bottom"
+        self.menu.ver_growth = "down"
+
+    def on_focus(self, *args):
+        self.menu.items = [
+            {
+                "text": f'{i}',
+                "viewclass": "OneLineListItem",
+                "on_release": lambda x=f'{i}': self.Menu_callback(x)
+            } for i in dw.GetKKT() if self.text.lower() in i.lower()
+        ]
+
+        if self.focus:
+            self.menu.dismiss()
+            self.menu.open()
+
+        MDTextField.on_focus(self, *args)
+
+    def Menu_callback(self, text):
+        self.text = text
+        self.menu.dismiss()
 
 
 class MyInput(MDTextFieldRect):
@@ -47,22 +209,6 @@ class MyInput(MDTextFieldRect):
 
 
 class CurrentKKT(Screen):
-    def __init__(self, **kw):
-        super().__init__(**kw)
-        self.date = MDDatePicker()
-
-    def on_save(self, instance, value, date_range):
-        date = str(value).split("-")
-        monthlist = ("января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября",
-                     "октября", "ноября", "декабря")
-        self.ids.Date.text = date[2] + " " + monthlist[int(date[1]) - 1] + " " + date[0]
-
-        self.date.dismiss()
-
-    def show_date_picker(self):
-        self.date.elem = self.ids.Date.text
-        self.date.bind(on_save=self.on_save)
-        self.date.open()
 
     def RegN(self):
         self.manager.get_screen("Doc").ids.curkkt.text = self.ids.reg.text + "/" + self.ids.Date.text
@@ -75,11 +221,6 @@ class DocFill(Screen):
         super().__init__(**kw)
         self.DockMenu = MDDropdownMenu()
         self.UsersMenu = MDDropdownMenu()
-        self.MenuKKT = MDDropdownMenu()
-        self.MenuFN = MDDropdownMenu()
-        self.MenuOFD = MDDropdownMenu()
-        self.MenuRegion = MDDropdownMenu()
-        self.date = MDDatePicker()
 
     def ULActive(self):
         self.ids.inn.max_len = 10
@@ -113,164 +254,89 @@ class DocFill(Screen):
                     self.ids.name2.text = info[1][21:]
 
     def MenuDock(self):
-        items = ["Регистрация", "Перерегистрация", "Снятие с учета"]
-        menu_items = [
+
+        self.DockMenu.caller = self.ids.DockType
+        self.DockMenu.items = [
             {
                 "text": f'{i}',
                 "viewclass": "OneLineListItem",
                 "on_release": lambda x=f'{i}': self.MenuDock_callback(x)
-            } for i in items
+            } for i in ("Регистрация", "Перерегистрация", "Снятие с учета")
         ]
-
-        self.DockMenu.caller = self.ids.DockType
-        self.DockMenu.items = menu_items
         self.DockMenu.width_mult = 2.69
         self.DockMenu.max_height = 150
 
         self.DockMenu.open()
 
     def UserMenu(self):
-        items = ["Пользователь", "Представитель"]
-        menu_items = [
+        self.UsersMenu.caller = self.ids.User
+        self.UsersMenu.items = [
             {
                 "text": f'{i}',
                 "viewclass": "OneLineListItem",
                 "on_release": lambda x=f'{i}': self.MenuUser_callback(x)
-            } for i in items
+            } for i in ("Пользователь", "Представитель")
         ]
-        self.UsersMenu.caller = self.ids.User
-        self.UsersMenu.items = menu_items
         self.UsersMenu.width_mult = 2.5
         self.UsersMenu.max_height = 100
 
         self.UsersMenu.open()
 
-    def KKTMenu(self):
-        items = dw.GetKKT()
-        menu_items = [
-            {
-                "text": f'{i}',
-                "viewclass": "OneLineListItem",
-                "on_release": lambda x=f'{i}': self.KKTMenu_callback(x)
-            } for i in items if self.ids.KKT.text.lower() in i.lower()
-        ]
-        self.MenuKKT.caller = self.ids.KKT
-        self.MenuKKT.items = menu_items
-        self.MenuKKT.width_mult = 4
-        self.MenuKKT.max_height = 300
-        self.MenuKKT.position = "bottom"
-        self.MenuKKT.ver_growth = "down"
-
-        self.MenuKKT.open()
-
-    def FNMenu(self):
-        items = dw.GetFN()
-        menu_items = [
-            {
-                "text": f'{i}',
-                "viewclass": "OneLineListItem",
-                "on_press": lambda x=f'{i}': self.FNMenu_callback(x)
-            } for i in items.keys() if self.ids.FN.text.lower() in str(i).lower()
-        ]
-        self.MenuFN.caller = self.ids.FN
-        self.MenuFN.items = menu_items
-        self.MenuFN.width_mult = 100
-        self.MenuFN.max_height = 300
-        self.MenuFN.position = "bottom"
-        self.MenuFN.ver_growth = "down"
-
-        self.MenuFN.open()
-
-    def OFDMenu(self):
-        items = dw.GetOFD()
-        menu_items = [
-            {
-                "text": f'{i}',
-                "viewclass": "OneLineListItem",
-                "on_press": lambda x=f'{i}': self.OFDMenu_callback(x)
-            } for i in items.keys() if self.ids.OFD.text.lower() in str(i).lower()
-        ]
-        self.MenuOFD.caller = self.ids.OFD
-        self.MenuOFD.items = menu_items
-        self.MenuOFD.width_mult = 100
-        self.MenuOFD.max_height = 300
-        self.MenuOFD.position = "bottom"
-        self.MenuOFD.ver_growth = "down"
-
-        self.MenuOFD.open()
-
-    def RegionMenu(self):
-        items = dw.GetRegions()
-        menu_items = [
-            {
-                "text": f'{i}',
-                "viewclass": "OneLineListItem",
-                "on_press": lambda x=f'{i}': self.RegionMenu_callback(x)
-            } for i in items if self.ids.region.text.lower() in str(i).lower()
-        ]
-        self.MenuRegion.caller = self.ids.region
-        self.MenuRegion.items = menu_items
-        self.MenuRegion.width_mult = 100
-        self.MenuRegion.max_height = 300
-        self.MenuRegion.position = "bottom"
-        self.MenuRegion.ver_growth = "down"
-
-        self.MenuRegion.open()
-
-    def OFDMenu_callback(self, text):
-        items = dw.GetOFD()
-        self.ids.OFD.text = text
-        self.ids.ofdn1.text = items[text][0][0] if items[text][0][0] is not None else ""
-        self.ids.ofdn2.text = items[text][0][1] if items[text][0][1] is not None else ""
-        self.ids.ofdn3.text = items[text][0][2] if items[text][0][2] is not None else ""
-        self.ids.ofdn4.text = items[text][0][3] if items[text][0][3] is not None else ""
-        self.ids.ofdinn.text = items[text][1] if items[text][1] is not None else ""
-
-        self.MenuOFD.dismiss()
-
-    def RegionMenu_callback(self, text):
-        self.ids.region.text = text
-
-        self.MenuRegion.dismiss()
-
-    def FNMenu_callback(self, text):
-        items = dw.GetFN()
-        self.ids.FN.text = text
-        self.ids.fn1.text = items[text][0] if items[text][0] is not None else ""
-        self.ids.fn2.text = items[text][1] if items[text][1] is not None else ""
-        self.ids.fn3.text = items[text][2] if items[text][2] is not None else ""
-        self.ids.fn4.text = items[text][3] if items[text][3] is not None else ""
-        self.ids.fn5.text = items[text][4] if items[text][4] is not None else ""
-        self.ids.fn6.text = items[text][5] if items[text][5] is not None else ""
-
-        self.MenuFN.dismiss()
-
-    def KKTMenu_callback(self, text):
-        self.ids.KKT.text = text
-
-        self.MenuKKT.dismiss()
-
     def MenuUser_callback(self, text):
         self.ids.User.text = text
+
+        for i in (self.ids.d1, self.ids.d2, self.ids.d3):
+            if text == "Представитель":
+                i.readonly = False
+                i.background_color = MDTextFieldRect().background_color
+            else:
+                i.readonly = True
+                i.text = ""
+                i.background_color = 0, 0, 0, .4
+
         self.UsersMenu.dismiss()
 
     def MenuDock_callback(self, text):
         self.ids.DockType.text = text
+        for i in (self.ids.r1, self.ids.r2, self.ids.r3, self.ids.r4,
+                  self.ids.r5, self.ids.r6, self.ids.r7, self.ids.r8):
+
+            if text == "Регистрация" or text == "Снятие с учета":
+                i.disabled = True
+            else:
+                i.disabled = False
+
+        elems = {"TextFiled": (self.ids.FN, self.ids.OFD, self.ids.region),
+                 "TextInput": (self.ids.ogrn, self.ids.fn1, self.ids.fn2, self.ids.fn3, self.ids.fn4, self.ids.fn5,
+                               self.ids.fn6, self.ids.serialFN, self.ids.ZipCode, self.ids.district, self.ids.city,
+                               self.ids.village, self.ids.street, self.ids.house, self.ids.campus, self.ids.room,
+                               self.ids.exp1, self.ids.exp2, self.ids.exp3, self.ids.ofdn1, self.ids.ofdn2,
+                               self.ids.ofdn3, self.ids.ofdn4, self.ids.ofdinn),
+                 "ChekBoxes": (self.ids.ofd1, self.ids.ofd2, self.ids.ofd3, self.ids.ofd4, self.ids.ofd5, self.ids.ofd6,
+                               self.ids.ofd7, self.ids.ofd8, self.ids.ofd9, self.ids.ofd10, self.ids.ofd11,
+                               self.ids.ofd12)
+                 }
+        for i, j in elems.items():
+            for e in j:
+                if text == "Снятие с учета":
+                    if i == "TextFiled" or i == "ChekBoxes":
+                        e.disabled = True
+
+                    else:
+                        e.readonly = True
+                        e.background_color = 0, 0, 0, .4
+                        e.text = ""
+                else:
+                    if i == "TextFiled" or i == "ChekBoxes":
+                        e.disabled = False
+
+                    else:
+                        e.readonly = False
+                        e.background_color = MDTextFieldRect().background_color
+
         if text == "Перерегистрация":
             self.manager.current = "KKT"
         self.DockMenu.dismiss()
-
-    def on_save(self, instance, value, date_range):
-        date = str(value).split("-")
-        monthlist = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября",
-                     "октября", "ноября", "декабря"]
-        self.ids.Date.text = date[2] + " " + monthlist[int(date[1]) - 1] + " " + date[0]
-        self.date.dismiss()
-
-    def show_date_picker(self):
-        self.date.elem = self.ids.Date.text
-        self.date.bind(on_save=self.on_save)
-        self.date.open()
 
     def GetPostIndex(self):
         if self.ids.district.text == "":
@@ -282,19 +348,33 @@ class DocFill(Screen):
 
     def GenerateXLSX(self):
         data = {"Primary": {"TypeUser": (self.ids.TG1.active, self.ids.TG2.active),
-                            "TypeDock": self.ids.DockType.text, "CurKkt": self.ids.curkkt.text,
-                            "DateDock": self.ids.Date.text, "User": self.ids.User.text,
+                            "TypeDock": self.ids.DockType.text,
+                            "CurKkt": self.ids.curkkt.text,
+                            "DateDock": self.ids.Date.text,
+                            "User": self.ids.User.text,
                             "Resons": (self.ids.r1.active, self.ids.r2.active, self.ids.r3.active,
                                        self.ids.r4.active, self.ids.r5.active, self.ids.r6.active,
                                        self.ids.r7.active, self.ids.r8.active)
                             },
                 "KKTandFN": {},
-                "Address": {"index": self.ids.ZipCode.text, "RegionCode": self.ids.region.text[:2]},
+                "Address": {"index": self.ids.ZipCode.text,
+                            "RegionCode": self.ids.region.text[:2]},
                 "OFD": {"Using": (self.ids.ofd1.active, self.ids.ofd2.active, self.ids.ofd3.active,
                                   self.ids.ofd4.active, self.ids.ofd5.active, self.ids.ofd7.active,
                                   self.ids.ofd6.active, self.ids.ofd12.active, self.ids.ofd8.active,
-                                  self.ids.ofd9.active, self.ids.ofd10.active, self.ids.ofd11.active)}
+                                  self.ids.ofd9.active, self.ids.ofd10.active, self.ids.ofd11.active)},
+                "Raports": {"FNBroken": self.ids.FNBroken.active,
+                            "RegRep": {"OnRegRep": self.ids.RegRep.active,
+                                       "Date": self.ids.DateReg.text,
+                                       "Time": self.ids.TimeReg.text
+                                       },
+                            "ClosReg": {"OnRegClose": self.ids.RegClose.active,
+                                        "Date": self.ids.Dateclos.text,
+                                        "Time": self.ids.Timeclos.text
+                                        }
+                            }
                 }
+
         ogrn = self.ids.ogrn.text
         if len(ogrn) < 15:
             ogrn = AddSymbol(ogrn, 15)
@@ -478,6 +558,30 @@ class DocFill(Screen):
             OFDInn = AddSymbol(OFDInn, 12)
 
         data["OFD"]["OFDInn"] = OFDInn
+
+        Nreg = self.ids.Nregrep.text
+        if len(Nreg) != 8:
+            Nreg = AddSymbol(Nreg, 8)
+
+        Nclos = self.ids.Nregclos.text
+        if len(Nclos) != 8:
+            Nclos = AddSymbol(Nclos, 8)
+
+        data["Raports"]["RegRep"]["Nrep"] = Nreg
+
+        data["Raports"]["ClosReg"]["Nrep"] = Nclos
+
+        FPReg = self.ids.FPDockreg.text
+        if len(FPReg) != 10:
+            FPReg = AddSymbol(FPReg, 10)
+
+        FPClos = self.ids.FPDockclos.text
+        if len(FPClos) != 10:
+            FPClos = AddSymbol(FPClos, 10)
+
+        data["Raports"]["RegRep"]["FP"] = FPReg
+
+        data["Raports"]["ClosReg"]["FP"] = FPClos
 
         dw.excelwork(data)
 

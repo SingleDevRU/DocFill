@@ -58,22 +58,22 @@ def excelwork(data):
                  f[i]["BL1"], f[i]["BO1"], f[i]["BR1"], f[i]["BU1"],
                  f[i]["BX1"], f[i]["CA1"], f[i]["CD1"])
 
-        for j in range(len(data["Primary"]["OGRN"])):
-            ogrnl[j].value = data["Primary"]["OGRN"][j]
+        for _ in range(len(data["Primary"]["OGRN"])):
+            ogrnl[_].value = data["Primary"]["OGRN"][_]
 
         innl = (f[i]["AN4"], f[i]["AQ4"], f[i]["AT4"], f[i]["AW4"],
                 f[i]["AZ4"], f[i]["BC4"], f[i]["BF4"], f[i]["BI4"],
                 f[i]["BL4"], f[i]["BO4"], f[i]["BR4"], f[i]["BU4"])
 
-        for j in range(len(data["Primary"]["INN"])):
-            innl[j].value = data["Primary"]["INN"][j]
+        for _ in range(len(data["Primary"]["INN"])):
+            innl[_].value = data["Primary"]["INN"][_]
 
         kppl = (f[i]["AN6"], f[i]["AQ6"], f[i]["AT6"], f[i]["AW6"],
                 f[i]["AZ6"], f[i]["BC6"], f[i]["BF6"], f[i]["BI6"],
                 f[i]["BL6"])
 
-        for j in range(len(data["Primary"]["KPP"])):
-            kppl[j].value = data["Primary"]["KPP"][j]
+        for _ in range(len(data["Primary"]["KPP"])):
+            kppl[_].value = data["Primary"]["KPP"][_]
 
     f["стр.1"]["AA12"].value = "1" if data["Primary"]["TypeDock"] == "Регистрация" else "2"
 
@@ -81,8 +81,8 @@ def excelwork(data):
                f["стр.1"]["BE15"], f["стр.1"]["BK15"], f["стр.1"]["BQ15"], f["стр.1"]["BW15"])
 
     if data["Primary"]["TypeDock"] == "Перерегистрация":
-        for j in range(len(data["Primary"]["Resons"])):
-            resonsl[j].value = "1" if data["Primary"]["Resons"][j] else "2"
+        for _ in range(len(data["Primary"]["Resons"])):
+            resonsl[_].value = "1" if data["Primary"]["Resons"][_] else "2"
 
         regn = data["Primary"]["CurKkt"].split("/")
         n = regn[0]
@@ -95,16 +95,16 @@ def excelwork(data):
                  f["стр.2"]["BF21"], f["стр.2"]["BI21"], f["стр.2"]["BL21"], f["стр.2"]["BO21"],
                  f["стр.2"]["BR21"], f["стр.2"]["BU21"], f["стр.2"]["BX21"], f["стр.2"]["CA21"])
 
-        for j in range(len(n)):
-            regnl[j].value = n[j]
+        for _ in range(len(n)):
+            regnl[_].value = n[_]
 
         regd = FormatDate(regn[1])
 
         datel = (f["стр.2"]["CM21"], f["стр.2"]["CP21"], f["стр.2"]["CV21"], f["стр.2"]["CY21"],
                  f["стр.2"]["DE21"], f["стр.2"]["DH21"], f["стр.2"]["DK21"], f["стр.2"]["DN21"])
 
-        for j in range(len(regd)):
-            datel[j].value = regd[j]
+        for _ in range(len(regd)):
+            datel[_].value = regd[_]
 
     fname1 = (f["стр.1"]["A17"], f["стр.1"]["D17"], f["стр.1"]["G17"], f["стр.1"]["J17"],
               f["стр.1"]["M17"], f["стр.1"]["P17"], f["стр.1"]["S17"], f["стр.1"]["V17"],
@@ -117,8 +117,8 @@ def excelwork(data):
               f["стр.1"]["CS17"], f["стр.1"]["CV17"], f["стр.1"]["CY17"], f["стр.1"]["DB17"],
               f["стр.1"]["DE17"], f["стр.1"]["DH17"], f["стр.1"]["DK17"], f["стр.1"]["DN17"])
 
-    for j in range(len(data["Primary"]["FullName"][0])):
-        fname1[j].value = data["Primary"]["FullName"][0][j]
+    for _ in range(len(data["Primary"]["FullName"][0])):
+        fname1[_].value = data["Primary"]["FullName"][0][_]
 
     fname2 = (f["стр.1"]["A19"], f["стр.1"]["D19"], f["стр.1"]["G19"], f["стр.1"]["J19"],
               f["стр.1"]["M19"], f["стр.1"]["P19"], f["стр.1"]["S19"], f["стр.1"]["V19"],
@@ -131,8 +131,8 @@ def excelwork(data):
               f["стр.1"]["CS19"], f["стр.1"]["CV19"], f["стр.1"]["CY19"], f["стр.1"]["DB19"],
               f["стр.1"]["DE19"], f["стр.1"]["DH19"], f["стр.1"]["DK19"], f["стр.1"]["DN19"])
 
-    for j in range(len(data["Primary"]["FullName"][1])):
-        fname2[j].value = data["Primary"]["FullName"][1][j]
+    for _ in range(len(data["Primary"]["FullName"][1])):
+        fname2[_].value = data["Primary"]["FullName"][1][_]
 
     fname3 = (f["стр.1"]["A21"], f["стр.1"]["D21"], f["стр.1"]["G21"], f["стр.1"]["J21"],
               f["стр.1"]["M21"], f["стр.1"]["P21"], f["стр.1"]["S21"], f["стр.1"]["V21"],
@@ -145,8 +145,8 @@ def excelwork(data):
               f["стр.1"]["CS21"], f["стр.1"]["CV21"], f["стр.1"]["CY21"], f["стр.1"]["DB21"],
               f["стр.1"]["DE21"], f["стр.1"]["DH21"], f["стр.1"]["DK21"], f["стр.1"]["DN21"])
 
-    for j in range(len(data["Primary"]["FullName"][2])):
-        fname3[j].value = data["Primary"]["FullName"][2][j]
+    for _ in range(len(data["Primary"]["FullName"][2])):
+        fname3[_].value = data["Primary"]["FullName"][2][_]
 
     f["стр.1"]["AJ26"].value, f["стр.1"]["AM26"].value, f["стр.1"]["AP26"].value = "0", "1", "0"
     f["стр.1"]["N28"].value, f["стр.1"]["Q28"].value, f["стр.1"]["T28"].value = "0", "1", "0"
@@ -159,8 +159,8 @@ def excelwork(data):
                 f["стр.1"]["AK36"], f["стр.1"]["AN36"], f["стр.1"]["AQ36"], f["стр.1"]["AT36"],
                 f["стр.1"]["AW36"], f["стр.1"]["AZ36"], f["стр.1"]["BC36"], f["стр.1"]["BF36"])
 
-    for j in range(len(data["Primary"]["UserFIO"][0])):
-        userfio1[j].value = data["Primary"]["UserFIO"][0][j]
+    for _ in range(len(data["Primary"]["UserFIO"][0])):
+        userfio1[_].value = data["Primary"]["UserFIO"][0][_]
 
     userfio2 = (f["стр.1"]["A38"], f["стр.1"]["D38"], f["стр.1"]["G38"], f["стр.1"]["J38"],
                 f["стр.1"]["M38"], f["стр.1"]["P38"], f["стр.1"]["S38"], f["стр.1"]["V38"],
@@ -168,8 +168,8 @@ def excelwork(data):
                 f["стр.1"]["AK38"], f["стр.1"]["AN38"], f["стр.1"]["AQ38"], f["стр.1"]["AT38"],
                 f["стр.1"]["AW38"], f["стр.1"]["AZ38"], f["стр.1"]["BC38"], f["стр.1"]["BF38"])
 
-    for j in range(len(data["Primary"]["UserFIO"][1])):
-        userfio2[j].value = data["Primary"]["UserFIO"][1][j]
+    for _ in range(len(data["Primary"]["UserFIO"][1])):
+        userfio2[_].value = data["Primary"]["UserFIO"][1][_]
 
     userfio3 = (f["стр.1"]["A40"], f["стр.1"]["D40"], f["стр.1"]["G40"], f["стр.1"]["J40"],
                 f["стр.1"]["M40"], f["стр.1"]["P40"], f["стр.1"]["S40"], f["стр.1"]["V40"],
@@ -177,16 +177,16 @@ def excelwork(data):
                 f["стр.1"]["AK40"], f["стр.1"]["AN40"], f["стр.1"]["AQ40"], f["стр.1"]["AT40"],
                 f["стр.1"]["AW40"], f["стр.1"]["AZ40"], f["стр.1"]["BC40"], f["стр.1"]["BF40"])
 
-    for j in range(len(data["Primary"]["UserFIO"][2])):
-        userfio3[j].value = data["Primary"]["UserFIO"][2][j]
+    for _ in range(len(data["Primary"]["UserFIO"][2])):
+        userfio3[_].value = data["Primary"]["UserFIO"][2][_]
 
     datedock = (f["стр.1"]["AB45"], f["стр.1"]["AE45"], f["стр.1"]["AK45"], f["стр.1"]["AN45"],
                 f["стр.1"]["AT45"], f["стр.1"]["AW45"], f["стр.1"]["AZ45"], f["стр.1"]["BC45"])
 
     dated = FormatDate(data["Primary"]["DateDock"])
 
-    for j in range(len(dated)):
-        datedock[j].value = dated[j]
+    for _ in range(len(dated)):
+        datedock[_].value = dated[_]
 
     dockinfo1 = (f["стр.2"]["A12"], f["стр.2"]["D12"], f["стр.2"]["G12"], f["стр.2"]["J12"],
                  f["стр.2"]["M12"], f["стр.2"]["P12"], f["стр.2"]["S12"], f["стр.2"]["V12"],
@@ -194,8 +194,8 @@ def excelwork(data):
                  f["стр.2"]["AK12"], f["стр.2"]["AN12"], f["стр.2"]["AQ12"], f["стр.2"]["AT12"],
                  f["стр.2"]["AW12"], f["стр.2"]["AZ12"], f["стр.2"]["BC12"], f["стр.2"]["BF12"])
 
-    for j in range(len(data["Primary"]["Document"][0])):
-        dockinfo1[j].value = data["Primary"]["Document"][0][j]
+    for _ in range(len(data["Primary"]["Document"][0])):
+        dockinfo1[_].value = data["Primary"]["Document"][0][_]
 
     dockinfo2 = (f["стр.2"]["A14"], f["стр.2"]["D14"], f["стр.2"]["G14"], f["стр.2"]["J14"],
                  f["стр.2"]["M14"], f["стр.2"]["P14"], f["стр.2"]["S14"], f["стр.2"]["V14"],
@@ -203,8 +203,8 @@ def excelwork(data):
                  f["стр.2"]["AK14"], f["стр.2"]["AN14"], f["стр.2"]["AQ14"], f["стр.2"]["AT14"],
                  f["стр.2"]["AW14"], f["стр.2"]["AZ14"], f["стр.2"]["BC14"], f["стр.2"]["BF14"])
 
-    for j in range(len(data["Primary"]["Document"][1])):
-        dockinfo2[j].value = data["Primary"]["Document"][1][j]
+    for _ in range(len(data["Primary"]["Document"][1])):
+        dockinfo2[_].value = data["Primary"]["Document"][1][_]
 
     dockinfo3 = (f["стр.2"]["A16"], f["стр.2"]["D16"], f["стр.2"]["G16"], f["стр.2"]["J16"],
                  f["стр.2"]["M16"], f["стр.2"]["P16"], f["стр.2"]["S16"], f["стр.2"]["V16"],
@@ -212,8 +212,8 @@ def excelwork(data):
                  f["стр.2"]["AK16"], f["стр.2"]["AN16"], f["стр.2"]["AQ16"], f["стр.2"]["AT16"],
                  f["стр.2"]["AW16"], f["стр.2"]["AZ16"], f["стр.2"]["BC16"], f["стр.2"]["BF16"])
 
-    for j in range(len(data["Primary"]["Document"][2])):
-        dockinfo3[j].value = data["Primary"]["Document"][2][j]
+    for _ in range(len(data["Primary"]["Document"][2])):
+        dockinfo3[_].value = data["Primary"]["Document"][2][_]
 
     KKTmodel = (f["стр.3_Разд.1"]["BC13"], f["стр.3_Разд.1"]["BF13"], f["стр.3_Разд.1"]["BI13"],
                 f["стр.3_Разд.1"]["BL13"], f["стр.3_Разд.1"]["BO13"], f["стр.3_Разд.1"]["BR13"],
@@ -223,8 +223,8 @@ def excelwork(data):
                 f["стр.3_Разд.1"]["CV13"], f["стр.3_Разд.1"]["CY13"], f["стр.3_Разд.1"]["DB13"],
                 f["стр.3_Разд.1"]["DE13"], f["стр.3_Разд.1"]["DH13"])
 
-    for j in range(len(data["KKTandFN"]["Model"])):
-        KKTmodel[j].value = data["KKTandFN"]["Model"][j]
+    for _ in range(len(data["KKTandFN"]["Model"])):
+        KKTmodel[_].value = data["KKTandFN"]["Model"][_]
 
     KKTs = (f["стр.3_Разд.1"]["BC17"], f["стр.3_Разд.1"]["BF17"], f["стр.3_Разд.1"]["BI17"],
             f["стр.3_Разд.1"]["BL17"], f["стр.3_Разд.1"]["BO17"], f["стр.3_Разд.1"]["BR17"],
@@ -234,8 +234,8 @@ def excelwork(data):
             f["стр.3_Разд.1"]["CV17"], f["стр.3_Разд.1"]["CY17"], f["стр.3_Разд.1"]["DB17"],
             f["стр.3_Разд.1"]["DE17"], f["стр.3_Разд.1"]["DH17"])
 
-    for j in range(len(data["KKTandFN"]["SerialKKT"])):
-        KKTs[j].value = data["KKTandFN"]["SerialKKT"][j]
+    for _ in range(len(data["KKTandFN"]["SerialKKT"])):
+        KKTs[_].value = data["KKTandFN"]["SerialKKT"][_]
 
     FNname1 = (f["стр.3_Разд.1"]["BC21"], f["стр.3_Разд.1"]["BF21"], f["стр.3_Разд.1"]["BI21"],
                f["стр.3_Разд.1"]["BL21"], f["стр.3_Разд.1"]["BO21"], f["стр.3_Разд.1"]["BR21"],
@@ -245,8 +245,8 @@ def excelwork(data):
                f["стр.3_Разд.1"]["CV21"], f["стр.3_Разд.1"]["CY21"], f["стр.3_Разд.1"]["DB21"],
                f["стр.3_Разд.1"]["DE21"], f["стр.3_Разд.1"]["DH21"])
 
-    for j in range(len(data["KKTandFN"]["FNName"][0])):
-        FNname1[j].value = data["KKTandFN"]["FNName"][0][j]
+    for _ in range(len(data["KKTandFN"]["FNName"][0])):
+        FNname1[_].value = data["KKTandFN"]["FNName"][0][_]
 
     FNname2 = (f["стр.3_Разд.1"]["BC23"], f["стр.3_Разд.1"]["BF23"], f["стр.3_Разд.1"]["BI23"],
                f["стр.3_Разд.1"]["BL23"], f["стр.3_Разд.1"]["BO23"], f["стр.3_Разд.1"]["BR23"],
@@ -256,8 +256,8 @@ def excelwork(data):
                f["стр.3_Разд.1"]["CV23"], f["стр.3_Разд.1"]["CY23"], f["стр.3_Разд.1"]["DB23"],
                f["стр.3_Разд.1"]["DE23"], f["стр.3_Разд.1"]["DH23"])
 
-    for j in range(len(data["KKTandFN"]["FNName"][1])):
-        FNname2[j].value = data["KKTandFN"]["FNName"][1][j]
+    for _ in range(len(data["KKTandFN"]["FNName"][1])):
+        FNname2[_].value = data["KKTandFN"]["FNName"][1][_]
 
     FNname3 = (f["стр.3_Разд.1"]["BC25"], f["стр.3_Разд.1"]["BF25"], f["стр.3_Разд.1"]["BI25"],
                f["стр.3_Разд.1"]["BL25"], f["стр.3_Разд.1"]["BO25"], f["стр.3_Разд.1"]["BR25"],
@@ -267,8 +267,8 @@ def excelwork(data):
                f["стр.3_Разд.1"]["CV25"], f["стр.3_Разд.1"]["CY25"], f["стр.3_Разд.1"]["DB25"],
                f["стр.3_Разд.1"]["DE25"], f["стр.3_Разд.1"]["DH25"])
 
-    for j in range(len(data["KKTandFN"]["FNName"][2])):
-        FNname3[j].value = data["KKTandFN"]["FNName"][2][j]
+    for _ in range(len(data["KKTandFN"]["FNName"][2])):
+        FNname3[_].value = data["KKTandFN"]["FNName"][2][_]
 
     FNname4 = (f["стр.3_Разд.1"]["BC27"], f["стр.3_Разд.1"]["BF27"], f["стр.3_Разд.1"]["BI27"],
                f["стр.3_Разд.1"]["BL27"], f["стр.3_Разд.1"]["BO27"], f["стр.3_Разд.1"]["BR27"],
@@ -278,8 +278,8 @@ def excelwork(data):
                f["стр.3_Разд.1"]["CV27"], f["стр.3_Разд.1"]["CY27"], f["стр.3_Разд.1"]["DB27"],
                f["стр.3_Разд.1"]["DE27"], f["стр.3_Разд.1"]["DH27"])
 
-    for j in range(len(data["KKTandFN"]["FNName"][3])):
-        FNname4[j].value = data["KKTandFN"]["FNName"][3][j]
+    for _ in range(len(data["KKTandFN"]["FNName"][3])):
+        FNname4[_].value = data["KKTandFN"]["FNName"][3][_]
 
     FNname5 = (f["стр.3_Разд.1"]["BC29"], f["стр.3_Разд.1"]["BF29"], f["стр.3_Разд.1"]["BI29"],
                f["стр.3_Разд.1"]["BL29"], f["стр.3_Разд.1"]["BO29"], f["стр.3_Разд.1"]["BR29"],
@@ -289,8 +289,8 @@ def excelwork(data):
                f["стр.3_Разд.1"]["CV29"], f["стр.3_Разд.1"]["CY29"], f["стр.3_Разд.1"]["DB29"],
                f["стр.3_Разд.1"]["DE29"], f["стр.3_Разд.1"]["DH29"])
 
-    for j in range(len(data["KKTandFN"]["FNName"][4])):
-        FNname5[j].value = data["KKTandFN"]["FNName"][4][j]
+    for _ in range(len(data["KKTandFN"]["FNName"][4])):
+        FNname5[_].value = data["KKTandFN"]["FNName"][4][_]
 
     FNname6 = (f["стр.3_Разд.1"]["BC31"], f["стр.3_Разд.1"]["BF31"], f["стр.3_Разд.1"]["BI31"],
                f["стр.3_Разд.1"]["BL31"], f["стр.3_Разд.1"]["BO31"], f["стр.3_Разд.1"]["BR31"],
@@ -300,8 +300,8 @@ def excelwork(data):
                f["стр.3_Разд.1"]["CV31"], f["стр.3_Разд.1"]["CY31"], f["стр.3_Разд.1"]["DB31"],
                f["стр.3_Разд.1"]["DE31"], f["стр.3_Разд.1"]["DH31"])
 
-    for j in range(len(data["KKTandFN"]["FNName"][5])):
-        FNname6[j].value = data["KKTandFN"]["FNName"][5][j]
+    for _ in range(len(data["KKTandFN"]["FNName"][5])):
+        FNname6[_].value = data["KKTandFN"]["FNName"][5][_]
 
     FNs = (f["стр.3_Разд.1"]["BC33"], f["стр.3_Разд.1"]["BF33"], f["стр.3_Разд.1"]["BI33"],
            f["стр.3_Разд.1"]["BL33"], f["стр.3_Разд.1"]["BO33"], f["стр.3_Разд.1"]["BR33"],
@@ -311,14 +311,14 @@ def excelwork(data):
            f["стр.3_Разд.1"]["CV33"], f["стр.3_Разд.1"]["CY33"], f["стр.3_Разд.1"]["DB33"],
            f["стр.3_Разд.1"]["DE33"], f["стр.3_Разд.1"]["DH33"])
 
-    for j in range(len(data["KKTandFN"]["SerialFN"])):
-        FNs[j].value = data["KKTandFN"]["SerialFN"][j]
+    for _ in range(len(data["KKTandFN"]["SerialFN"])):
+        FNs[_].value = data["KKTandFN"]["SerialFN"][_]
 
     index = (f["стр.3_Разд.1"]["AE38"], f["стр.3_Разд.1"]["AH38"], f["стр.3_Разд.1"]["AK38"],
              f["стр.3_Разд.1"]["AN38"], f["стр.3_Разд.1"]["AQ38"], f["стр.3_Разд.1"]["AT38"])
 
-    for j in range(len(data["Address"]["index"])):
-        index[j].value = data["Address"]["index"][j]
+    for _ in range(len(data["Address"]["index"])):
+        index[_].value = data["Address"]["index"][_]
 
     f["стр.3_Разд.1"]["DK38"].value = data["Address"]["RegionCode"][0]
     f["стр.3_Разд.1"]["DN38"].value = data["Address"]["RegionCode"][1]
@@ -334,8 +334,8 @@ def excelwork(data):
              f["стр.3_Разд.1"]["CY40"], f["стр.3_Разд.1"]["DB40"], f["стр.3_Разд.1"]["DE40"],
              f["стр.3_Разд.1"]["DH40"], f["стр.3_Разд.1"]["DK40"], f["стр.3_Разд.1"]["DN40"])
 
-    for j in range(len(data["Address"]["District"])):
-        distr[j].value = data["Address"]["District"][j]
+    for _ in range(len(data["Address"]["District"])):
+        distr[_].value = data["Address"]["District"][_]
 
     city = (f["стр.3_Разд.1"]["AE42"], f["стр.3_Разд.1"]["AH42"], f["стр.3_Разд.1"]["AK42"],
             f["стр.3_Разд.1"]["AN42"], f["стр.3_Разд.1"]["AQ42"], f["стр.3_Разд.1"]["AT42"],
@@ -348,8 +348,8 @@ def excelwork(data):
             f["стр.3_Разд.1"]["CY42"], f["стр.3_Разд.1"]["DB42"], f["стр.3_Разд.1"]["DE42"],
             f["стр.3_Разд.1"]["DH42"], f["стр.3_Разд.1"]["DK42"], f["стр.3_Разд.1"]["DN42"])
 
-    for j in range(len(data["Address"]["City"])):
-        city[j].value = data["Address"]["City"][j]
+    for _ in range(len(data["Address"]["City"])):
+        city[_].value = data["Address"]["City"][_]
 
     vill = (f["стр.3_Разд.1"]["AE44"], f["стр.3_Разд.1"]["AH44"], f["стр.3_Разд.1"]["AK44"],
             f["стр.3_Разд.1"]["AN44"], f["стр.3_Разд.1"]["AQ44"], f["стр.3_Разд.1"]["AT44"],
@@ -362,8 +362,8 @@ def excelwork(data):
             f["стр.3_Разд.1"]["CY44"], f["стр.3_Разд.1"]["DB44"], f["стр.3_Разд.1"]["DE44"],
             f["стр.3_Разд.1"]["DH44"], f["стр.3_Разд.1"]["DK44"], f["стр.3_Разд.1"]["DN44"])
 
-    for j in range(len(data["Address"]["Village"])):
-        vill[j].value = data["Address"]["Village"][j]
+    for _ in range(len(data["Address"]["Village"])):
+        vill[_].value = data["Address"]["Village"][_]
 
     street = (f["стр.4_Разд.1"]["AE9"], f["стр.4_Разд.1"]["AH9"], f["стр.4_Разд.1"]["AK9"],
               f["стр.4_Разд.1"]["AN9"], f["стр.4_Разд.1"]["AQ9"], f["стр.4_Разд.1"]["AT9"],
@@ -376,29 +376,29 @@ def excelwork(data):
               f["стр.4_Разд.1"]["CY9"], f["стр.4_Разд.1"]["DB9"], f["стр.4_Разд.1"]["DE9"],
               f["стр.4_Разд.1"]["DH9"], f["стр.4_Разд.1"]["DK9"], f["стр.4_Разд.1"]["DN9"])
 
-    for j in range(len(data["Address"]["Street"])):
-        street[j].value = data["Address"]["Street"][j]
+    for _ in range(len(data["Address"]["Street"])):
+        street[_].value = data["Address"]["Street"][_]
 
     house = (f["стр.4_Разд.1"]["AE11"], f["стр.4_Разд.1"]["AH11"], f["стр.4_Разд.1"]["AK11"],
              f["стр.4_Разд.1"]["AN11"], f["стр.4_Разд.1"]["AQ11"], f["стр.4_Разд.1"]["AT11"],
              f["стр.4_Разд.1"]["AW11"], f["стр.4_Разд.1"]["AZ11"])
 
-    for j in range(len(data["Address"]["House"])):
-        house[j].value = data["Address"]["House"][j]
+    for _ in range(len(data["Address"]["House"])):
+        house[_].value = data["Address"]["House"][_]
 
     camp = (f["стр.4_Разд.1"]["AE13"], f["стр.4_Разд.1"]["AH13"], f["стр.4_Разд.1"]["AK13"],
             f["стр.4_Разд.1"]["AN13"], f["стр.4_Разд.1"]["AQ13"], f["стр.4_Разд.1"]["AT13"],
             f["стр.4_Разд.1"]["AW13"], f["стр.4_Разд.1"]["AZ13"])
 
-    for j in range(len(data["Address"]["Campus"])):
-        camp[j].value = data["Address"]["Campus"][j]
+    for _ in range(len(data["Address"]["Campus"])):
+        camp[_].value = data["Address"]["Campus"][_]
 
     room = (f["стр.4_Разд.1"]["AE15"], f["стр.4_Разд.1"]["AH15"], f["стр.4_Разд.1"]["AK15"],
             f["стр.4_Разд.1"]["AN15"], f["стр.4_Разд.1"]["AQ15"], f["стр.4_Разд.1"]["AT15"],
             f["стр.4_Разд.1"]["AW15"], f["стр.4_Разд.1"]["AZ15"])
 
-    for j in range(len(data["Address"]["Room"])):
-        room[j].value = data["Address"]["Room"][j]
+    for _ in range(len(data["Address"]["Room"])):
+        room[_].value = data["Address"]["Room"][_]
 
     place1 = (f["стр.4_Разд.1"]["AZ18"], f["стр.4_Разд.1"]["BC18"], f["стр.4_Разд.1"]["BF18"],
               f["стр.4_Разд.1"]["BI18"], f["стр.4_Разд.1"]["BL18"], f["стр.4_Разд.1"]["BO18"],
@@ -408,8 +408,8 @@ def excelwork(data):
               f["стр.4_Разд.1"]["CS18"], f["стр.4_Разд.1"]["CV18"], f["стр.4_Разд.1"]["CY18"],
               f["стр.4_Разд.1"]["DB18"], f["стр.4_Разд.1"]["DE18"])
 
-    for j in range(len(data["Address"]["Place"][0])):
-        place1[j].value = data["Address"]["Place"][0][j]
+    for _ in range(len(data["Address"]["Place"][0])):
+        place1[_].value = data["Address"]["Place"][0][_]
 
     place2 = (f["стр.4_Разд.1"]["AZ20"], f["стр.4_Разд.1"]["BC20"], f["стр.4_Разд.1"]["BF20"],
               f["стр.4_Разд.1"]["BI20"], f["стр.4_Разд.1"]["BL20"], f["стр.4_Разд.1"]["BO20"],
@@ -419,8 +419,8 @@ def excelwork(data):
               f["стр.4_Разд.1"]["CS20"], f["стр.4_Разд.1"]["CV20"], f["стр.4_Разд.1"]["CY20"],
               f["стр.4_Разд.1"]["DB20"], f["стр.4_Разд.1"]["DE20"])
 
-    for j in range(len(data["Address"]["Place"][1])):
-        place2[j].value = data["Address"]["Place"][1][j]
+    for _ in range(len(data["Address"]["Place"][1])):
+        place2[_].value = data["Address"]["Place"][1][_]
 
     place3 = (f["стр.4_Разд.1"]["AZ22"], f["стр.4_Разд.1"]["BC22"], f["стр.4_Разд.1"]["BF22"],
               f["стр.4_Разд.1"]["BI22"], f["стр.4_Разд.1"]["BL22"], f["стр.4_Разд.1"]["BO22"],
@@ -430,16 +430,16 @@ def excelwork(data):
               f["стр.4_Разд.1"]["CS22"], f["стр.4_Разд.1"]["CV22"], f["стр.4_Разд.1"]["CY22"],
               f["стр.4_Разд.1"]["DB22"], f["стр.4_Разд.1"]["DE22"])
 
-    for j in range(len(data["Address"]["Place"][2])):
-        place3[j].value = data["Address"]["Place"][2][j]
+    for _ in range(len(data["Address"]["Place"][2])):
+        place3[_].value = data["Address"]["Place"][2][_]
 
     Using = (f["стр.4_Разд.1"]["AZ27"], f["стр.5_Разд.2"]["BF11"], f["стр.5_Разд.2"]["BF18"],
              f["стр.5_Разд.2"]["BF23"], f["стр.5_Разд.2"]["BF29"], f["стр.5_Разд.2"]["BF33"],
              f["стр.5_Разд.2"]["BF37"], f["стр.5_Разд.2"]["BF42"], f["стр.6_Разд.2"]["BF10"],
              f["стр.6_Разд.2"]["BF15"], f["стр.6_Разд.2"]["BF19"], f["стр.6_Разд.2"]["BF24"])
 
-    for j in range(len(data["OFD"]["Using"])):
-        Using[j].value = "1" if data["OFD"]["Using"][j] else "2"
+    for _ in range(len(data["OFD"]["Using"])):
+        Using[_].value = "1" if data["OFD"]["Using"][_] else "2"
 
     OFDName1 = (f["стр.9_Разд.3"]["BC12"], f["стр.9_Разд.3"]["BF12"], f["стр.9_Разд.3"]["BI12"],
                 f["стр.9_Разд.3"]["BL12"], f["стр.9_Разд.3"]["BO12"], f["стр.9_Разд.3"]["BR12"],
@@ -449,8 +449,8 @@ def excelwork(data):
                 f["стр.9_Разд.3"]["CV12"], f["стр.9_Разд.3"]["CY12"], f["стр.9_Разд.3"]["DB12"],
                 f["стр.9_Разд.3"]["DE12"], f["стр.9_Разд.3"]["DH12"])
 
-    for j in range(len(data["OFD"]["OFDName"][0])):
-        OFDName1[j].value = data["OFD"]["OFDName"][0][j]
+    for _ in range(len(data["OFD"]["OFDName"][0])):
+        OFDName1[_].value = data["OFD"]["OFDName"][0][_]
 
     OFDName2 = (f["стр.9_Разд.3"]["BC14"], f["стр.9_Разд.3"]["BF14"], f["стр.9_Разд.3"]["BI14"],
                 f["стр.9_Разд.3"]["BL14"], f["стр.9_Разд.3"]["BO14"], f["стр.9_Разд.3"]["BR14"],
@@ -460,8 +460,8 @@ def excelwork(data):
                 f["стр.9_Разд.3"]["CV14"], f["стр.9_Разд.3"]["CY14"], f["стр.9_Разд.3"]["DB14"],
                 f["стр.9_Разд.3"]["DE14"], f["стр.9_Разд.3"]["DH14"])
 
-    for j in range(len(data["OFD"]["OFDName"][1])):
-        OFDName2[j].value = data["OFD"]["OFDName"][1][j]
+    for _ in range(len(data["OFD"]["OFDName"][1])):
+        OFDName2[_].value = data["OFD"]["OFDName"][1][_]
 
     OFDName3 = (f["стр.9_Разд.3"]["BC16"], f["стр.9_Разд.3"]["BF16"], f["стр.9_Разд.3"]["BI16"],
                 f["стр.9_Разд.3"]["BL16"], f["стр.9_Разд.3"]["BO16"], f["стр.9_Разд.3"]["BR16"],
@@ -471,8 +471,8 @@ def excelwork(data):
                 f["стр.9_Разд.3"]["CV16"], f["стр.9_Разд.3"]["CY16"], f["стр.9_Разд.3"]["DB16"],
                 f["стр.9_Разд.3"]["DE16"], f["стр.9_Разд.3"]["DH16"])
 
-    for j in range(len(data["OFD"]["OFDName"][2])):
-        OFDName3[j].value = data["OFD"]["OFDName"][2][j]
+    for _ in range(len(data["OFD"]["OFDName"][2])):
+        OFDName3[_].value = data["OFD"]["OFDName"][2][_]
 
     OFDName4 = (f["стр.9_Разд.3"]["BC18"], f["стр.9_Разд.3"]["BF18"], f["стр.9_Разд.3"]["BI18"],
                 f["стр.9_Разд.3"]["BL18"], f["стр.9_Разд.3"]["BO18"], f["стр.9_Разд.3"]["BR18"],
@@ -482,19 +482,89 @@ def excelwork(data):
                 f["стр.9_Разд.3"]["CV18"], f["стр.9_Разд.3"]["CY18"], f["стр.9_Разд.3"]["DB18"],
                 f["стр.9_Разд.3"]["DE18"], f["стр.9_Разд.3"]["DH18"])
 
-    for j in range(len(data["OFD"]["OFDName"][3])):
-        OFDName4[j].value = data["OFD"]["OFDName"][3][j]
+    for _ in range(len(data["OFD"]["OFDName"][3])):
+        OFDName4[_].value = data["OFD"]["OFDName"][3][_]
 
     OFDInn = (f["стр.9_Разд.3"]["BC21"], f["стр.9_Разд.3"]["BF21"], f["стр.9_Разд.3"]["BI21"],
               f["стр.9_Разд.3"]["BL21"], f["стр.9_Разд.3"]["BO21"], f["стр.9_Разд.3"]["BR21"],
               f["стр.9_Разд.3"]["BU21"], f["стр.9_Разд.3"]["BX21"], f["стр.9_Разд.3"]["CA21"],
               f["стр.9_Разд.3"]["CD21"], f["стр.9_Разд.3"]["CG21"], f["стр.9_Разд.3"]["CJ21"])
 
-    for j in range(len(data["OFD"]["OFDInn"])):
-        OFDInn[j].value = data["OFD"]["OFDInn"][j]
+    for _ in range(len(data["OFD"]["OFDInn"])):
+        OFDInn[_].value = data["OFD"]["OFDInn"][_]
+
+    f["стр.10_Разд.4"]["BD11"].value = "1" if data["Raports"]["FNBroken"] else "2"
+
+    if not data["Raports"]["RegRep"]["OnRegRep"]:
+        Nreg = (f["стр.10_Разд.4"]["BD18"], f["стр.10_Разд.4"]["BG18"], f["стр.10_Разд.4"]["BJ18"],
+                f["стр.10_Разд.4"]["BM18"], f["стр.10_Разд.4"]["BP18"], f["стр.10_Разд.4"]["BS18"],
+                f["стр.10_Разд.4"]["BV18"], f["стр.10_Разд.4"]["BY18"])
+
+        for _ in range(len(data["Raports"]["RegRep"]["Nrep"])):
+            Nreg[_].value = data["Raports"]["RegRep"]["Nrep"][_]
+
+        DateReg = (f["стр.10_Разд.4"]["BD22"], f["стр.10_Разд.4"]["BG22"], f["стр.10_Разд.4"]["BM22"],
+                   f["стр.10_Разд.4"]["BP22"], f["стр.10_Разд.4"]["BV22"], f["стр.10_Разд.4"]["BY22"],
+                   f["стр.10_Разд.4"]["CB22"], f["стр.10_Разд.4"]["CE22"])
+
+        Date = FormatDate(data["Raports"]["RegRep"]["Date"])
+
+        for _ in range(len(Date)):
+            DateReg[_].value = Date[_]
+
+        TimeReg = (f["стр.10_Разд.4"]["BD26"], f["стр.10_Разд.4"]["BG26"],
+                   f["стр.10_Разд.4"]["BM26"], f["стр.10_Разд.4"]["BP26"])
+
+        Time = "".join(data["Raports"]["RegRep"]["Time"].split(":"))
+
+        for _ in range(len(Time)):
+            TimeReg[_].value = Time[_]
+
+        FPreg = (f["стр.10_Разд.4"]["BD29"], f["стр.10_Разд.4"]["BG29"], f["стр.10_Разд.4"]["BJ29"],
+                 f["стр.10_Разд.4"]["BM29"], f["стр.10_Разд.4"]["BP29"], f["стр.10_Разд.4"]["BS29"],
+                 f["стр.10_Разд.4"]["BV29"], f["стр.10_Разд.4"]["BY29"], f["стр.10_Разд.4"]["CB29"],
+                 f["стр.10_Разд.4"]["CE29"])
+
+        for _ in range(len(data["Raports"]["RegRep"]["FP"])):
+            FPreg[_].value = data["Raports"]["RegRep"]["FP"][_]
+
+    if not data["Raports"]["ClosReg"]["OnRegClose"]:
+        Nclos = (f["стр.10_Разд.4"]["BD34"], f["стр.10_Разд.4"]["BG34"], f["стр.10_Разд.4"]["BJ34"],
+                f["стр.10_Разд.4"]["BM34"], f["стр.10_Разд.4"]["BP34"], f["стр.10_Разд.4"]["BS34"],
+                f["стр.10_Разд.4"]["BV34"], f["стр.10_Разд.4"]["BY34"])
+
+        for _ in range(len(data["Raports"]["ClosReg"]["Nrep"])):
+            Nclos[_].value = data["Raports"]["ClosReg"]["Nrep"][_]
+
+        DateReg = (f["стр.10_Разд.4"]["BD38"], f["стр.10_Разд.4"]["BG38"], f["стр.10_Разд.4"]["BM38"],
+                   f["стр.10_Разд.4"]["BP38"], f["стр.10_Разд.4"]["BV38"], f["стр.10_Разд.4"]["BY38"],
+                   f["стр.10_Разд.4"]["CB38"], f["стр.10_Разд.4"]["CE38"])
+
+        Date = FormatDate(data["Raports"]["ClosReg"]["Date"])
+
+        for _ in range(len(Date)):
+            DateReg[_].value = Date[_]
+
+        TimeReg = (f["стр.10_Разд.4"]["BD42"], f["стр.10_Разд.4"]["BG42"],
+                   f["стр.10_Разд.4"]["BM42"], f["стр.10_Разд.4"]["BP42"])
+
+        Time = "".join(data["Raports"]["ClosReg"]["Time"].split(":"))
+
+        for _ in range(len(Time)):
+            TimeReg[_].value = Time[_]
+
+        FPreg = (f["стр.10_Разд.4"]["BD45"], f["стр.10_Разд.4"]["BG45"], f["стр.10_Разд.4"]["BJ45"],
+                 f["стр.10_Разд.4"]["BM45"], f["стр.10_Разд.4"]["BP45"], f["стр.10_Разд.4"]["BS45"],
+                 f["стр.10_Разд.4"]["BV45"], f["стр.10_Разд.4"]["BY45"], f["стр.10_Разд.4"]["CB45"],
+                 f["стр.10_Разд.4"]["CE45"])
+
+        for _ in range(len(data["Raports"]["ClosReg"]["FP"])):
+            FPreg[_].value = data["Raports"]["ClosReg"]["FP"][_]
+
+
 
     f.save("3.xlsx")
 
 
 if __name__ == "__main__":
-    print(FormatDate("04 Ноября 2022"))
+    print("".join("12:48".split(":")))
