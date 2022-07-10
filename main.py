@@ -1,12 +1,13 @@
 from kivymd.uix.floatlayout import MDFloatLayout
 from kivymd.app import MDApp
 from kivymd.uix.tab import MDTabsBase
-from kivy.uix.screenmanager import Screen, ScreenManager
+from kivy.uix.screenmanager import Screen
 from kivymd.uix.picker import MDDatePicker, MDTimePicker
 from kivymd.uix.textfield import MDTextFieldRect
 from kivymd.uix.textfield import MDTextField
 from kivymd.uix.menu import MDDropdownMenu
 from kivy.properties import ObjectProperty
+from kivy.uix.popup import Popup
 
 import rq
 import dw
@@ -21,6 +22,37 @@ def AddSymbol(string, value):
 
 class MyTab(MDFloatLayout, MDTabsBase):
     pass
+
+
+class CurrentKKT(Popup):
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.title = "Рег. номер ККТ"
+        self.size_hint = (None, None)
+        self.size = (550, 250)
+        self.title_color = (0, 0, 0)
+        self.background_color = (255, 255, 255)
+        self.auto_dismiss = False
+        self.parrent = ObjectProperty()
+
+    def Clear(self):
+        self.ids.Date.text = ""
+        self.ids.reg.text = ""
+
+    def PostValue(self):
+        self.parrent.ids.curkkt.text = self.ids.reg.text + "/" + self.ids.Date.text
+        self.dismiss()
+
+
+class DeReg(Popup):
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.title = "Причина снятия ккт с учета"
+        self.size_hint = (None, None)
+        self.size = (550, 250)
+        self.title_color = (0, 0, 0)
+        self.background_color = (255, 255, 255)
+        self.auto_dismiss = False
 
 
 class Time(MDTextField):
@@ -45,12 +77,14 @@ class Date(MDTextField):
     def __init__(self, **kw):
         super().__init__(**kw)
         self.date = MDDatePicker()
+        self.date.ids.edit_icon.disabled = True
 
     def on_focus(self, *args):
         self.date.elem = self
         self.date.bind(on_save=self.on_save)
         if self.focus:
             self.date.open()
+
         MDTextField.on_focus(self, *args)
 
     def on_save(self, instance, value, date_range):
@@ -208,11 +242,11 @@ class MyInput(MDTextFieldRect):
         MDTextFieldRect.insert_text(self, substring, from_undo)
 
 
-class CurrentKKT(Screen):
+# class CurrentKKT(Screen):
 
-    def RegN(self):
-        self.manager.get_screen("Doc").ids.curkkt.text = self.ids.reg.text + "/" + self.ids.Date.text
-        self.manager.current = "Doc"
+# def RegN(self):
+# self.manager.get_screen("Doc").ids.curkkt.text = self.ids.reg.text + "/" + self.ids.Date.text
+# self.manager.current = "Doc"
 
 
 class DocFill(Screen):
@@ -221,6 +255,9 @@ class DocFill(Screen):
         super().__init__(**kw)
         self.DockMenu = MDDropdownMenu()
         self.UsersMenu = MDDropdownMenu()
+        self.DeRegPop = DeReg()
+        self.CurrKKT = CurrentKKT()
+        self.CurrKKT.parrent = self
 
     def ULActive(self):
         self.ids.inn.max_len = 10
@@ -335,7 +372,11 @@ class DocFill(Screen):
                         e.background_color = MDTextFieldRect().background_color
 
         if text == "Перерегистрация":
-            self.manager.current = "KKT"
+            self.CurrKKT.open()
+
+        if text == "Снятие с учета":
+            self.DeRegPop.open()
+
         self.DockMenu.dismiss()
 
     def GetPostIndex(self):
@@ -372,7 +413,8 @@ class DocFill(Screen):
                                         "Date": self.ids.Dateclos.text,
                                         "Time": self.ids.Timeclos.text
                                         }
-                            }
+                            },
+                "DeReg": (self.DeRegPop.ids.Thief.active, self.DeRegPop.ids.Lost.active)
                 }
 
         ogrn = self.ids.ogrn.text
@@ -589,11 +631,11 @@ class DocFill(Screen):
 class MyApp(MDApp):
     def build(self):
         self.load_kv("interface.kv")
-        sm = ScreenManager()
-        sm.add_widget(DocFill(name='Doc'))
-        sm.add_widget(CurrentKKT(name='KKT'))
+        # sm = ScreenManager()
+        # sm.add_widget(DocFill(name='Doc'))
+        # sm.add_widget(CurrentKKT(name='KKT'))
 
-        return sm
+        return DocFill()
 
 
 if __name__ == "__main__":
