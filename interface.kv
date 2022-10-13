@@ -2,7 +2,7 @@
     MDTabs:
         id: tabs
         MyTab:
-            text: "Основные сведения"
+            title: "Основные сведения"
 
             Date:
                 id: Date
@@ -22,7 +22,7 @@
                 size_hint_y: None
                 height: 25
                 size_hint_x: None
-                width: 200
+                width: 300
                 pos_hint: {"center_x": .6, "center_y": .94}
 
 
@@ -32,7 +32,7 @@
                 hint_text: "Вид документа"
                 multiline: False
                 size_hint_y: None
-                height: 50
+                height: 61
                 size_hint_x: None
                 width: 150
                 pos_hint: {"center_x": .3, "center_y": .94}
@@ -141,7 +141,7 @@
 
             MDLabel:
                 text: "ИП"
-                pos_hint: {"center_x": .53, "center_y": .92}
+                pos_hint: {"center_x": .58, "center_y": .92}
                 font_size: 15
 
             MDCheckbox:
@@ -151,11 +151,11 @@
                 group: "group"
                 size: dp(30), dp(30)
                 size_hint: None, None
-                pos_hint: {"center_x": .1, "center_y": .92}
+                pos_hint: {"center_x": .05, "center_y": .92}
 
             MDLabel:
                 text: "ЮрЛицо"
-                pos_hint: {"center_x": .53, "center_y": .86}
+                pos_hint: {"center_x": .58, "center_y": .86}
                 font_size: 15
 
             MDCheckbox:
@@ -164,36 +164,28 @@
                 group: "group"
                 size: dp(30), dp(30)
                 size_hint: None, None
-                pos_hint: {"center_x": .14, "center_y": .86}
-
-            MDLabel:
-                text:"ИНН"
-                pos_hint: {"center_x": .50, "center_y": .80}
-                font_size: 15
+                pos_hint: {"center_x": .05, "center_y": .86}
 
             MyInput:
                 max_len: 12
+                hint_text: "ИНН"
                 input_filter: "int"
                 id: inn
                 multiline: False
                 size_hint_y: None
                 height: 30
                 size_hint_x: None
-                width: 100
-                pos_hint: {"center_x": .09, "center_y": .74}
+                width: 120
+                pos_hint: {"center_x": .09, "center_y": .80}
 
             MDFillRoundFlatButton:
                 text: "Запрос"
                 pos_hint: {"center_x": .09, "center_y": .10}
                 on_press: root.request(inn.text)
 
-            MDLabel:
-                text:"ОГРН/ОГРНИП"
-                pos_hint: {"center_x": .50, "center_y": .69}
-                font_size: 15
-
             MyInput:
                 max_len: 15
+                hint_text: "ОГРН/ОГРНИП"
                 input_filter: "int"
                 id: ogrn
                 multiline: False
@@ -201,15 +193,11 @@
                 height: 30
                 size_hint_x: None
                 width: 120
-                pos_hint: {"center_x": .09, "center_y": .64}
-
-            MDLabel:
-                text:"КПП"
-                pos_hint: {"center_x": .50, "center_y": .59}
-                font_size: 15
+                pos_hint: {"center_x": .09, "center_y": .69}
 
             MyInput:
                 id: kpp
+                hint_text: "КПП"
                 input_filter: "int"
                 max_len: 9
                 readonly: True
@@ -219,7 +207,7 @@
                 height: 30
                 size_hint_x: None
                 width: 120
-                pos_hint: {"center_x": .09, "center_y": .54}
+                pos_hint: {"center_x": .09, "center_y": .59}
 
             MDLabel:
                 text:"Полное наименование/ФИО"
@@ -273,7 +261,7 @@
                 readonly: True
                 multiline: False
                 size_hint_y: None
-                height: 50
+                height: 61
                 size_hint_x: None
                 width: 150
                 pos_hint: {"center_x": .1, "center_y": .45}
@@ -356,26 +344,22 @@
                 pos_hint: {"center_x": .7, "center_y": .23}
 
         MyTab:
-            text: "Данные ККТ и ФН"
+            title: "Данные ККТ и ФН"
 
             MenuKKT:
                 id: KKT
                 hint_text: "Модель ККТ"
+                on_focus: if self.focus: self.menu.open()
                 readonly: False
                 multiline: False
-                size_hint_y: None
-                height: 25
-                size_hint_x: None
+                size_hint: None, None
+                height: 61
                 width: 200
                 pos_hint: {"center_x": .15, "center_y": 0.95}
 
-            MDLabel:
-                text: "Серийный номер ККТ"
-                pos_hint: {"center_x": 1, "center_y": .98}
-                font_size: 15
-
             MyInput:
                 id: seriesKKT
+                hint_text: "Серийный номер ККТ"
                 max_len: 20
                 input_filter: "int"
                 multiline: False
@@ -383,17 +367,17 @@
                 height: 30
                 size_hint_x: None
                 width: 300
-                pos_hint: {"center_x": .6, "center_y": .93}
+                pos_hint: {"center_x": .6, "center_y": .95}
 
             MenuFN:
                 id: FN
+                on_focus: if self.focus: self.menu.open()
                 parrent: root
                 hint_text: "Модель ФН"
                 readonly: False
                 multiline: False
-                size_hint_y: None
-                height: 25
-                size_hint_x: None
+                size_hint: None, None
+                height: 61
                 width: 700
                 pos_hint: {"center_x": .5, "center_y": 0.85}
 
@@ -457,13 +441,9 @@
                 width: 300
                 pos_hint: {"center_x": .65, "center_y": .65}
 
-            MDLabel:
-                text: "Серийный номер ФН"
-                pos_hint: {"center_x": 0.85, "center_y": .55}
-                font_size: 15
-
             MyInput:
                 id: serialFN
+                hint_text: "Серийный номер ФН"
                 max_len: 20
                 input_filter: "int"
                 multiline: False
@@ -471,10 +451,10 @@
                 height: 30
                 size_hint_x: None
                 width: 300
-                pos_hint: {"center_x": .45, "center_y": .5}
+                pos_hint: {"center_x": .45, "center_y": .55}
 
         MyTab:
-            text: "Адрес установки"
+            title: "Адрес установки"
 
             MDLabel:
                 text: "Индекс"
@@ -498,22 +478,18 @@
             RegionMenu:
                 id: region
                 text: "66 СВЕРДЛОВСКАЯ ОБЛАСТЬ"
+                on_focus: if self.focus: self.menu.open()
                 hint_text: "Регион"
                 readonly: False
                 multiline: False
-                size_hint_y: None
-                height: 50
-                size_hint_x: None
+                size_hint: None,None
+                height: 61
                 width: 450
                 pos_hint: {"center_x": .7, "center_y": 0.9}
 
-            MDLabel:
-                text: "Район"
-                pos_hint: {"center_x": 0.57, "center_y": .82}
-                font_size: 15
-
             MyInput:
                 id: district
+                hint_text: "Район"
                 max_len: 30
                 multiline: False
                 size_hint_y: None
@@ -522,13 +498,9 @@
                 width: 300
                 pos_hint: {"center_x": .35, "center_y": .82}
 
-            MDLabel:
-                text: "Город"
-                pos_hint: {"center_x": 0.57, "center_y": .75}
-                font_size: 15
-
             MyInput:
                 id: city
+                hint_text: "Город"
                 max_len: 30
                 multiline: False
                 size_hint_y: None
@@ -537,43 +509,31 @@
                 width: 300
                 pos_hint: {"center_x": .35, "center_y": .75}
 
-            MDLabel:
-                text: "Населенный пункт\n(село,поселок и т.д.)"
-                pos_hint: {"center_x": 0.5, "center_y": .68}
-                font_size: 15
-
             MyInput:
                 id: village
+                hint_text: "Населенный пункт (село,поселок и т.д.)"
                 max_len: 30
                 multiline: False
                 size_hint_y: None
                 height: 30
                 size_hint_x: None
                 width: 300
-                pos_hint: {"center_x": .38, "center_y": .68}
-
-            MDLabel:
-                text: "Улица (проспект,\nпереулок и т.д.)"
-                pos_hint: {"center_x": 0.5, "center_y": .61}
-                font_size: 15
+                pos_hint: {"center_x": .35, "center_y": .68}
 
             MyInput:
                 id: street
+                hint_text: "Улица (проспект,переулок и т.д.)"
                 max_len: 30
                 multiline: False
                 size_hint_y: None
                 height: 30
                 size_hint_x: None
                 width: 300
-                pos_hint: {"center_x": .38, "center_y": .61}
-
-            MDLabel:
-                text: "Номер дома"
-                pos_hint: {"center_x": 0.63, "center_y": .54}
-                font_size: 15
+                pos_hint: {"center_x": .35, "center_y": .61}
 
             MyInput:
                 id: house
+                hint_text: "Номер дома"
                 max_len: 8
                 multiline: False
                 size_hint_y: None
@@ -582,13 +542,9 @@
                 width: 150
                 pos_hint: {"center_x": .18, "center_y": .49}
 
-            MDLabel:
-                text: "Номер корпуса"
-                pos_hint: {"center_x": .93, "center_y": .54}
-                font_size: 15
-
             MyInput:
                 id: campus
+                hint_text: "Номер корпуса"
                 max_len: 8
                 multiline: False
                 size_hint_y: None
@@ -597,13 +553,9 @@
                 width: 150
                 pos_hint: {"center_x": .5, "center_y": .49}
 
-            MDLabel:
-                text: "Номер помещения"
-                pos_hint: {"center_x": 1.23, "center_y": .54}
-                font_size: 15
-
             MyInput:
                 id: room
+                hint_text: "Номер помещения"
                 max_len: 8
                 multiline: False
                 size_hint_y: None
@@ -648,7 +600,7 @@
                 pos_hint: {"center_x": .45, "center_y": .18}
 
         MyTab:
-            text: "Настройки ОФД \n и передачи данных"
+            title: "Настройки ОФД \n и передачи данных"
 
             MDLabel:
                 text: "ККТ предназначена для работы исключительно\nв автономном режиме "
@@ -712,6 +664,7 @@
 
             MDCheckbox:
                 id: ofd6
+                disabled: True if root.ids.AL1.active or root.ids.DockType.text == "Снятие с учета" else False
                 size: dp(30), dp(30)
                 size_hint: None, None
                 pos_hint: {"center_x": .03, "center_y": .65}
@@ -785,6 +738,7 @@
             OFDMenu:
                 id: OFD
                 parrent: root
+                on_focus: if self.focus: self.menu.open()
                 hint_text: "ОФД"
                 readonly: False
                 multiline: False
@@ -792,11 +746,11 @@
                 height: 50
                 size_hint_x: None
                 width: 450
-                pos_hint: {"center_x": .5, "center_y": 0.58}
+                pos_hint: {"center_x": .5, "center_y": 0.49}
 
             MDLabel:
                 text: "Наименование ОФД"
-                pos_hint: {"center_x": .53, "center_y": .50}
+                pos_hint: {"center_x": .53, "center_y": .41}
                 font_size: 15
 
             MyInput:
@@ -807,7 +761,7 @@
                 height: 30
                 size_hint_x: None
                 width: 400
-                pos_hint: {"center_x": .5, "center_y": .50}
+                pos_hint: {"center_x": .5, "center_y": .41}
 
             MyInput:
                 id: ofdn2
@@ -817,7 +771,7 @@
                 height: 30
                 size_hint_x: None
                 width: 400
-                pos_hint: {"center_x": .5, "center_y": .44}
+                pos_hint: {"center_x": .5, "center_y": .35}
 
             MyInput:
                 id: ofdn3
@@ -827,7 +781,7 @@
                 height: 30
                 size_hint_x: None
                 width: 400
-                pos_hint: {"center_x": .5, "center_y": .38}
+                pos_hint: {"center_x": .5, "center_y": .29}
 
             MyInput:
                 id: ofdn4
@@ -837,15 +791,11 @@
                 height: 30
                 size_hint_x: None
                 width: 400
-                pos_hint: {"center_x": .5, "center_y": .32}
-
-            MDLabel:
-                text: "ИНН ОФД"
-                pos_hint: {"center_x": .53, "center_y": .26}
-                font_size: 15
+                pos_hint: {"center_x": .5, "center_y": .23}
 
             MyInput:
                 id: ofdinn
+                hint_text: "ИНН ОФД"
                 max_len: 10
                 input_filter: "int"
                 multiline: False
@@ -853,15 +803,18 @@
                 height: 30
                 size_hint_x: None
                 width: 400
-                pos_hint: {"center_x": .4, "center_y": .26}
+                pos_hint: {"center_x": .28, "center_y": .15}
 
-            MDFillRoundFlatButton:
-                text: "Генерация"
-                pos_hint: {"center_x": .09, "center_y": .10}
-                on_press: root.GenerateXLSX()
+            MDRectangleFlatButton:
+                id: ListDev
+                text: "Список автоматических устройств для расчетов"
+                disabled: False if root.ids.ofd6.active else True
+                line_color: 0,0,0,0
+                pos_hint: {"center_x": .23, "center_y": .58}
+                on_press: root.manager.current = 'ACD'
 
         MyTab:
-            text: "Сведения об отчетах"
+            title: "Сведения об отчетах"
 
             MDLabel:
                 text: "ФН заменен в связи с поломкой"
@@ -990,12 +943,365 @@
                 width: 150
                 pos_hint: {"center_x": .6, "center_y": .25}
 
+            MDFillRoundFlatButton:
+                text: "Генерация"
+                pos_hint: {"center_x": .09, "center_y": .10}
+                on_press: root.OpenPath()
+
+            MDLabel:
+                text: "8 листов"
+                pos_hint: {"center_x": .7, "center_y": .15}
+                font_size: 15
+
+            MDCheckbox:
+                id: AL1
+                group: "AlGroup"
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .23, "center_y": .10}
+
+            MDLabel:
+                text: "10 листов"
+                pos_hint: {"center_x": .8, "center_y": .15}
+                font_size: 15
+
+            MDCheckbox:
+                id: AL2
+                active: True
+                group: "AlGroup"
+                size: dp(30), dp(30)
+                size_hint: None, None
+                pos_hint: {"center_x": .34, "center_y": .10}
+
+
+
+<AutoCalcDevice>
+    BoxLayout:
+        orientation: "vertical"
+
+        MDTopAppBar:
+            title: "Автоматические устройства для расчетов"
+            size_hint_y: None
+            height: 25
+            right_action_items: [["arrow-right", lambda x: root.CloseWindow()]]
+
+
+        MDTabs:
+            id: DeviceTabs
+
+            MyTab:
+                title: "Устройство 1"
+
+                MDTextFieldRect:
+                    id: ZipCode1
+                    hint_text: "Индекс"
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 150
+                    pos_hint: {"center_x": .1, "center_y": .9}
+
+                MDFillRoundFlatButton:
+                    text: "Получить индекс"
+                    pos_hint: {"center_x": .3, "center_y": .9}
+                    on_press: root.GetPostIndex(root.ids.district1, root.ids.city1, root.ids.village1, root.ids.ZipCode1)
+
+                RegionMenu:
+                    id: region1
+                    on_focus: if self.focus: self.menu.open()
+                    text: "66 СВЕРДЛОВСКАЯ ОБЛАСТЬ"
+                    hint_text: "Регион"
+                    readonly: False
+                    multiline: False
+                    size_hint_y: None
+                    height: 61
+                    size_hint_x: None
+                    width: 450
+                    pos_hint: {"center_x": .7, "center_y": 0.9}
+
+                MyInput:
+                    id: district1
+                    hint_text: "Район"
+                    max_len: 30
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 300
+                    pos_hint: {"center_x": .35, "center_y": .82}
+
+                MyInput:
+                    id: city1
+                    hint_text: "Город"
+                    max_len: 30
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 300
+                    pos_hint: {"center_x": .35, "center_y": .75}
+
+                MyInput:
+                    id: village1
+                    hint_text: "Населенный пункт (село,поселок и т.д.)"
+                    max_len: 30
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 300
+                    pos_hint: {"center_x": .38, "center_y": .68}
+
+                MyInput:
+                    id: street1
+                    hint_text: "Улица (проспект,переулок и т.д.)"
+                    max_len: 30
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 300
+                    pos_hint: {"center_x": .38, "center_y": .61}
+
+                MyInput:
+                    id: house1
+                    hint_text: "Номер дома"
+                    max_len: 8
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 150
+                    pos_hint: {"center_x": .18, "center_y": .49}
+
+                MyInput:
+                    id: campus1
+                    hint_text: "Номер корпуса"
+                    max_len: 8
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 150
+                    pos_hint: {"center_x": .5, "center_y": .49}
+
+                MyInput:
+                    id: room1
+                    hint_text: "Номер помещения"
+                    max_len: 8
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 150
+                    pos_hint: {"center_x": .82, "center_y": .49}
+
+                MDLabel:
+                    text: "Место установки (применения) контрольно-кассовой техники"
+                    pos_hint: {"center_x": .7, "center_y": .40}
+                    font_size: 15
+
+                MyInput:
+                    id: expd1_1
+                    max_len: 20
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 400
+                    pos_hint: {"center_x": .45, "center_y": .33}
+
+                MyInput:
+                    id: expd1_2
+                    max_len: 20
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 400
+                    pos_hint: {"center_x": .45, "center_y": .25}
+
+                MyInput:
+                    id: expd1_3
+                    max_len: 20
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 400
+                    pos_hint: {"center_x": .45, "center_y": .18}
+
+                MyInput:
+                    max_len: 20
+                    hint_text: "Номер устройства..."
+                    input_filter: "int"
+                    id: n1
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 400
+                    pos_hint: {"center_x": .45, "center_y": .10}
+
+            MyTab:
+                title: "Устройство 2"
+
+                MDTextFieldRect:
+                    id: ZipCode2
+                    hint_text: "Индекс"
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 150
+                    pos_hint: {"center_x": .1, "center_y": .9}
+
+                MDFillRoundFlatButton:
+                    text: "Получить индекс"
+                    pos_hint: {"center_x": .3, "center_y": .9}
+                    on_press: root.GetPostIndex(root.ids.district2, root.ids.city2, root.ids.village2, root.ids.ZipCode2)
+
+                RegionMenu:
+                    id: region2
+                    text: "66 СВЕРДЛОВСКАЯ ОБЛАСТЬ"
+                    on_focus: if self.focus: self.menu.open()
+                    hint_text: "Регион"
+                    readonly: False
+                    multiline: False
+                    size_hint_y: None
+                    height: 61
+                    size_hint_x: None
+                    width: 450
+                    pos_hint: {"center_x": .7, "center_y": 0.9}
+
+                MyInput:
+                    id: district2
+                    hint_text: "Район"
+                    max_len: 30
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 300
+                    pos_hint: {"center_x": .35, "center_y": .82}
+
+                MyInput:
+                    id: city2
+                    hint_text: "Город"
+                    max_len: 30
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 300
+                    pos_hint: {"center_x": .35, "center_y": .75}
+
+                MyInput:
+                    id: village2
+                    hint_text: "Населенный пункт (село,поселок и т.д.)"
+                    max_len: 30
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 300
+                    pos_hint: {"center_x": .38, "center_y": .68}
+
+                MyInput:
+                    id: street2
+                    hint_text: "Улица (проспект,переулок и т.д.)"
+                    max_len: 30
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 300
+                    pos_hint: {"center_x": .38, "center_y": .61}
+
+                MyInput:
+                    id: house2
+                    hint_text: "Номер дома"
+                    max_len: 8
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 150
+                    pos_hint: {"center_x": .18, "center_y": .49}
+
+                MyInput:
+                    id: campus2
+                    hint_text: "Номер корпуса"
+                    max_len: 8
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 150
+                    pos_hint: {"center_x": .5, "center_y": .49}
+
+                MyInput:
+                    id: room2
+                    hint_text: "Номер помещения"
+                    max_len: 8
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 150
+                    pos_hint: {"center_x": .82, "center_y": .49}
+
+                MDLabel:
+                    text: "Место установки (применения) контрольно-кассовой техники"
+                    pos_hint: {"center_x": .7, "center_y": .40}
+                    font_size: 15
+
+                MyInput:
+                    id: expd2_1
+                    max_len: 20
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 400
+                    pos_hint: {"center_x": .45, "center_y": .33}
+
+                MyInput:
+                    id: expd2_2
+                    max_len: 20
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 400
+                    pos_hint: {"center_x": .45, "center_y": .25}
+
+                MyInput:
+                    id: expd2_3
+                    max_len: 20
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 400
+                    pos_hint: {"center_x": .45, "center_y": .18}
+
+                MyInput:
+                    max_len: 20
+                    hint_text: "Номер устройства..."
+                    input_filter: "int"
+                    id: n2
+                    multiline: False
+                    size_hint_y: None
+                    height: 30
+                    size_hint_x: None
+                    width: 400
+                    pos_hint: {"center_x": .45, "center_y": .10}
+
+
 <CurrentKKT>
-    #title: "Текущий ККТ"
-    #title_color: 0, 0, 0
-    #size_hint: None, None
-    #size: 525, 200
-    #background_color: 255, 255, 255
+
     MDFloatLayout:
         Date:
             id: Date
@@ -1062,4 +1368,26 @@
             pos_hint: {"center_x": .1, "center_y": .2}
             on_press: root.dismiss()
 
+<Path>
+    FileNameEnter:
+        id: FName
+        hint_text: "Наименование файла..."
+        multiline: False
+        size_hint_y: None
+        height: 30
+        size_hint_x: None
+        width: 500
+        pos_hint: {"center_x": .57, "center_y": .06}
 
+<AttentionPopup>
+    MDFloatLayout:
+
+        MDFillRoundFlatButton:
+            id: bt
+            text: "ОК"
+            pos_hint: {"center_x": .1, "center_y": .2}
+            on_press: root.dismiss()
+
+        MDLabel:
+            id: msg
+            pos_hint: {"center_x": .65, "center_y": .65}

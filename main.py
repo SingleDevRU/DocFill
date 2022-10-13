@@ -1,13 +1,16 @@
 from kivymd.uix.floatlayout import MDFloatLayout
 from kivymd.app import MDApp
 from kivymd.uix.tab import MDTabsBase
-from kivy.uix.screenmanager import Screen
-from kivymd.uix.picker import MDDatePicker, MDTimePicker
+from kivy.uix.screenmanager import Screen, ScreenManager
+from kivymd.uix.pickers import MDDatePicker, MDTimePicker
 from kivymd.uix.textfield import MDTextFieldRect
 from kivymd.uix.textfield import MDTextField
 from kivymd.uix.menu import MDDropdownMenu
 from kivy.properties import ObjectProperty
 from kivy.uix.popup import Popup
+from kivymd.uix.filemanager import MDFileManager
+
+from os import listdir
 
 import rq
 import dw
@@ -24,6 +27,30 @@ class MyTab(MDFloatLayout, MDTabsBase):
     pass
 
 
+class FileNameEnter(MDTextFieldRect):
+
+    def insert_text(self, substring, from_undo=False):
+        if substring in ("'", "\"", "<", ">", "\\", "|", "/", ".", ",", "?", "!", ":", ";", "+", "-", "*"):
+            substring = ""
+
+        MDTextFieldRect.insert_text(self, substring, from_undo)
+
+
+class Path(MDFileManager):
+    pass
+
+
+class AttentionPopup(Popup):
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.title = "Внимание!"
+        self.size_hint = (None, None)
+        self.size = (550, 250)
+        self.title_color = (0, 0, 0)
+        self.background_color = (255, 255, 255)
+        self.auto_dismiss = False
+
+
 class CurrentKKT(Popup):
     def __init__(self, **kw):
         super().__init__(**kw)
@@ -38,9 +65,11 @@ class CurrentKKT(Popup):
     def Clear(self):
         self.ids.Date.text = ""
         self.ids.reg.text = ""
+        self.parrent.ids.curkkt.text = ""
 
     def PostValue(self):
-        self.parrent.ids.curkkt.text = self.ids.reg.text + "/" + self.ids.Date.text
+        self.parrent.ids.curkkt.text = self.ids.reg.text + ("/" if self.ids.reg.text != "" and self.ids.Date.text != ""
+                                                            else "") + self.ids.Date.text
         self.dismiss()
 
 
@@ -59,7 +88,6 @@ class Time(MDTextField):
     def __init__(self, **kw):
         super().__init__(**kw)
         self.time = MDTimePicker()
-        self.time.ids.input_clock_switch.disabled = True
 
     def on_focus(self, *args):
         self.time.bind(on_save=self.GetTime)
@@ -77,7 +105,6 @@ class Date(MDTextField):
     def __init__(self, **kw):
         super().__init__(**kw)
         self.date = MDDatePicker()
-        self.date.ids.edit_icon.disabled = True
 
     def on_focus(self, *args):
         self.date.elem = self
@@ -107,7 +134,7 @@ class OFDMenu(MDTextField):
         self.menu.position = "bottom"
         self.menu.ver_growth = "down"
 
-    def on_focus(self, *args):
+    def set_text(self, instance_text_field, text: str) -> None:
         self.menu.items = [
             {
                 "text": f'{i}',
@@ -120,7 +147,7 @@ class OFDMenu(MDTextField):
             self.menu.dismiss()
             self.menu.open()
 
-        MDTextField.on_focus(self, *args)
+        MDTextField.set_text(self, instance_text_field, text)
 
     def Menu_callback(self, text):
         items = dw.GetOFD()
@@ -139,12 +166,12 @@ class RegionMenu(MDTextField):
         super().__init__(**kw)
         self.menu = MDDropdownMenu()
         self.menu.caller = self
-        self.menu.width_mult = 100
+        self.menu.width_mult = 7
         self.menu.max_height = 300
         self.menu.position = "bottom"
         self.menu.ver_growth = "down"
 
-    def on_focus(self, *args):
+    def set_text(self, instance_text_field, text: str) -> None:
         self.menu.items = [
             {
                 "text": f'{i}',
@@ -157,7 +184,7 @@ class RegionMenu(MDTextField):
             self.menu.dismiss()
             self.menu.open()
 
-        MDTextField.on_focus(self, *args)
+        MDTextField.set_text(self, instance_text_field, text)
 
     def Menu_callback(self, text):
         self.text = text
@@ -175,7 +202,7 @@ class MenuFN(MDTextField):
         self.menu.position = "bottom"
         self.menu.ver_growth = "down"
 
-    def on_focus(self, *args):
+    def set_text(self, instance_text_field, text: str) -> None:
         self.menu.items = [
             {
                 "text": f'{i}',
@@ -188,7 +215,7 @@ class MenuFN(MDTextField):
             self.menu.dismiss()
             self.menu.open()
 
-        MDTextField.on_focus(self, *args)
+        MDTextField.set_text(self, instance_text_field, text)
 
     def Menu_callback(self, text):
         items = dw.GetFN()
@@ -208,12 +235,12 @@ class MenuKKT(MDTextField):
         super().__init__(**kw)
         self.menu = MDDropdownMenu()
         self.menu.caller = self
-        self.menu.width_mult = 4
+        self.menu.width_mult = 3.7
         self.menu.max_height = 300
         self.menu.position = "bottom"
         self.menu.ver_growth = "down"
 
-    def on_focus(self, *args):
+    def set_text(self, instance_text_field, text: str) -> None:
         self.menu.items = [
             {
                 "text": f'{i}',
@@ -226,7 +253,7 @@ class MenuKKT(MDTextField):
             self.menu.dismiss()
             self.menu.open()
 
-        MDTextField.on_focus(self, *args)
+        MDTextField.set_text(self, instance_text_field, text)
 
     def Menu_callback(self, text):
         self.text = text
@@ -242,22 +269,54 @@ class MyInput(MDTextFieldRect):
         MDTextFieldRect.insert_text(self, substring, from_undo)
 
 
-# class CurrentKKT(Screen):
+class AutoCalcDevice(Screen):
 
-# def RegN(self):
-# self.manager.get_screen("Doc").ids.curkkt.text = self.ids.reg.text + "/" + self.ids.Date.text
-# self.manager.current = "Doc"
+    def GetPostIndex(self, district, city, village, ZipCode):
+        if district.text == "":
+            text = city.text
+        else:
+            text = district.text + "," + village.text
+
+        ZipCode.text = rq.GetIndex(text) if rq.GetIndex(text) is not False else ""
+
+    def CloseWindow(self):
+        self.manager.current = "Doc"
 
 
 class DocFill(Screen):
 
     def __init__(self, **kw):
         super().__init__(**kw)
-        self.DockMenu = MDDropdownMenu()
-        self.UsersMenu = MDDropdownMenu()
+        self.DockMenu = MDDropdownMenu(position="bottom")
+        self.UsersMenu = MDDropdownMenu(position="bottom")
         self.DeRegPop = DeReg()
         self.CurrKKT = CurrentKKT()
         self.CurrKKT.parrent = self
+        self.SavePath = Path(exit_manager=self.exit_manager,
+                             select_path=self.select_path)
+        self.Attention = AttentionPopup()
+
+    def select_path(self, path):
+        name = self.SavePath.ids.FName.text
+        try:
+            filename = name if name[len(name) - 1] != " " else name[:-1]
+        except IndexError:
+            pass
+        else:
+            if filename + ".xlsx" in listdir(path):
+                self.Attention.ids.msg.text = f"Файл с именем {filename}.xlsx уже существует!"
+                self.Attention.open()
+                return
+
+            pathtosave = path + "\\" + filename + ".xlsx"
+            self.GenerateXLSX(pathtosave)
+            self.exit_manager()
+
+    def exit_manager(self, *args):
+        self.SavePath.close()
+
+    def OpenPath(self):
+        self.SavePath.show_disks()
 
     def ULActive(self):
         self.ids.inn.max_len = 10
@@ -273,6 +332,8 @@ class DocFill(Screen):
 
     def request(self, inn):
         info = rq.EgrulRq(inn)
+        self.ids.ogrn.text = ""
+        self.ids.kpp.text = ""
         if info:
             self.ids.ogrn.text = info[2]
             if info[0] == "fl":
@@ -280,15 +341,18 @@ class DocFill(Screen):
                 self.ids.name2.text = info[1]
             else:
                 self.ids.kpp.text = info[3]
-                if "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ" in info[1]:
-                    self.ids.name1.text = info[1][:40]
-                    self.ids.name2.text = info[1][41:]
-                elif "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО" in info[1]:
-                    self.ids.name1.text = info[1][:30]
-                    self.ids.name2.text = info[1][31:]
+                if "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ" in info[1].upper():
+                    self.ids.name1.text = "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ"
+                    self.ids.name2.text = info[1][41:] if len(info[1]) < 80 else info[1][41:80]
+                    self.ids.name3.text = "" if len(info[1]) < 80 else info[1][81:]
+                elif "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО" in info[1].upper():
+                    self.ids.name1.text = "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО"
+                    self.ids.name2.text = info[1][31:] if len(info[1]) < 71 else info[1][31:71]
+                    self.ids.name3.text = "" if len(info[1]) < 71 else info[1][72:]
                 elif "АКЦИОНЕРНОЕ ОБЩЕСТВО" in info[1]:
-                    self.ids.name1.text = info[1][:20]
-                    self.ids.name2.text = info[1][21:]
+                    self.ids.name1.text = "АКЦИОНЕРНОЕ ОБЩЕСТВО"
+                    self.ids.name2.text = info[1][21:] if len(info[1]) < 61 else info[1][21:61]
+                    self.ids.name3.text = "" if len(info[1]) < 61 else info[1][62:]
 
     def MenuDock(self):
 
@@ -349,7 +413,7 @@ class DocFill(Screen):
                                self.ids.village, self.ids.street, self.ids.house, self.ids.campus, self.ids.room,
                                self.ids.exp1, self.ids.exp2, self.ids.exp3, self.ids.ofdn1, self.ids.ofdn2,
                                self.ids.ofdn3, self.ids.ofdn4, self.ids.ofdinn),
-                 "ChekBoxes": (self.ids.ofd1, self.ids.ofd2, self.ids.ofd3, self.ids.ofd4, self.ids.ofd5, self.ids.ofd6,
+                 "ChekBoxes": (self.ids.ofd1, self.ids.ofd2, self.ids.ofd3, self.ids.ofd4, self.ids.ofd5,
                                self.ids.ofd7, self.ids.ofd8, self.ids.ofd9, self.ids.ofd10, self.ids.ofd11,
                                self.ids.ofd12)
                  }
@@ -363,6 +427,8 @@ class DocFill(Screen):
                         e.readonly = True
                         e.background_color = 0, 0, 0, .4
                         e.text = ""
+                    self.ids.AL1.disabled, self.ids.AL1.active = True, False
+                    self.ids.AL2.disabled, self.ids.AL2.active = True, False
                 else:
                     if i == "TextFiled" or i == "ChekBoxes":
                         e.disabled = False
@@ -374,7 +440,7 @@ class DocFill(Screen):
         if text == "Перерегистрация":
             self.CurrKKT.open()
 
-        if text == "Снятие с учета":
+        elif text == "Снятие с учета":
             self.DeRegPop.open()
 
         self.DockMenu.dismiss()
@@ -387,7 +453,24 @@ class DocFill(Screen):
 
         self.ids.ZipCode.text = rq.GetIndex(text) if rq.GetIndex(text) is not False else ""
 
-    def GenerateXLSX(self):
+    def GenerateXLSX(self, path):
+        if self.ids.Date.text == "":
+            self.Attention.ids.msg.text = "Укажите дату документа!"
+            self.Attention.open()
+            return
+
+        elif not self.ids.RegRep.active and (self.ids.DateReg.text == "" or self.ids.TimeReg.text == ""):
+            dateortime = "дату" if self.ids.DateReg.text == "" else "время"
+            self.Attention.ids.msg.text = f"Укажите {dateortime} отчета о регистрации!"
+            self.Attention.open()
+            return
+
+        elif not self.ids.RegClose.active and (self.ids.Dateclos.text == "" or self.ids.Timeclos.text == ""):
+            dateortime = "дату" if self.ids.Dateclos.text == "" else "время"
+            self.Attention.ids.msg.text = f"Укажите {dateortime} отчета о закрытии ФН!"
+            self.Attention.open()
+            return
+
         data = {"Primary": {"TypeUser": (self.ids.TG1.active, self.ids.TG2.active),
                             "TypeDock": self.ids.DockType.text,
                             "CurKkt": self.ids.curkkt.text,
@@ -414,228 +497,98 @@ class DocFill(Screen):
                                         "Time": self.ids.Timeclos.text
                                         }
                             },
-                "DeReg": (self.DeRegPop.ids.Thief.active, self.DeRegPop.ids.Lost.active)
+                "DeReg": (self.DeRegPop.ids.Thief.active, self.DeRegPop.ids.Lost.active),
+                "AutoCalcDevice": {"device1": {"index": self.manager.get_screen("ACD").ids.ZipCode1.text,
+                                               "regioncode": self.manager.get_screen("ACD").ids.region1.text[:2]
+                                               },
+                                   "device2": {"index": self.manager.get_screen("ACD").ids.ZipCode2.text,
+                                               "regioncode": self.manager.get_screen("ACD").ids.region2.text[:2]
+                                               }
+                                   },
+                "NumberOfSheets": (self.ids.AL1.active, self.ids.AL2.active)
                 }
 
-        ogrn = self.ids.ogrn.text
-        if len(ogrn) < 15:
-            ogrn = AddSymbol(ogrn, 15)
-
-        data["Primary"]["OGRN"] = ogrn
-
-        inn = self.ids.inn.text
-        if len(inn) != 12:
-            inn = AddSymbol(inn, 12)
-
-        data["Primary"]["INN"] = inn
-
-        kpp = self.ids.kpp.text
-        if len(kpp) != 9:
-            kpp = AddSymbol(kpp, 9)
-
-        data["Primary"]["KPP"] = kpp
-
-        name1 = self.ids.name1.text
-        if len(name1) != 40:
-            name1 = AddSymbol(name1, 40)
-
-        name2 = self.ids.name2.text
-        if len(name2) != 40:
-            name2 = AddSymbol(name2, 40)
-
-        name3 = self.ids.name3.text
-        if len(name3) != 40:
-            name3 = AddSymbol(name3, 40)
-
-        data["Primary"]["FullName"] = (name1, name2, name3)
-
-        userf = self.ids.f.text
-        if len(userf) != 20:
-            userf = AddSymbol(userf, 20)
-
-        useri = self.ids.i.text
-        if len(useri) != 20:
-            useri = AddSymbol(useri, 20)
-
-        usero = self.ids.o.text
-        if len(usero) != 20:
-            usero = AddSymbol(usero, 20)
-
-        data["Primary"]["UserFIO"] = (userf, useri, usero)
-
-        doc1 = self.ids.d1.text
-        if len(doc1) != 20:
-            doc1 = AddSymbol(doc1, 20)
-
-        doc2 = self.ids.d2.text
-        if len(doc2) != 20:
-            doc2 = AddSymbol(doc2, 20)
-
-        doc3 = self.ids.d3.text
-        if len(doc3) != 20:
-            doc3 = AddSymbol(doc3, 20)
-
-        data["Primary"]["Document"] = (doc1, doc2, doc3)
-
-        model = self.ids.KKT.text
-        if len(model) != 20:
-            model = AddSymbol(model, 20)
-
-        data["KKTandFN"]["Model"] = model
-
-        KKTs = self.ids.seriesKKT.text
-        if len(KKTs) != 20:
-            KKTs = AddSymbol(KKTs, 20)
-
-        data["KKTandFN"]["SerialKKT"] = KKTs
-
-        FNs = self.ids.serialFN.text
-        if len(FNs) != 20:
-            FNs = AddSymbol(FNs, 20)
-
-        data["KKTandFN"]["SerialFN"] = FNs
-
-        FNname1 = self.ids.fn1.text
-        if len(FNname1) != 20:
-            FNname1 = AddSymbol(FNname1, 20)
-
-        FNname2 = self.ids.fn2.text
-        if len(FNname2) != 20:
-            FNname2 = AddSymbol(FNname2, 20)
-
-        FNname3 = self.ids.fn3.text
-        if len(FNname3) != 20:
-            FNname3 = AddSymbol(FNname3, 20)
-
-        FNname4 = self.ids.fn4.text
-        if len(FNname4) != 20:
-            FNname4 = AddSymbol(FNname4, 20)
-
-        FNname5 = self.ids.fn5.text
-        if len(FNname5) != 20:
-            FNname5 = AddSymbol(FNname5, 20)
-
-        FNname6 = self.ids.fn6.text
-        if len(FNname6) != 20:
-            FNname6 = AddSymbol(FNname6, 20)
-
-        data["KKTandFN"]["FNName"] = (FNname1, FNname2, FNname3, FNname4, FNname5, FNname6)
-
-        distr = self.ids.district.text
-        if len(distr) != 30:
-            distr = AddSymbol(distr, 30)
-
-        data["Address"]["District"] = distr
-
-        city = self.ids.city.text
-        if len(city) != 30:
-            city = AddSymbol(city, 30)
-
-        data["Address"]["City"] = city
-
-        vill = self.ids.village.text
-        if len(vill) != 30:
-            vill = AddSymbol(vill, 30)
-
-        data["Address"]["Village"] = vill
-
-        Street = self.ids.street.text
-        if len(Street) != 30:
-            Street = AddSymbol(Street, 30)
-
-        data["Address"]["Street"] = Street
-
-        house = self.ids.house.text
-        if len(house) != 8:
-            house = AddSymbol(house, 8)
-
-        data["Address"]["House"] = house
-
-        camp = self.ids.campus.text
-        if len(camp) != 8:
-            camp = AddSymbol(camp, 8)
-
-        data["Address"]["Campus"] = camp
-
-        room = self.ids.room.text
-        if len(room) != 8:
-            room = AddSymbol(room, 8)
-
-        data["Address"]["Room"] = room
-
-        place1 = self.ids.exp1.text
-        if len(place1) != 20:
-            place1 = AddSymbol(place1, 20)
-
-        place2 = self.ids.exp2.text
-        if len(place2) != 20:
-            place2 = AddSymbol(place2, 20)
-
-        place3 = self.ids.exp3.text
-        if len(place3) != 20:
-            place3 = AddSymbol(place3, 20)
-
-        data["Address"]["Place"] = (place1, place2, place3)
-
-        OFDName1 = self.ids.ofdn1.text
-        if len(OFDName1) != 20:
-            OFDName1 = AddSymbol(OFDName1, 20)
-
-        OFDName2 = self.ids.ofdn2.text
-        if len(OFDName2) != 20:
-            OFDName2 = AddSymbol(OFDName2, 20)
-
-        OFDName3 = self.ids.ofdn3.text
-        if len(OFDName3) != 20:
-            OFDName3 = AddSymbol(OFDName3, 20)
-
-        OFDName4 = self.ids.ofdn4.text
-        if len(OFDName4) != 20:
-            OFDName4 = AddSymbol(OFDName4, 20)
-
-        data["OFD"]["OFDName"] = (OFDName1, OFDName2, OFDName3, OFDName4)
-
-        OFDInn = self.ids.ofdinn.text
-        if len(OFDInn) != 12:
-            OFDInn = AddSymbol(OFDInn, 12)
-
-        data["OFD"]["OFDInn"] = OFDInn
-
-        Nreg = self.ids.Nregrep.text
-        if len(Nreg) != 8:
-            Nreg = AddSymbol(Nreg, 8)
-
-        Nclos = self.ids.Nregclos.text
-        if len(Nclos) != 8:
-            Nclos = AddSymbol(Nclos, 8)
-
-        data["Raports"]["RegRep"]["Nrep"] = Nreg
-
-        data["Raports"]["ClosReg"]["Nrep"] = Nclos
-
-        FPReg = self.ids.FPDockreg.text
-        if len(FPReg) != 10:
-            FPReg = AddSymbol(FPReg, 10)
-
-        FPClos = self.ids.FPDockclos.text
-        if len(FPClos) != 10:
-            FPClos = AddSymbol(FPClos, 10)
-
-        data["Raports"]["RegRep"]["FP"] = FPReg
-
-        data["Raports"]["ClosReg"]["FP"] = FPClos
-
-        dw.excelwork(data)
+        data["Primary"]["OGRN"] = AddSymbol(self.ids.ogrn.text, 15)
+        data["Primary"]["INN"] = AddSymbol(self.ids.inn.text, 12)
+        data["Primary"]["KPP"] = AddSymbol(self.ids.kpp.text, 9)
+
+        data["Primary"]["FullName"] = (AddSymbol(self.ids.name1.text, 40), AddSymbol(self.ids.name2.text, 40),
+                                       AddSymbol(self.ids.name3.text, 40))
+
+        data["Primary"]["UserFIO"] = (AddSymbol(self.ids.f.text, 20), AddSymbol(self.ids.i.text, 20),
+                                      AddSymbol(self.ids.o.text, 20))
+
+        data["Primary"]["Document"] = (AddSymbol(self.ids.d1.text, 20), AddSymbol(self.ids.d2.text, 20),
+                                       AddSymbol(self.ids.d3.text, 20))
+
+        data["KKTandFN"]["Model"] = AddSymbol(self.ids.KKT.text, 20)
+        data["KKTandFN"]["SerialKKT"] = AddSymbol(self.ids.seriesKKT.text, 20)
+        data["KKTandFN"]["SerialFN"] = AddSymbol(self.ids.serialFN.text, 20)
+
+        data["KKTandFN"]["FNName"] = (AddSymbol(self.ids.fn1.text, 20), AddSymbol(self.ids.fn2.text, 20),
+                                      AddSymbol(self.ids.fn3.text, 20), AddSymbol(self.ids.fn4.text, 20),
+                                      AddSymbol(self.ids.fn5.text, 20), AddSymbol(self.ids.fn6.text, 20))
+
+        data["Address"]["District"] = AddSymbol(self.ids.district.text, 30)
+        data["Address"]["City"] = AddSymbol(self.ids.city.text, 30)
+        data["Address"]["Village"] = AddSymbol(self.ids.village.text, 30)
+        data["Address"]["Street"] = AddSymbol(self.ids.street.text, 30)
+        data["Address"]["House"] = AddSymbol(self.ids.house.text, 8)
+        data["Address"]["Campus"] = AddSymbol(self.ids.campus.text, 8)
+        data["Address"]["Room"] = AddSymbol(self.ids.room.text, 8)
+
+        data["Address"]["Place"] = (AddSymbol(self.ids.exp1.text, 20), AddSymbol(self.ids.exp2.text, 20),
+                                    AddSymbol(self.ids.exp3.text, 20))
+
+        data["OFD"]["OFDName"] = (AddSymbol(self.ids.ofdn1.text, 20), AddSymbol(self.ids.ofdn2.text, 20),
+                                  AddSymbol(self.ids.ofdn3.text, 20), AddSymbol(self.ids.ofdn4.text, 20))
+
+        data["OFD"]["OFDInn"] = AddSymbol(self.ids.ofdinn.text, 12)
+
+        data["Raports"]["RegRep"]["Nrep"] = AddSymbol(self.ids.Nregrep.text, 8)
+        data["Raports"]["ClosReg"]["Nrep"] = AddSymbol(self.ids.Nregclos.text, 8)
+        data["Raports"]["RegRep"]["FP"] = AddSymbol(self.ids.FPDockreg.text, 10)
+        data["Raports"]["ClosReg"]["FP"] = AddSymbol(self.ids.FPDockclos.text, 10)
+
+        if self.ids.ofd6.active:
+            ACD = self.manager.get_screen('ACD')
+            data["AutoCalcDevice"]["device1"]["district"] = AddSymbol(ACD.ids.district1.text, 30)
+            data["AutoCalcDevice"]["device1"]["city"] = AddSymbol(ACD.ids.city1.text, 30)
+            data["AutoCalcDevice"]["device1"]["village"] = AddSymbol(ACD.ids.village1.text, 30)
+            data["AutoCalcDevice"]["device1"]["street"] = AddSymbol(ACD.ids.street1.text, 30)
+            data["AutoCalcDevice"]["device1"]["house"] = AddSymbol(ACD.ids.house1.text, 8)
+            data["AutoCalcDevice"]["device1"]["campus"] = AddSymbol(ACD.ids.campus1.text, 8)
+            data["AutoCalcDevice"]["device1"]["room"] = AddSymbol(ACD.ids.room1.text, 8)
+            data["AutoCalcDevice"]["device1"]["place"] = (AddSymbol(ACD.ids.expd1_1.text, 20),
+                                                          AddSymbol(ACD.ids.expd1_2.text, 20),
+                                                          AddSymbol(ACD.ids.expd1_3.text, 20))
+            data["AutoCalcDevice"]["device1"]["number"] = AddSymbol(ACD.ids.n1.text, 20)
+
+            data["AutoCalcDevice"]["device2"]["district"] = AddSymbol(ACD.ids.district2.text, 30)
+            data["AutoCalcDevice"]["device2"]["city"] = AddSymbol(ACD.ids.city2.text, 30)
+            data["AutoCalcDevice"]["device2"]["village"] = AddSymbol(ACD.ids.village2.text, 30)
+            data["AutoCalcDevice"]["device2"]["street"] = AddSymbol(ACD.ids.street2.text, 30)
+            data["AutoCalcDevice"]["device2"]["house"] = AddSymbol(ACD.ids.house2.text, 8)
+            data["AutoCalcDevice"]["device2"]["campus"] = AddSymbol(ACD.ids.campus2.text, 8)
+            data["AutoCalcDevice"]["device2"]["room"] = AddSymbol(ACD.ids.room2.text, 8)
+            data["AutoCalcDevice"]["device2"]["place"] = (AddSymbol(ACD.ids.expd2_1.text, 20),
+                                                          AddSymbol(ACD.ids.expd2_2.text, 20),
+                                                          AddSymbol(ACD.ids.expd2_3.text, 20))
+            data["AutoCalcDevice"]["device2"]["number"] = AddSymbol(ACD.ids.n2.text, 20)
+
+        dw.excelwork(data, path)
 
 
 class MyApp(MDApp):
     def build(self):
+        self.title = "DocFill"
+        self.theme_cls.accent_palette = "Red"
         self.load_kv("interface.kv")
-        # sm = ScreenManager()
-        # sm.add_widget(DocFill(name='Doc'))
-        # sm.add_widget(CurrentKKT(name='KKT'))
+        sm = ScreenManager()
+        sm.add_widget(DocFill(name='Doc'))
+        sm.add_widget(AutoCalcDevice(name='ACD'))
 
-        return DocFill()
+        return sm
 
 
 if __name__ == "__main__":

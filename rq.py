@@ -15,9 +15,11 @@ def EgrulRq(inn):
     r = rq.post(url, data={"query": inn})
     if r:
         r1 = rq.get(url1 + r.json()["t"])
-        if r1:
+        if r1 and len(r1.json()["rows"]) > 0:
             res = r1.json()["rows"][0]
             # вид лица
+            if res["k"] == "sprav-fl":
+                return False
             info.append(res["k"])
             # полное наименование/ФИО
             info.append(res["n"])
